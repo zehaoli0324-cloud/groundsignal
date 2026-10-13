@@ -48,7 +48,7 @@
 | 功能基因组学与单细胞 | 3 | Open Problems、scIB、GEARS |
 | **合计** | **45** | |
 
-完整分类方案提出了 12 个一级类别，当前数据覆盖其中 10 类。广义科学基准中只有部分任务属于生物医药，相关范围需要结合任务说明确认。
+完整分类方案提出了 12 个一级类别，当前数据覆盖其中 10 类。“公共卫生与健康服务”和“数据质量、安全与评测基础设施”尚无项目作为主领域归入。广义科学基准中只有部分任务属于生物医药，相关范围需要结合任务说明确认。
 
 ## 如何使用
 
@@ -94,7 +94,36 @@
 | [ORGANIZATION_CLASSIFICATION.md](ORGANIZATION_CLASSIFICATION.md) | 浏览公司、高校、研究机构及挑战社区的组织分类 |
 | [PARALLEL_BIOMEDICINE_CLASSIFICATION.md](PARALLEL_BIOMEDICINE_CLASSIFICATION.md) | 理解遗传学图谱之外的医学题目分类与统计口径 |
 
-分类说明中提到的逐题数据、分类脚本及 `organization_summary.csv` 未随本目录交付；本目录也不包含原始大题库和中间压缩包。
+分类说明中提到的逐题 JSONL、汇总表、分类脚本及 `organization_summary.csv` 均未包含在当前仓库快照中。本目录保留分类说明和汇总口径；逐题分析需先补齐数据与脚本。本目录也不包含原始大题库和中间压缩包。
+
+### 本地查询示例
+
+克隆仓库后，可以用 Python 标准库查看某个领域的项目与来源：
+
+```bash
+git clone https://github.com/zehaoli0324-cloud/groundsignal.git
+cd groundsignal
+python - <<'PY'
+import csv
+from pathlib import Path
+
+base = Path("04-投资人/生物医药Benchmark版图")
+
+def read_csv(filename):
+    with (base / filename).open(encoding="utf-8-sig", newline="") as f:
+        return list(csv.DictReader(f))
+
+registry = {row["benchmark_id"]: row
+            for row in read_csv("benchmark_registry.csv")}
+
+for row in read_csv("benchmark_subcategory_mapping.csv"):
+    if row["primary_domain"] == "功能基因组学与单细胞":
+        project = registry[row["benchmark_id"]]
+        print(project["name"], project["official_url"])
+PY
+```
+
+这段示例用于目录查询。具体评测运行方式需要进入相应项目，按其官方说明准备数据和环境。
 
 ## 如何理解质量与价值
 
@@ -144,6 +173,8 @@ GroundSignal 的目标是将公开信号转化为可追溯、可比较和可更�
 
 ## 更新与贡献
 
+欢迎通过 [Issue](https://github.com/zehaoli0324-cloud/groundsignal/issues) 或 Pull Request 补充项目、修正归属、核验许可和提供采用证据。
+
 建议按照以下顺序新增或更新记录：
 
 1. **登记来源**：优先采用官方项目、论文或维护仓库，记录版本、任务范围、访问与许可条件。
@@ -153,7 +184,7 @@ GroundSignal 的目标是将公开信号转化为可追溯、可比较和可更�
 5. **补充价值证据**：分别记录科研采用、产品集成、实际交易和潜在需求，避免用同一个链接支持不同主张。
 6. **检查关联与变更**：检查 ID 唯一性、关联完整性、来源链接和统计口径，更新日期及修改原因。
 
-提交修订时，请提供来源链接、适用版本、拟修改字段和理由。只有得到新证据支持时，才提高归属置信度、质量结论或商业证据等级。
+提交修订时，请提供来源链接、适用版本、核验日期、拟修改字段和理由。修改现有项目时保持 `benchmark_id` 稳定，并同步相关表。只有得到新证据支持时，才提高归属置信度、质量结论或商业证据等级。
 
 ## 下一步
 

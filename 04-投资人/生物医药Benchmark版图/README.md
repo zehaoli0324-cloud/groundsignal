@@ -1,141 +1,149 @@
 # 生物医药 Benchmark 版图
 
-**把“谁在做评测、评测什么、如何评测、对谁有价值”连接起来，形成可追溯的生物医药 AI 研究与产业分析入口。**
+**连接机构、评测任务与产业需求，理解 AI 在生物医药中已经被评测了什么，以及哪些能力值得进一步验证。**
 
-本项目是 [GroundSignal](../../README.md) 的生物医药 Benchmark 专题，面向投资研究、模型评测和科研任务设计，将分散的公开基准整理为可关联的机构、任务、子领域与价值证据。
+这是 [GroundSignal](../../README.md) 的生物医药 AI 评测研究专题。项目从公开 Benchmark 出发，整理其创建与维护机构、领域覆盖、任务形式、质量初评和价值证据，为投资研究、模型评测和科研任务设计提供一个可追溯的入口。
 
-它围绕四个问题展开：
+**当前交付：45 条 Benchmark 登记记录、39 条机构实体记录、六张关联数据表及专题分析文档。** 当前阶段为研究型版图库；持续更新、交互查询与模型实跑评测是下一步建设方向。
 
-- **机构版图**：哪些公司、高校、实验室和社区在创建或维护 Benchmark？
-- **能力版图**：现有评测覆盖哪些临床与科研任务，采用什么数据和评测形式？
-- **评测价值**：一个 Benchmark 能否区分模型能力，质量、难度和复现条件如何？
-- **产业价值**：任务对应哪些买方和工作流，价值判断有哪些公开证据支持？
+[快速概览 PDF](biomedical_benchmark_investor_memo_7p.pdf) · [Benchmark 总表](benchmark_registry.csv) · [领域映射](benchmark_subcategory_mapping.csv) · [整理方法](ORGANIZATION_SUBCATEGORY_VALUE_PLAN.md)
 
-**当前阶段：研究型版图库与初步分析材料。** 现有成果为 CSV 数据表、分类说明和投资人概览；自动更新、交互看板和模型执行评测属于后续建设方向。
+## 为什么做这份版图
 
-[投资人概览 PDF](biomedical_benchmark_investor_memo_7p.pdf) · [Benchmark 总表](benchmark_registry.csv) · [子领域映射](benchmark_subcategory_mapping.csv) · [经济价值证据](benchmark_economic_value_evidence.csv)
+生物医药 AI 的评测对象跨度很大：医学知识问答、开放式健康对话、组学数据分析、基因扰动预测、蛋白质设计和分子筛选，都可能被称为“生物医药 Benchmark”，但它们检验的能力、需要的证据和对应的工作流不同。
 
-## 当前收录
+要判断一个方向是否值得投入，需要把几个问题连起来：
 
-数据快照：**2026-10-13**。统计以本目录 CSV 为准。
+| 问题 | 本项目整理的内容 | 支持的判断 |
+| --- | --- | --- |
+| 谁在做？ | 创建者、维护者、联合机构、平台和社区 | 研究布局与机构生态 |
+| 测什么？ | 主领域、子领域、任务类型和数据入口 | 能力覆盖与候选来源 |
+| 测得怎么样？ | 规模口径、质量初评、难度、区分能力和复现需求 | 是否适合进一步审查或评测 |
+| 对谁有用？ | 潜在买方、工作流、决策影响和采用证据 | 产业验证与研究优先级 |
 
-| 项目 | 当前规模 | 统计口径 |
+项目希望将“一个 Benchmark 的名字”展开为一条可检查的研究线索：**来源是谁、任务是什么、结果能证明什么、与实际使用之间还需要补什么证据。**
+
+## 当前版图
+
+以下为 **2026-10-13 数据快照**，统计来自本目录 CSV。数字表示登记记录数，包含题库、数据集、任务套件、评测工具和持续挑战赛，不能相加为统一“总题量”。
+
+| 主领域 | 记录数 | 当前登记项目 |
 | --- | ---: | --- |
-| Benchmark 登记记录 | 45 | 按 `benchmark_id` 去重 |
-| 机构实体记录 | 39 | 按 `organization_id` 去重，包含实验室、联盟和社区记录 |
-| 已覆盖一级领域 | 10 | 按子领域映射表中的 `primary_domain` 统计 |
-| 机构归属、子领域映射、质量初评、价值证据 | 各 45 条 | 当前各表均覆盖全部登记记录 |
-| 经济价值证据等级 | C 级 22 条、D 级 23 条 | 表内初步标注，仍需逐项核验 |
-| Benchmark 级公开交易金额 | 45 条均标注“未披露” | 不能据此判断实际收入或不存在商业价值 |
-
-45 条记录包含问答题库、任务集合、数据集、评测工具、预测任务和持续挑战赛。它们的评测单位不同，不能简单相加为“总题量”，也不能按题量直接排名。
-
-### 覆盖领域
-
-下表使用当前主领域标签，每条记录计入一个主领域；代表项目仅用于导航。
-
-| 一级领域 | 记录数 | 代表项目 |
-| --- | ---: | --- |
-| 临床医学与医学知识 | 9 | MedQA、HealthBench、MedXpertQA、CMB |
+| 临床医学与医学知识 | 9 | MedQA-USMLE、MedMCQA、MultiMedQA、HealthBench、MedXpertQA、MedBench、CMB、CMExam、MSDiagnosis |
 | 生物医学 NLP 与证据检索 | 3 | PubMedQA、BioASQ、CBLUE |
-| 医学影像与数字病理 | 5 | GMAI-MMBench、MedMNIST、MIMIC-CXR、CAMELYON |
-| 生物科研 Agent 与实验工作流 | 5 | LAB-Bench、BixBench、BioMysteryBench、BiomniBench-DA |
+| 生物科研 Agent 与实验工作流 | 5 | LAB-Bench、BixBench、BioMysteryBench、LifeSciBench、BiomniBench-DA |
 | 遗传学与基因组学 | 2 | GeneBench、GeneBench-Pro |
+| 功能基因组学与单细胞 | 3 | Open Problems in Single-Cell Analysis、scIB、GEARS |
+| 蛋白质与结构生物学 | 7 | ProteinBench、PXMeter、PXDesignBench、ProteinGym、FLIP/FLIP2、CASP、CAMEO |
+| 药物发现与分子机器学习 | 7 | Therapeutics Data Commons、MoleculeNet、LIT-PCBA、PoseBusters、DUD-E、GuacaMol、MOSES |
+| 医学影像与数字病理 | 5 | GMAI-MMBench、MedMNIST、MIMIC-CXR、CheXpert、CAMELYON |
 | 临床时间序列与医疗 Agent | 2 | HealthAgentBench、Sequential Diagnosis Benchmark |
 | 科学复现与一般科学推理 | 2 | PaperBenchX、SuperGPQA |
-| 蛋白质与结构生物学 | 7 | ProteinBench、PXMeter、PXDesignBench、ProteinGym、CASP |
-| 药物发现与分子机器学习 | 7 | TDC、MoleculeNet、LIT-PCBA、PoseBusters、GuacaMol |
-| 功能基因组学与单细胞 | 3 | Open Problems、scIB、GEARS |
-| **合计** | **45** | |
+| **合计** | **45** | **每条记录按一个主领域计数** |
 
-完整分类方案提出了 12 个一级类别，当前数据覆盖其中 10 类。“公共卫生与健康服务”和“数据质量、安全与评测基础设施”尚无项目作为主领域归入。广义科学基准中只有部分任务属于生物医药，相关范围需要结合任务说明确认。
+[分类方案](ORGANIZATION_SUBCATEGORY_VALUE_PLAN.md) 定义了 12 个一级类别，目前登记数据覆盖其中 10 类；“公共卫生与健康服务”和“数据质量、安全与评测基础设施”尚无项目作为主领域归入。次级领域保存在映射表中；广义科学项目的生物医药覆盖范围需按具体任务确认。
 
-## 如何使用
+机构层同时收录公司研究团队、高校实验室、研究平台、挑战联盟和开放社区。39 条记录是当前机构实体表的规模，其中包含不同层级的组织描述；创建、维护、托管和采用关系应结合来源分别核验。
 
-### 投资与产业研究
+## 从哪里开始
 
-先读 [投资人概览](biomedical_benchmark_investor_memo_7p.pdf)，再通过 [机构实体表](organization_entity.csv) 和 [机构归属表](benchmark_organization.csv) 找到相关组织，最后查看 [经济价值证据表](benchmark_economic_value_evidence.csv)。
+### 做投资或产业研究
 
-研究时沿着“**子领域 → 工作流 → 潜在买方 → 采用或交易证据**”展开。例如，蛋白质设计任务可进一步研究候选筛选和实验验证场景，科研 Agent 任务可进一步研究分析工作流和专家时间成本。买方与节省成本的描述需要实际采用、测量或交易证据支持。
+先读 [投资人概览 PDF](biomedical_benchmark_investor_memo_7p.pdf)，再沿着“**领域 → 任务 → 工作流 → 买方 → 价值证据**”追查。
 
-### 模型评测与能力分析
+例如，研究蛋白质设计方向时，可以从 PXDesignBench 定位任务与官方入口，从机构表了解相关团队，再检查价值证据表中的候选筛选、实验验证和潜在买方描述。随后需要寻找具体的采用、实验效果或交易证据，确认这些潜在需求是否形成了实际价值。
 
-先在 [子领域映射表](benchmark_subcategory_mapping.csv) 中筛选任务，再从 [登记表](benchmark_registry.csv) 进入官网、论文、代码和数据入口，结合 [初评表](benchmark_assessment.csv) 检查题量口径、质量、难度、SOTA 压力及待补证据。
+建议的阅读顺序：
 
-正式比较模型前，应固定 Benchmark 版本、数据划分、评分方法、工具权限和运行预算。知识问答、数据分析和多步 Agent 任务应分别比较。
+1. [领域映射表](benchmark_subcategory_mapping.csv)：选择关注的方向和任务。
+2. [机构归属表](benchmark_organization.csv)与[机构实体表](organization_entity.csv)：理解相关组织与生态。
+3. [价值证据表](benchmark_economic_value_evidence.csv)：检查买方、场景、证据等级和待验证判断。
 
-### 科研任务与出题种子发现
+### 选模型评测或科研出题来源
 
-用领域和任务类型定位候选来源，再检查数据可获取性、许可证、评分规则和复现环境。涉及遗传学以外医学题目时，可参考 [平行生物医药分类说明](PARALLEL_BIOMEDICINE_CLASSIFICATION.md)。
+先筛领域和任务类型，再从 [Benchmark 总表](benchmark_registry.csv)进入官网、论文与代码，结合 [初评表](benchmark_assessment.csv)检查任务是否适合当前目标。
 
-这个目录提供来源发现与初筛依据。将某条来源纳入正式题包，还需要完成任务级科学审查、数据授权核验、参考解验证和实际运行测试。
+- **知识与对话任务**：关注数据污染、专家评分、安全边界与真实问题覆盖。
+- **预测与设计任务**：关注数据划分、分布外泛化、指标含义与实验验证。
+- **数据分析与 Agent 任务**：关注可执行环境、工具权限、预算、过程证据与结果复现。
 
-## 数据结构与文件导航
+纳入正式评测或题包前，需要固定版本、核验许可、审查评分方法并验证参考解。目录中的初评可用于候选筛选，正式结论需要任务级审查与运行证据。
 
-项目将机构、Benchmark、领域和价值证据分开记录，便于分别更新并关联查询。
+### 看医学题库的细分类
 
-| 文件 | 内容 | 关联字段 |
+[平行生物医药分类说明](PARALLEL_BIOMEDICINE_CLASSIFICATION.md)讨论遗传学图谱之外的医学题目分类，包括药学、护理、临床专科和公共卫生等。
+
+该文档的题目级统计有独立范围。当前仓库快照未包含其中引用的逐题数据和分类脚本，因此这些题量应按原文口径理解，不能与本目录 45 条登记记录合并计算。
+
+## 数据如何组织
+
+数据拆为机构、Benchmark、领域和价值证据四层，以便分别维护事实、分类与分析判断。
+
+| 文件 | 主要内容 | 查询与关联方式 |
 | --- | --- | --- |
-| [benchmark_registry.csv](benchmark_registry.csv) | 名称、任务类型、官网、论文、代码或数据入口、公开状态与许可状态 | `benchmark_id` |
-| [benchmark_organization.csv](benchmark_organization.csv) | 主组织、联合组织或生态、组织类型、地区、归属方式和置信度 | `benchmark_id` |
-| [organization_entity.csv](organization_entity.csv) | 机构规范名称、别名、类别、实验室或部门、角色及来源 | `organization_id` |
-| [benchmark_subcategory_mapping.csv](benchmark_subcategory_mapping.csv) | 主领域、主子领域、次级分类、覆盖方式、任务类型与模态 | `benchmark_id` |
-| [benchmark_assessment.csv](benchmark_assessment.csv) | 规模、使用信号、质量初评、难度、SOTA 压力和下一步测量 | `benchmark_id` |
-| [benchmark_economic_value_evidence.csv](benchmark_economic_value_evidence.csv) | 价值链、潜在买方、使用场景、商业信号、来源、证据等级与潜在价值分数 | `benchmark_id`、`organization_id` |
+| [benchmark_registry.csv](benchmark_registry.csv) | 名称、维护者、任务类型、官网、论文、代码或数据入口、公开与许可状态 | 登记主表，主键为 `benchmark_id` |
+| [benchmark_organization.csv](benchmark_organization.csv) | 主组织、联合机构或生态、组织类型、地区、归属方式与置信度 | 按 `benchmark_id` 关联；机构以名称描述 |
+| [organization_entity.csv](organization_entity.csv) | 机构 ID、规范名称、别名、类别、部门、角色与来源 | 机构主表，主键为 `organization_id` |
+| [benchmark_subcategory_mapping.csv](benchmark_subcategory_mapping.csv) | 主领域、主子领域、次级分类、覆盖方式与任务类型 | 按 `benchmark_id` 关联 |
+| [benchmark_assessment.csv](benchmark_assessment.csv) | 规模、使用信号、质量初评、难度、SOTA 压力与待补测量 | 按 `benchmark_id` 关联 |
+| [benchmark_economic_value_evidence.csv](benchmark_economic_value_evidence.csv) | 价值链、买方、场景、商业信号、证据链接、等级与潜在价值分数 | 按 `benchmark_id` 关联任务，按 `organization_id` 关联机构 |
 
-以 `benchmark_registry.csv` 为入口，使用 `benchmark_id` 关联其他 Benchmark 表，再通过价值证据表中的 `organization_id` 关联机构实体表。当前这些关联键均能在相应主表中找到。
+当前五张 Benchmark 相关表各有 45 条记录，`benchmark_id` 集合一致；价值证据表中的机构 ID 均能关联到机构实体表。
 
-目前子领域映射表每个 Benchmark 只有一行，次级分类保存在字段中；机构归属表使用组织名称描述归属。正式的子领域实体表、多对多映射和完整机构角色关系表仍需补齐。
+当前领域映射每个 Benchmark 一行，次级分类存于字段中。稳定的子领域实体、多对多关系以及逐条机构角色证据，属于后续数据结构完善工作。
 
-| 文档 | 阅读目的 |
-| --- | --- |
-| [biomedical_benchmark_investor_memo_7p.pdf](biomedical_benchmark_investor_memo_7p.pdf) | 快速浏览投资人版概览 |
-| [ORGANIZATION_SUBCATEGORY_VALUE_PLAN.md](ORGANIZATION_SUBCATEGORY_VALUE_PLAN.md) | 理解四层整理方法、分类方案、价值维度与执行顺序 |
-| [ORGANIZATION_CLASSIFICATION.md](ORGANIZATION_CLASSIFICATION.md) | 浏览公司、高校、研究机构及挑战社区的组织分类 |
-| [PARALLEL_BIOMEDICINE_CLASSIFICATION.md](PARALLEL_BIOMEDICINE_CLASSIFICATION.md) | 理解遗传学图谱之外的医学题目分类与统计口径 |
+### 本地查看示例
 
-分类说明中提到的逐题 JSONL、汇总表、分类脚本及 `organization_summary.csv` 均未包含在当前仓库快照中。本目录保留分类说明和汇总口径；逐题分析需先补齐数据与脚本。本目录也不包含原始大题库和中间压缩包。
-
-### 本地查询示例
-
-克隆仓库后，可以用 Python 标准库查看某个领域的项目与来源：
+克隆仓库并进入根目录后，运行以下标准库 Python 示例，无需额外依赖：
 
 ```bash
 git clone https://github.com/zehaoli0324-cloud/groundsignal.git
 cd groundsignal
-python - <<'PY'
+```
+
+```python
 import csv
 from pathlib import Path
 
-base = Path("04-投资人/生物医药Benchmark版图")
+root = Path("04-投资人/生物医药Benchmark版图")
 
-def read_csv(filename):
-    with (base / filename).open(encoding="utf-8-sig", newline="") as f:
+def read_table(name):
+    with (root / name).open(encoding="utf-8-sig", newline="") as f:
         return list(csv.DictReader(f))
 
-registry = {row["benchmark_id"]: row
-            for row in read_csv("benchmark_registry.csv")}
+registry = {
+    row["benchmark_id"]: row
+    for row in read_table("benchmark_registry.csv")
+}
 
-for row in read_csv("benchmark_subcategory_mapping.csv"):
+for row in read_table("benchmark_subcategory_mapping.csv"):
     if row["primary_domain"] == "功能基因组学与单细胞":
-        project = registry[row["benchmark_id"]]
-        print(project["name"], project["official_url"])
-PY
+        source = registry[row["benchmark_id"]]
+        print(source["name"], row["primary_subcategory"],
+              source["data_or_code_url"])
 ```
 
-这段示例用于目录查询。具体评测运行方式需要进入相应项目，按其官方说明准备数据和环境。
+这个查询可用于定位单细胞与扰动方向的登记来源。它读取的是版图数据，候选任务能否复现需要进入各项目继续检查。
 
-## 如何理解质量与价值
+## 如何读质量与经济价值
 
-### 质量、难度与机构归属
+### 质量判断
 
-`benchmark_assessment.csv` 的质量分数目前均带有 `provisional-` 前缀，是待审查的初评。正式质量判断需要补充来源、重复与污染检查、标注可靠性、评分可复现性和版本化运行证据。
+`benchmark_assessment.csv` 中的质量分数均带有 `provisional-` 前缀，表示研究初评。难度、SOTA 压力和排序价值也需要结合具体版本、数据划分、模型结果和运行条件核验。
 
-机构归属的置信度只描述“谁创建或维护”的确定程度。创建者、维护者、托管平台和采用者应分别核验，机构名称本身不能证明任务质量。
+机构归属置信度回答“创建或维护关系有多确定”；质量分数回答“评测本身是否可靠”。两者应分别判断。
 
-### 经济价值证据等级
+### 价值判断
 
-| 等级 | 方法口径 | 当前记录数 |
+项目分别关注三个层次：
+
+- **已实现商业价值**：合同、采购、授权、付费服务或其他交易证据。
+- **可验证的使用价值**：科研采用、产品集成、模型验收或可测量的工作流收益。
+- **潜在经济价值**：根据买方需求、决策影响、数据稀缺和替代成本提出的研究假设。
+
+价值证据等级采用以下方法口径：
+
+| 等级 | 需要支持的主张 | 当前表内条数 |
 | --- | --- | ---: |
 | A | 公开合同、采购、价格、授权或企业客户证据 | 0 |
 | B | 官方产品集成、企业服务、付费 API、模型发布门槛或正式合作 | 0 |
@@ -143,57 +151,64 @@ PY
 | D | 基于数据稀缺、决策影响和替代成本的合理推断 | 23 |
 | E | 证据不足，保留为候选方向 | 0 |
 
-等级是当前表内标注，阅读时需要回到 `evidence_url` 核验相应主张。项目官网可以支持项目身份，但采购、采用或节省成本等主张需要各自对应的证据。
+上述条数是当前表内标注的统计。核验时应检查来源是否直接支持相应主张：项目官网可支持项目身份，采用程度、商业合同和成本节省需要各自的证据。
 
-`economic_potential_score` 表示优先研究和商业验证的潜在价值。整理方案提出了买方需求、决策影响、数据稀缺、替代成本、采用程度、变现信号和监管关联七个维度；当前表尚未提供全部维度的逐项分值，暂不能完整复算总分。
+当前 45 条记录的商业信号均为 `not_publicly_disclosed`，公开金额和使用量均标为“未披露”，成本节省均为“待验证”。
 
-**潜在价值分数不能解释为收入、估值、市场规模或投资回报预测。**
+`economic_potential_score` 用于排列后续研究与商业验证的优先级。方法文档提出七个评分维度，但当前数据尚未提供全部维度的逐项分值，无法完整复算总分。**该分数不能解释为收入、估值、市场规模或投资回报。**
 
-### 分类与来源的边界
+## 当前完成度与下一步
 
-- 当前子领域标签均为初步分类，`coverage_mode` 使用 `direct_or_adjacent`，尚未明确拆开直接覆盖与邻近相关。
-- 价值证据表的 `subcategory_id` 仍存在 `unknown` 等粗粒度标签，需要统一为稳定分类 ID。
-- 39 条机构记录包含不同层级的实验室、社区和生态描述，仍需继续处理别名、上下级和可能重叠的实体。
-- 多项许可状态仍为 `license-review` 或 `terms-review`；公开可下载不自动意味着允许再分发或商业使用。
-- `evidence_date` 应结合来源理解，不能直接视为论文发表日、交易发生日或最近一次联网复核时间。
-- 平行医学分类文档描述的是另一组题目级分类统计，其题量不属于本目录 45 条登记记录的统一规模指标。
+| 层次 | 已有内容 | 下一步要完成的工作 |
+| --- | --- | --- |
+| 来源登记 | 45 条记录及官网、论文、代码或数据入口 | 逐条固定版本，核验项目身份、访问与许可条件 |
+| 机构整理 | 45 条归属记录、39 条机构实体记录 | 统一别名和上下级关系，拆开创建、维护、托管与采用角色 |
+| 领域分类 | 10 个主领域及子领域描述 | 将 `direct_or_adjacent` 拆为明确覆盖关系，建立稳定分类 ID |
+| 质量研究 | 规模、难度、质量和区分能力初评 | 增加任务级审查、参考解和版本化运行结果 |
+| 价值研究 | 买方、场景、来源链接和潜在价值初评 | 将采用和商业主张拆成逐条证据，补充实际效果与交易来源 |
+| 持续情报 | 可人工阅读与关联的 CSV 快照 | 接入变化记录、定期核验与筛选看板 |
+
+其中，价值证据表有 40 条 `subcategory_id=unknown`，其余标签也尚未形成统一分类体系；领域映射的置信度均为 `provisional`。这些字段需要在下一阶段优先归一化。
+
+实际复用数据时，还应逐条检查 `license_status`。公开可访问与允许再分发或商业使用是不同条件。`evidence_date` 的含义也需结合来源确认，不能直接作为发表日、交易日或最近一次联网核验时间。
 
 ## 与 GroundSignal 的关系
 
-GroundSignal 的目标是将公开信号转化为可追溯、可比较和可更新的情报。本专题为生物医药评测方向提供了一个结构化起点：
+GroundSignal 面向可追溯、可比较和可持续更新的情报。本专题为生物医药评测方向提供基础数据：
 
-| GroundSignal 对象 | 本专题可提供的内容 | 后续接入工作 |
+| GroundSignal 对象 | 本专题的对应内容 | 接入重点 |
 | --- | --- | --- |
-| Entity | 机构与 Benchmark 登记记录 | 稳定实体 ID、别名与角色归一化 |
-| Claim / Relation | 创建维护关系、领域归属、采用与价值判断 | 拆成独立主张并绑定来源 |
-| Evidence | 官网、论文、代码和价值证据链接 | 补充证据摘录、采集时间与核验状态 |
-| Event | 待建设 | 记录新版本、任务变化、排行榜及采用变化 |
+| Entity | 机构与 Benchmark | 实体 ID、别名和角色归一化 |
+| Claim / Relation | 机构归属、领域覆盖、采用及价值判断 | 拆成独立主张，绑定来源与核验状态 |
+| Evidence | 官方入口、论文、代码和价值来源 | 补充主张对应的证据、采集时间和适用版本 |
+| Event | 后续建设 | 追踪新版本、任务变化、评测结果及采用变化 |
 
-当前文件已支持人工阅读和表格关联。持续监测、变化检测和自动情报生成需要进一步实现并验证。
+长期目标是持续回答：**哪个方向出现了新评测、新能力或新采用证据，这些变化是否足以改变原有判断。**
 
-## 更新与贡献
+## 文档导航与更新规则
 
-欢迎通过 [Issue](https://github.com/zehaoli0324-cloud/groundsignal/issues) 或 Pull Request 补充项目、修正归属、核验许可和提供采用证据。
+| 文档 | 用途 |
+| --- | --- |
+| [投资人概览 PDF](biomedical_benchmark_investor_memo_7p.pdf) | 快速阅读当前专题概览 |
+| [组织、子领域与经济价值整理方案](ORGANIZATION_SUBCATEGORY_VALUE_PLAN.md) | 四层结构、12 类领域、价值评分与证据方法 |
+| [Benchmark 组织分类](ORGANIZATION_CLASSIFICATION.md) | 按公司、研究机构、高校和挑战社区浏览 |
+| [平行生物医药分类](PARALLEL_BIOMEDICINE_CLASSIFICATION.md) | 查看遗传学图谱之外的医学题目分类口径 |
 
-建议按照以下顺序新增或更新记录：
+部分文档引用了 `organization_summary.csv` 或题目级分类文件，这些文件未包含在当前仓库快照中；使用时以实际文件与各文档范围说明为准。
 
-1. **登记来源**：优先采用官方项目、论文或维护仓库，记录版本、任务范围、访问与许可条件。
-2. **核验机构**：区分创建、维护、托管和采用，复用已有机构 ID，并保留归属证据与置信度。
-3. **标注领域**：依据实际任务说明分类，区分直接覆盖和邻近相关，说明评测单位。
-4. **完成初评**：将公开事实、分析判断和待验证项分开，缺失信息明确标注。
-5. **补充价值证据**：分别记录科研采用、产品集成、实际交易和潜在需求，避免用同一个链接支持不同主张。
-6. **检查关联与变更**：检查 ID 唯一性、关联完整性、来源链接和统计口径，更新日期及修改原因。
+欢迎通过 [Issue](https://github.com/zehaoli0324-cloud/groundsignal/issues) 或 Pull Request 补充来源、修正归属和提供采用证据。
 
-提交修订时，请提供来源链接、适用版本、核验日期、拟修改字段和理由。修改现有项目时保持 `benchmark_id` 稳定，并同步相关表。只有得到新证据支持时，才提高归属置信度、质量结论或商业证据等级。
+新增或修订记录时，请提供**官方来源、适用版本、核验日期、拟修改字段与理由**，并遵循以下顺序：
 
-## 下一步
+1. 登记项目和任务范围，核验访问及许可条件。
+2. 复用机构 ID，分别记录组织角色与归属依据。
+3. 按实际任务分类，明确评测单位和直接或邻近覆盖。
+4. 将公开事实、分析判断和缺失信息分开标注。
+5. 为采用、成本节省或商业化主张提供对应证据。
+6. 检查 ID 唯一性、表间关联和统计口径，记录更新原因。
 
-| 优先级 | 工作 | 完成标准 |
-| --- | --- | --- |
-| P0 | 核验官方来源、版本、许可与机构归属 | 每条记录具备来源和明确核验状态 |
-| P0 | 统一机构和子领域 ID，拆分覆盖方式 | 名称重叠可解释，分类关系可关联 |
-| P1 | 将采用与商业判断拆成逐条证据记录 | 每个重要主张绑定来源、时间与状态 |
-| P1 | 补充版本化评测与任务级质量审查 | 难度与质量判断有可检查的运行或审查依据 |
-| P2 | 增加筛选看板与定期更新机制 | 可按机构、领域、任务和证据等级查询，并追踪变化 |
+修改现有项目时保持 `benchmark_id` 稳定，并同步相关表。新增来源应先完成核验，再进入正式统计；质量结论和证据等级应随新增证据更新。
 
-项目的长期价值在于持续回答：**哪些生物医药任务值得评测，现有评测能证明什么，以及这些能力与真实科研和产业决策之间还缺哪些证据。**
+---
+
+**让每一项生物医药 AI 能力判断，都能追溯到任务、数据、评测条件与实际使用证据。**

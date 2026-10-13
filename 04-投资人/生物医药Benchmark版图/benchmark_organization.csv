@@ -1,0 +1,46 @@
+benchmark_id,name,primary_organization,co_organizers_or_ecosystem,organization_type,region,ownership_mode,affiliation_confidence,organization_notes
+medqa,MedQA-USMLE,Stanford / academic community,medical NLP research,university/community,US/global,creator/maintainer,medium,Dataset created by academic researchers; not a Stanford corporate product.
+medmcqa,MedMCQA,AIIMS / academic community,Indian medical education and NLP,university/community,India/global,creator/maintainer,medium,Academic benchmark with broad community use.
+pubmedqa,PubMedQA,PubMedQA academic team,biomedical NLP community,academic/community,US/global,creator/maintainer,medium,Paper-derived biomedical QA benchmark.
+bioasq,BioASQ,BioASQ consortium,European biomedical information retrieval community,consortium/challenge,Europe/global,creator/maintainer,high,Challenge-style benchmark with recurring evaluation batches.
+multimedqa,MultiMedQA,Google Research,"MedQA, MedMCQA, PubMedQA, BioASQ and related datasets",AI company research lab,US/global,suite curator/evaluator,high,Google assembled the suite; component datasets have independent owners.
+healthbench,HealthBench,OpenAI,physician graders and clinical safety community,AI company,US/global,creator/maintainer,high,OpenAI-owned benchmark with physician-designed grading.
+medxpertqa,MedXpertQA,Tsinghua C3I + Shanghai AI Lab,FreedomIntelligence/OpenCompass ecosystem,university–research-lab joint,China,joint creator/maintainer,high,Joint benchmark; ownership should be cited to the paper and repository.
+medbench,MedBench v4/v5,Shanghai AI Lab / OpenCompass,FlagEval and Chinese medical model ecosystem,research institute/platform,China,creator/maintainer,high,Versioned medical evaluation suite.
+cblue,CBLUE,Chinese biomedical NLP community,Alibaba Tianchi data platform and academic users,community/platform,China,creator/maintainer,medium,Community benchmark; data distribution is tied to the official platform.
+cmb,CMB,FreedomIntelligence,Chinese medical LLM ecosystem,AI research organization/company,China,creator/maintainer,high,CMB is maintained by FreedomIntelligence.
+cmexam,CMExam,CUHK AIM / academic community,Chinese medical education and NLP,university/community,Hong Kong/China,creator/maintainer,high,Academic medical examination benchmark.
+gmai_mmbench,GMAI-MMBench,Chinese medical AI research community,medical vision-language research ecosystem,community/research collaboration,China/global,creator/maintainer,medium,Multi-source medical multimodal benchmark; verify exact author consortium per version.
+lab_bench,LAB-Bench,FutureHouse,scientific-agent and biology research community,nonprofit/research organization,US/global,creator/maintainer,high,Research-agent benchmark with public and private splits.
+bixbench,BixBench,FutureHouse / Edison Scientific,computational biology agent ecosystem,research organization/company joint,US/global,joint creator/maintainer,medium,Notebook-derived computational biology benchmark.
+biomysterybench,BioMysteryBench,Anthropic,biology and omics research community,AI company,US/global,creator/maintainer,high,Anthropic-led benchmark; public access scope may be version-dependent.
+lifescibench,LifeSciBench,OpenAI,life-science expert contributors,AI company,US/global,creator/maintainer,high,OpenAI-led expert workflow benchmark.
+genebench,GeneBench,OpenAI,genomics and quantitative biology experts,AI company,US/global,creator/maintainer,high,OpenAI-led genomics benchmark.
+genebench_pro,GeneBench-Pro,OpenAI,genomics and quantitative biology experts,AI company,US/global,creator/maintainer,high,OpenAI-led expert extension of GeneBench.
+healthagentbench,HealthAgentBench,Microsoft Research,clinical agent and tool-use research,AI company research lab,US/global,creator/maintainer,high,Microsoft Research-led agent benchmark.
+biomnibench_da,BiomniBench-DA,xbench / Phylo / Humanlaya Data Lab,biomedical data-analysis agent ecosystem,research platform/company joint,global,joint creator/maintainer,medium,Process-level benchmark; verify organization roles per release.
+paperbenchx,PaperBenchX,UniPat-AI,scientific reproduction and agent evaluation community,research organization/company,global,creator/maintainer,high,Public task repository with a restricted evaluation set.
+sequential_diagnosis,Sequential Diagnosis Benchmark,Microsoft Research,clinical reasoning and sequential decision research,AI company research lab,US/global,creator/maintainer,high,Microsoft Research-led benchmark.
+msdiagnosis,MSDiagnosis,Chinese academic community,Chinese clinical reasoning research,academic/community,China,creator/maintainer,medium,Keep the exact paper author list as the authoritative attribution.
+proteinbench,ProteinBench,ByteDance Research / Seed,protein foundation-model ecosystem,AI company research lab,China/global,creator/maintainer,high,Seed-led protein benchmark.
+pxmeter,PXMeter,ByteDance Seed,Protenix and biomolecular structure ecosystem,AI company research lab,China/global,creator/tool maintainer,high,Evaluation tooling associated with Protenix.
+pxdesignbench,PXDesignBench,ByteDance Seed,protein design ecosystem,AI company research lab,China/global,creator/maintainer,high,Seed-led protein-design benchmark.
+supergpqa,SuperGPQA,ByteDance Seed,M-A-P and broad scientific QA community,AI company research lab,China/global,creator/maintainer,high,General science benchmark with biomedical subsets.
+tdc,Therapeutics Data Commons,Harvard Zitnik Lab,"MIT, Stanford and therapeutic ML collaborators",university lab/consortium,US/global,creator/maintainer,high,Academic drug-discovery benchmark platform.
+moleculenet,MoleculeNet,DeepChem community,academic and industry molecular ML users,open-source community,US/global,creator/maintainer,high,Community benchmark suite rather than one institution-owned dataset.
+lit_pcba,LIT-PCBA,Tsuda Lab / academic community,virtual-screening and molecular docking community,university/community,Japan/global,creator/maintainer,medium,Academic virtual-screening benchmark.
+posebusters,PoseBusters,Academic structure-biology community,molecular docking and pose-generation users,academic/community,Europe/global,creator/maintainer,medium,Community benchmark; exact institutional attribution varies by paper version.
+dude_e,DUD-E,Academic docking community,virtual-screening and cheminformatics users,academic/community,global,legacy community benchmark,medium,Legacy benchmark with distributed maintenance.
+protein_gym,ProteinGym,Marks Lab / OATML and collaborators,"MIT, industry and protein-engineering community",university/industry collaboration,US/global,joint creator/maintainer,high,Multi-institution protein fitness benchmark.
+flip,FLIP/FLIP2,Stanford / NVIDIA / academic collaborators,protein engineering and ML community,university/industry collaboration,US/global,joint creator/maintainer,medium,Industry and academic collaboration; verify version-specific authorship.
+casp,CASP,CASP consortium,protein structure prediction community,international challenge consortium,global,challenge maintainer,high,Recurring blind prediction challenge.
+cameo,CAMEO,SwissModel / SIB,protein structure prediction community,research institute/platform,Switzerland/global,platform maintainer,high,Continuous evaluation service.
+openproblems,Open Problems in Single-Cell Analysis,Open Problems community,CZI and single-cell analysis community,community/consortium,global,creator/maintainer,high,Community-run open benchmark platform.
+scib,scIB,Theis Lab and collaborators,single-cell computational biology community,university/research institute,Germany/global,creator/maintainer,high,Academic evaluation framework.
+gears,GEARS,Stanford SNAP,single-cell perturbation and ML community,university lab,US/global,creator/maintainer,high,Stanford-led perturbation benchmark/model ecosystem.
+medmnist,MedMNIST,Shanghai Jiao Tong University and collaborators,medical imaging education and ML community,university/community,China/global,creator/maintainer,high,Standardized medical imaging dataset suite.
+mimic_cxr,MIMIC-CXR,MIT / PhysioNet,Beth Israel Deaconess and clinical data community,university/platform consortium,US/global,creator/maintainer,high,Credentialed clinical dataset with PhysioNet governance.
+chexpert,CheXpert,Stanford AIMI,clinical imaging and radiology ML community,university institute,US/global,creator/maintainer,high,Stanford-led chest X-ray benchmark.
+camelyon,CAMELYON,Radboud and international pathology community,Grand Challenge pathology ecosystem,international challenge consortium,Europe/global,challenge maintainer,high,Recurring digital pathology challenge family.
+guacamol,GuacaMol,BenevolentAI,molecular generation community,biotech/AI company,UK/global,creator/maintainer,high,Company-origin molecular generation benchmark.
+moses,MOSES,Molecular Sets community,open-source molecular generation users,open-source community,global,creator/maintainer,high,Community-maintained molecular generation suite.

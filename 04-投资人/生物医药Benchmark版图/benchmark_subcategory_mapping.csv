@@ -1,0 +1,46 @@
+benchmark_id,name,primary_domain,primary_subcategory,secondary_subcategories,coverage_mode,task_type,modality,economic_relevance_existing,confidence
+medqa,MedQA-USMLE,临床医学与医学知识,医学考试与临床知识,clinical medicine,direct_or_adjacent,medical multiple choice,text/data/code/multimodal,medium,provisional
+medmcqa,MedMCQA,临床医学与医学知识,医学考试与临床知识,clinical medicine,direct_or_adjacent,medical multiple choice,text/data/code/multimodal,medium,provisional
+pubmedqa,PubMedQA,生物医学NLP与证据检索,文献问答与证据检索,biomedical NLP,direct_or_adjacent,biomedical QA,text/data/code/multimodal,high,provisional
+bioasq,BioASQ,生物医学NLP与证据检索,生物医学检索与问答,biomedical NLP,direct_or_adjacent,biomedical QA and retrieval,text/data/code/multimodal,high,provisional
+multimedqa,MultiMedQA,临床医学与医学知识,多任务医学知识评测,clinical medicine,direct_or_adjacent,medical QA suite,text/data/code/multimodal,high,provisional
+healthbench,HealthBench,临床医学与医学知识,医疗安全与开放式健康对话,clinical medicine,direct_or_adjacent,open-ended medical conversation and safety,text/data/code/multimodal,high,provisional
+medxpertqa,MedXpertQA,临床医学与医学知识,专家级医学推理与多模态诊疗,clinical medicine,direct_or_adjacent,expert medical reasoning and multimodal QA,text/data/code/multimodal,high,provisional
+medbench,MedBench v4/v5,临床医学与医学知识,中文医疗综合评测,clinical medicine,direct_or_adjacent,Chinese medical evaluation suite,text/data/code/multimodal,high,provisional
+cblue,CBLUE,生物医学NLP与证据检索,中文生物医学NLP,biomedical NLP,direct_or_adjacent,Chinese biomedical NLP tasks,text/data/code/multimodal,high,provisional
+cmb,CMB,临床医学与医学知识,医学考试与知识覆盖,clinical medicine,direct_or_adjacent,Chinese medical QA,text/data/code/multimodal,medium,provisional
+cmexam,CMExam,临床医学与医学知识,中文医学考试,clinical medicine,direct_or_adjacent,Chinese medical examination QA,text/data/code/multimodal,medium,provisional
+gmai_mmbench,GMAI-MMBench,医学影像与数字病理,医学多模态与影像推理,medical imaging,direct_or_adjacent,multimodal medical QA and perception,text/data/code/multimodal,high,provisional
+lab_bench,LAB-Bench,生物科研Agent与实验工作流,实验任务与科研工具使用,biological research agents,direct_or_adjacent,biology QA and tool-use,text/data/code/multimodal,high,provisional
+bixbench,BixBench,生物科研Agent与实验工作流,生物信息学 notebook 分析,biological research agents,direct_or_adjacent,computational biology notebook QA,text/data/code/multimodal,high,provisional
+biomysterybench,BioMysteryBench,生物科研Agent与实验工作流,真实组学数据分析,biological research agents,direct_or_adjacent,omics data analysis,text/data/code/multimodal,high,provisional
+lifescibench,LifeSciBench,生物科研Agent与实验工作流,生命科学研究工作流,biological research agents,direct_or_adjacent,life-science workflows,text/data/code/multimodal,high,provisional
+genebench,GeneBench,遗传学与基因组学,统计遗传学与数量遗传学,genomics and quantitative biology,direct_or_adjacent,multi-stage data analysis,text/data/code/multimodal,high,provisional
+genebench_pro,GeneBench-Pro,遗传学与基因组学,综合遗传学与功能基因组学,genomics and quantitative biology,direct_or_adjacent,expert genomics reasoning,text/data/code/multimodal,high,provisional
+healthagentbench,HealthAgentBench,临床时间序列与医疗Agent,医疗 Agent 与工具调用,clinical agents,direct_or_adjacent,tool-use and clinical workflow,text/data/code/multimodal,high,provisional
+biomnibench_da,BiomniBench-DA,生物科研Agent与实验工作流,生物医学数据分析 Agent,biomedical research agents,direct_or_adjacent,process-level biomedical data analysis,text/data/code/multimodal,high,provisional
+paperbenchx,PaperBenchX,科学复现与一般科学推理,论文复现与科学计算,scientific reproduction with biomedical subset,direct_or_adjacent,scientific paper reproduction and evidence validation,text/data/code/multimodal,high,provisional
+sequential_diagnosis,Sequential Diagnosis Benchmark,临床时间序列与医疗Agent,连续诊断与病程决策,clinical agents,direct_or_adjacent,sequential diagnosis and test selection,text/data/code/multimodal,high,provisional
+msdiagnosis,MSDiagnosis,临床医学与医学知识,中文医学诊断,clinical medicine,direct_or_adjacent,multi-step Chinese clinical diagnosis,text/data/code/multimodal,high,provisional
+proteinbench,ProteinBench,蛋白质与结构生物学,蛋白质基础模型评测,protein foundation models,direct_or_adjacent,protein model evaluation,text/data/code/multimodal,high,provisional
+pxmeter,PXMeter,蛋白质与结构生物学,蛋白质结构评测,protein and biomolecular structure,direct_or_adjacent,structure prediction evaluation,text/data/code/multimodal,high,provisional
+pxdesignbench,PXDesignBench,蛋白质与结构生物学,蛋白质设计,protein design,direct_or_adjacent,protein design evaluation,text/data/code/multimodal,high,provisional
+supergpqa,SuperGPQA,科学复现与一般科学推理,泛科学高难度推理,general science with biomedical subset,direct_or_adjacent,graduate-level scientific QA,text/data/code/multimodal,medium-high,provisional
+tdc,Therapeutics Data Commons,药物发现与分子机器学习,药物发现与药物反应,drug discovery,direct_or_adjacent,drug discovery ML tasks,text/data/code/multimodal,high,provisional
+moleculenet,MoleculeNet,药物发现与分子机器学习,分子性质预测,drug discovery,direct_or_adjacent,molecular property prediction,text/data/code/multimodal,medium,provisional
+lit_pcba,LIT-PCBA,药物发现与分子机器学习,虚拟筛选,drug discovery,direct_or_adjacent,virtual screening,text/data/code/multimodal,high,provisional
+posebusters,PoseBusters,药物发现与分子机器学习,分子对接与结构质量,drug discovery,direct_or_adjacent,pose validity and docking,text/data/code/multimodal,high,provisional
+dude_e,DUD-E,药物发现与分子机器学习,虚拟筛选基准,drug discovery,direct_or_adjacent,virtual screening,text/data/code/multimodal,medium,provisional
+protein_gym,ProteinGym,蛋白质与结构生物学,蛋白突变效应,protein engineering,direct_or_adjacent,mutation effect prediction,text/data/code/multimodal,high,provisional
+flip,FLIP/FLIP2,蛋白质与结构生物学,蛋白表示与工程,protein engineering,direct_or_adjacent,protein fitness prediction,text/data/code/multimodal,high,provisional
+casp,CASP,蛋白质与结构生物学,蛋白质结构预测,protein structure,direct_or_adjacent,blind structure prediction,text/data/code/multimodal,high,provisional
+cameo,CAMEO,蛋白质与结构生物学,连续结构预测评测,protein structure,direct_or_adjacent,continuous structure prediction,text/data/code/multimodal,high,provisional
+openproblems,Open Problems in Single-Cell Analysis,功能基因组学与单细胞,单细胞分析开放问题,single-cell and omics,direct_or_adjacent,single-cell prediction and integration,text/data/code/multimodal,high,provisional
+scib,scIB,功能基因组学与单细胞,单细胞数据整合,single-cell omics,direct_or_adjacent,integration and batch correction,text/data/code/multimodal,high,provisional
+gears,GEARS,功能基因组学与单细胞,基因扰动预测,single-cell perturbation,direct_or_adjacent,gene perturbation prediction,text/data/code/multimodal,high,provisional
+medmnist,MedMNIST,医学影像与数字病理,标准化医学影像,medical imaging,direct_or_adjacent,image classification,text/data/code/multimodal,medium,provisional
+mimic_cxr,MIMIC-CXR,医学影像与数字病理,胸部影像与临床报告,medical imaging,direct_or_adjacent,chest X-ray and report modeling,text/data/code/multimodal,high,provisional
+chexpert,CheXpert,医学影像与数字病理,胸部 X 光,medical imaging,direct_or_adjacent,chest X-ray classification,text/data/code/multimodal,high,provisional
+camelyon,CAMELYON,医学影像与数字病理,数字病理,digital pathology,direct_or_adjacent,lymph-node metastasis detection,text/data/code/multimodal,high,provisional
+guacamol,GuacaMol,药物发现与分子机器学习,分子生成,drug discovery,direct_or_adjacent,molecular generation,text/data/code/multimodal,medium-high,provisional
+moses,MOSES,药物发现与分子机器学习,分子生成评测,drug discovery,direct_or_adjacent,molecular generation,text/data/code/multimodal,medium,provisional

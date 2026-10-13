@@ -1,0 +1,455 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/zehaoli0324-cloud/groundsignal/schemas/ground-evidence.v1.schema.json",
+  "title": "GroundSignal GroundEvidence ledger / manifest v1",
+  "description": "Structural contract. Reference integrity, support quotes, PIT chronology, synthetic separation and source independence require scripts/ground_evidence.py validation.",
+  "$defs": {
+    "time": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "(?:Z|[+-]\\d{2}:\\d{2})$"
+    },
+    "entity": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "aliases"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "aliases": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "identity_status": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "event": {
+      "type": "object",
+      "required": [
+        "id",
+        "event_type",
+        "title",
+        "entity_ids",
+        "event_time",
+        "created_at"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "event_type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "entity_ids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "product": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "event_time": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^\\d{4}(?:-\\d{2}(?:-\\d{2})?)?$"
+        },
+        "created_at": {
+          "$ref": "#/$defs/time"
+        }
+      }
+    },
+    "legal": {
+      "type": "object",
+      "required": [
+        "public_access",
+        "auth_required",
+        "robots_reviewed",
+        "tos_reviewed",
+        "redistribution_status",
+        "personal_data",
+        "reviewer",
+        "reviewed_at"
+      ],
+      "properties": {
+        "public_access": {
+          "enum": [
+            "UNKNOWN",
+            true,
+            false
+          ]
+        },
+        "auth_required": {
+          "enum": [
+            "UNKNOWN",
+            true,
+            false
+          ]
+        },
+        "robots_reviewed": {
+          "type": "boolean"
+        },
+        "tos_reviewed": {
+          "type": "boolean"
+        },
+        "redistribution_status": {
+          "enum": [
+            "UNKNOWN",
+            "ALLOWED",
+            "RESTRICTED"
+          ]
+        },
+        "personal_data": {
+          "enum": [
+            "UNASSESSED",
+            true,
+            false
+          ]
+        },
+        "reviewer": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reviewed_at": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/time"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "review": {
+      "type": "object",
+      "required": [
+        "id",
+        "evidence_id",
+        "at",
+        "decision",
+        "reviewer",
+        "reason"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "at": {
+          "$ref": "#/$defs/time"
+        },
+        "decision": {
+          "enum": [
+            "SUPPORT",
+            "CONFIRM",
+            "COUNTER",
+            "REJECT"
+          ]
+        },
+        "reviewer": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "supporting_quote": {
+          "type": "string"
+        },
+        "independence_group": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "event_update": {
+      "type": "object",
+      "required": [
+        "id",
+        "event_id",
+        "at",
+        "action",
+        "reviewer",
+        "reason"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "event_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "at": {
+          "$ref": "#/$defs/time"
+        },
+        "action": {
+          "enum": [
+            "REJECT",
+            "SUPERSEDE"
+          ]
+        },
+        "replacement_event_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reviewer": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "required": [
+        "id",
+        "event_id",
+        "evidence_type",
+        "source_url",
+        "source_domain",
+        "source_tier",
+        "published_at",
+        "first_seen_at",
+        "retrieved_at",
+        "processed_at",
+        "raw_fingerprint",
+        "fingerprint_scope",
+        "source_independence_group",
+        "content_excerpt",
+        "access_mode",
+        "original_source_checked",
+        "legal_basis",
+        "cited_source_url",
+        "lineage"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "event_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_url": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https?://"
+        },
+        "source_domain": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_tier": {
+          "enum": [
+            "T1",
+            "T2",
+            "T3",
+            "UNKNOWN"
+          ]
+        },
+        "published_at": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/time"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "first_seen_at": {
+          "$ref": "#/$defs/time"
+        },
+        "retrieved_at": {
+          "$ref": "#/$defs/time"
+        },
+        "processed_at": {
+          "$ref": "#/$defs/time"
+        },
+        "raw_fingerprint": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "fingerprint_scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_independence_group": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "content_excerpt": {
+          "type": "string",
+          "minLength": 1
+        },
+        "access_mode": {
+          "type": "string",
+          "minLength": 1
+        },
+        "original_source_checked": {
+          "type": "boolean"
+        },
+        "legal_basis": {
+          "$ref": "#/$defs/legal"
+        },
+        "cited_source_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "lineage": {
+          "type": "object",
+          "minProperties": 1
+        }
+      }
+    }
+  },
+  "type": "object",
+  "required": [
+    "schema_version",
+    "title",
+    "mode",
+    "created_at",
+    "stale_after_days",
+    "entities",
+    "events",
+    "reviews",
+    "event_updates"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "groundsignal.ground-evidence.v1"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "mode": {
+      "enum": [
+        "repository_backfill",
+        "collector_import",
+        "synthetic"
+      ]
+    },
+    "created_at": {
+      "$ref": "#/$defs/time"
+    },
+    "stale_after_days": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3650
+    },
+    "entities": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/entity"
+      }
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/event"
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/evidence"
+      }
+    },
+    "evidence_files": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "reviews": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/review"
+      }
+    },
+    "event_updates": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/event_update"
+      }
+    }
+  },
+  "oneOf": [
+    {
+      "required": [
+        "evidence"
+      ],
+      "not": {
+        "required": [
+          "evidence_files"
+        ]
+      }
+    },
+    {
+      "required": [
+        "evidence_files"
+      ],
+      "not": {
+        "required": [
+          "evidence"
+        ]
+      }
+    }
+  ]
+}

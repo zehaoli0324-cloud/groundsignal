@@ -1,0 +1,38 @@
+{
+  "id": "repo_evt_202403_blackwell",
+  "event_id": "evt_202403_blackwell",
+  "evidence_type": "disclosure",
+  "source_url": "https://github.com/zehaoli0324-cloud/groundsignal/blob/5506f8fa131f446e884762996387afc0b4d29b5d/ai-compute/04-%E4%BA%8B%E4%BB%B6/2024-03-NVIDIA%E5%8F%91%E5%B8%83Blackwell.md",
+  "source_domain": "github.com",
+  "source_tier": "UNKNOWN",
+  "published_at": null,
+  "first_seen_at": "2026-10-13T12:17:42+00:00",
+  "retrieved_at": "2026-10-13T12:17:42+00:00",
+  "processed_at": "2026-10-13T12:17:42+00:00",
+  "raw_fingerprint": "d2d4b24712755383338d001d9800b387d8202ba8a8daabaadb2c0d8f2f490263",
+  "fingerprint_scope": "repository_markdown",
+  "source_independence_group": null,
+  "content_excerpt": "发布 B200/GB200（Blackwell 架构）",
+  "access_mode": "repository_backfill",
+  "original_source_checked": false,
+  "legal_basis": {
+    "public_access": "UNKNOWN",
+    "auth_required": "UNKNOWN",
+    "robots_reviewed": false,
+    "tos_reviewed": false,
+    "redistribution_status": "UNKNOWN",
+    "personal_data": "UNASSESSED",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  "cited_source_url": null,
+  "lineage": {
+    "repository_commit": "5506f8fa131f446e884762996387afc0b4d29b5d",
+    "repository_path": "ai-compute/04-事件/2024-03-NVIDIA发布Blackwell.md",
+    "declared_fetched_at": "2026-08-26",
+    "declared_verified_at": "2026-08-26",
+    "legacy_event_type": "NEW_PRODUCT",
+    "original_article_retrieved": false,
+    "note": "原文是仓库事件笔记，不是原始商业凭证；历史置信度不继承为确认状态"
+  }
+}

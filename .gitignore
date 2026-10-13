@@ -1,2 +1,17 @@
 release/
 __pycache__/
+.collector-cache/
+collector-startup-error.log
+.build-venv/
+build/
+
+# Local settings, credentials and generated previews
+collector-config.json
+.env
+.env.*
+!.env.example
+board.html
+collection-board.html
+panorama.html
+collector-preview.jpg
+obsidian-connection-preview.jpg

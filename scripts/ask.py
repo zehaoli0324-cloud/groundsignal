@@ -324,6 +324,8 @@ def main():
     ap = argparse.ArgumentParser(description='Obsidian 企业情报 vault 问询 → HTML 看板')
     ap.add_argument('vault', help='vault 路径')
     ap.add_argument('query', help='查询词（实体名或问题）')
+    ap.add_argument('--collect', action='store_true',
+                    help='先联网采集再生成看板；查询词必须是公司名称')
     ap.add_argument('-o', '--output', default=None, help='输出 HTML 路径')
     ap.add_argument('-t', '--template', default=None,
                     help='看板模板路径（默认: 脚本同级 templates/board.html）')
@@ -340,6 +342,15 @@ def main():
     if not os.path.isdir(args.vault):
         print(f'❌ vault 路径不存在: {args.vault}', file=sys.stderr)
         sys.exit(1)
+
+    if args.collect:
+        from collect import collect
+        try:
+            result = collect(args.query, args.vault)
+            print(f'自动采集完成: {result["search_results"]} 条线索 → {result["note"]}')
+        except Exception as exc:
+            print(f'自动采集失败，未生成新看板: {exc}', file=sys.stderr)
+            sys.exit(1)
 
     notes = scan_vault(args.vault)
     # 问题句式：先尝试精确匹配，再尝试实体名子串匹配

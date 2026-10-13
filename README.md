@@ -259,6 +259,8 @@ docs/            architecture · source methodology · schema · evaluation · u
 
 ## Documentation
 
+- **图形界面**：双击 `启动采集界面.vbs`，输入公司名称并点击“搜索并保存”。详见 `界面使用说明.md`。
+- `docs/11-auto-collection.md` — 自动联网搜索公司并写入 Obsidian（`python scripts/collect.py "公司名称"`；仓库路径见 `collector-config.json`）
 - `docs/02-企业情报数据库-架构与Proposal.md` — architecture
 - `docs/04-search-methods.md` — data sources & retrieval methodology
 - `docs/06-eval-report.md` — Eval v1

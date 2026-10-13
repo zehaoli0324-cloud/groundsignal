@@ -1,12 +1,12 @@
-# 生物医药 Benchmark 版图
+# 生物方向的benchmark调查报告
 
 **连接机构、评测任务与产业需求，理解 AI 在生物医药中已经被评测了什么，以及哪些能力值得进一步验证。**
 
-这是 [GroundSignal](../../README.md) 的生物医药 AI 评测研究专题。项目从公开 Benchmark 出发，整理其创建与维护机构、领域覆盖、任务形式、质量初评和价值证据，为投资研究、模型评测和科研任务设计提供一个可追溯的入口。
+这是 [GroundSignal](../README.md) 的生物医药 AI 评测研究专题。项目从公开 Benchmark 出发，整理其创建与维护机构、领域覆盖、任务形式、质量初评和价值证据，为投资研究、模型评测和科研任务设计提供一个可追溯的入口。
 
 **当前交付：45 条 Benchmark 登记记录、39 条机构实体记录、六张关联数据表及专题分析文档。** 当前阶段为研究型版图库；持续更新、交互查询与模型实跑评测是下一步建设方向。
 
-[快速概览 PDF](biomedical_benchmark_investor_memo_7p.pdf) · [Benchmark 总表](benchmark_registry.csv) · [领域映射](benchmark_subcategory_mapping.csv) · [整理方法](ORGANIZATION_SUBCATEGORY_VALUE_PLAN.md) · [新调查报告 PDF](生物医药Benchmark_机构版图与实用价值调查报告_2026-10-13.pdf)
+[快速概览 PDF](专题概览_历史版.pdf) · [Benchmark 总表](benchmark_registry.csv) · [领域映射](benchmark_subcategory_mapping.csv) · [整理方法](ORGANIZATION_SUBCATEGORY_VALUE_PLAN.md) · [生物方向的benchmark调查报告 PDF](生物方向的benchmark调查报告_2026-10-13.pdf)
 
 ## 为什么做这份版图
 
@@ -78,7 +78,7 @@
 
 **机构归属更新说明：** [BixBench 官方仓库](https://github.com/Future-House/BixBench)明确署名 FutureHouse 与 ScienceMachine 合作，与当前 CSV 中的“FutureHouse / Edison Scientific”存在差异。本次更新在 README 与调查报告中记录差异，CSV 的逐项归一化需另行核验。Google 是 [MultiMedQA 的套件汇编者](https://research.google/pubs/large-language-models-encode-clinical-knowledge/)，组件数据集各有自己的创建与维护机构。Microsoft 两项评测的具体团队应分别核验。
 
-进一步阅读：[OpenAI](https://openai.com/index/healthbench/) · [Anthropic](https://www.anthropic.com/research/Evaluating-Claude-For-Bioinformatics-With-BioMysteryBench) · [ByteDance ProteinBench](https://proteinbench.github.io/) · [清华 / 上海 AI Lab MedXpertQA](https://medxpertqa.github.io/) · [MedBench 平台更新](https://www.shlab.org.cn/news/5444287)。更多项目来源见[调查报告](生物医药Benchmark调查报告_2026-10-13.md)。
+进一步阅读：[OpenAI](https://openai.com/index/healthbench/) · [Anthropic](https://www.anthropic.com/research/Evaluating-Claude-For-Bioinformatics-With-BioMysteryBench) · [ByteDance ProteinBench](https://proteinbench.github.io/) · [清华 / 上海 AI Lab MedXpertQA](https://medxpertqa.github.io/) · [MedBench 平台更新](https://www.shlab.org.cn/news/5444287)。更多项目来源见[调查报告](生物方向的benchmark调查报告_2026-10-13.md)。
 
 ## 各大类 Benchmark 的实用意义
 
@@ -103,13 +103,13 @@
 
 以“功能基因组学与单细胞”为例，评测的实用意义是判断整合方法是否保留生物差异，或扰动预测是否在未见条件上提供实验前排序增益。正式题目应加入无变化与均值基线、生物重复、批次诊断和留出条件，而不只报告整体表达相关性。
 
-[完整调查报告 PDF](生物医药Benchmark_机构版图与实用价值调查报告_2026-10-13.pdf)详细展开十个已收录大类的使用者、决策、验收、价值与边界，并讨论两个待补类别、市场需求、竞争格局与最小试点。
+[完整调查报告 PDF](生物方向的benchmark调查报告_2026-10-13.pdf)详细展开十个已收录大类的使用者、决策、验收、价值与边界，并讨论两个待补类别、市场需求、竞争格局与最小试点。
 
 ## 从哪里开始
 
 ### 做投资或产业研究
 
-先读 [投资人概览 PDF](biomedical_benchmark_investor_memo_7p.pdf)，再沿着“**领域 → 任务 → 工作流 → 买方 → 价值证据**”追查。
+先读 [专题概览 PDF（历史版）](专题概览_历史版.pdf)，再沿着“**领域 → 任务 → 工作流 → 买方 → 价值证据**”追查。
 
 例如，研究蛋白质设计方向时，可以从 PXDesignBench 定位任务与官方入口，从机构表了解相关团队，再检查价值证据表中的候选筛选、实验验证和潜在买方描述。随后需要寻找具体的采用、实验效果或交易证据，确认这些潜在需求是否形成了实际价值。
 
@@ -165,7 +165,7 @@ cd groundsignal
 import csv
 from pathlib import Path
 
-root = Path("04-投资人/生物医药Benchmark版图")
+root = Path("生物方向的benchmark调查报告")
 
 def read_table(name):
     with (root / name).open(encoding="utf-8-sig", newline="") as f:
@@ -249,8 +249,8 @@ GroundSignal 面向可追溯、可比较和可持续更新的情报。本专题�
 
 | 文档 | 用途 |
 | --- | --- |
-| [机构版图与实用价值调查报告 PDF](生物医药Benchmark_机构版图与实用价值调查报告_2026-10-13.pdf) / [Markdown](生物医药Benchmark调查报告_2026-10-13.md) | 新调查报告：机构分类、各类用途、需求与商业验证、试点和实施路线 |
-| [投资人概览 PDF](biomedical_benchmark_investor_memo_7p.pdf) | 快速阅读当前专题概览 |
+| [生物方向的benchmark调查报告 PDF](生物方向的benchmark调查报告_2026-10-13.pdf) / [Markdown](生物方向的benchmark调查报告_2026-10-13.md) | 新调查报告：机构分类、各类用途、需求与商业验证、试点和实施路线 |
+| [专题概览 PDF（历史版）](专题概览_历史版.pdf) | 快速阅读当前专题概览 |
 | [组织、子领域与经济价值整理方案](ORGANIZATION_SUBCATEGORY_VALUE_PLAN.md) | 四层结构、12 类领域、价值评分与证据方法 |
 | [Benchmark 组织分类](ORGANIZATION_CLASSIFICATION.md) | 按公司、研究机构、高校和挑战社区浏览 |
 | [平行生物医药分类](PARALLEL_BIOMEDICINE_CLASSIFICATION.md) | 查看遗传学图谱之外的医学题目分类口径 |

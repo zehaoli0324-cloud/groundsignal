@@ -1,4 +1,4 @@
-# 生物医药 Benchmark 机构版图与实用价值调查报告
+# 生物方向的benchmark调查报告
 
 研究日期：2026-10-13
 
@@ -448,7 +448,7 @@ R14 本次可核验作者预印本的检索元数据，正文访问受限；过�
 
 [R28] ByteDance Seed：SuperGPQA 官方介绍。https://seed.bytedance.com/en/blog/doubao-seed-team-launched-supergpqa-an-open-source-benchmark-test-set-covering-285-disciplines
 
-仓库数据来源：GroundSignal / 04-投资人/生物医药Benchmark版图，main 提交 ed60c7d。统计来自 benchmark_registry、benchmark_organization、organization_entity、benchmark_subcategory_mapping、benchmark_assessment、benchmark_economic_value_evidence 六张 CSV。
+仓库数据来源：GroundSignal 生物方向的benchmark调查报告专题；统计基于重命名前 main 提交 ed60c7d 的 CSV 快照。统计来自 benchmark_registry、benchmark_organization、organization_entity、benchmark_subcategory_mapping、benchmark_assessment、benchmark_economic_value_evidence 六张 CSV。
 
 现有登记表中的长尾项目与上述重点核验来源具有不同证据状态。网页或官方介绍可支持项目身份与描述，不能替代合同、临床试验、实验命中或独立复现证据。
 

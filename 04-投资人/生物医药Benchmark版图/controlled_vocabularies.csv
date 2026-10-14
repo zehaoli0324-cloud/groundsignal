@@ -1,0 +1,12 @@
+field,code,meaning,usage_note
+question_status,public-download,公开下载,通常可以按许可证整理本地副本
+question_status,public-gated,公开但受门槛限制,需要注册、申请或接受使用条款
+question_status,paper-or-leaderboard,有论文/榜单但未取得完整题目,不能把任务数当成已落地题目数
+question_status,not-question-based,不是传统问答题,输入数据、结构或测试案例构成评测对象
+evidence_grade,A,公开合同、采购、授权或价格,已实现商业价值的强证据
+evidence_grade,B,官方产品集成、企业服务或正式合作,可验证产业使用价值
+evidence_grade,C,长期榜单、标准或多机构重复采用,标准层影响力，不等于付费
+evidence_grade,D,基于数据稀缺、决策影响和替代成本推断,潜在价值，不等于已商业化
+evidence_grade,E,证据不足,仅作候选方向
+record_status,provisional,初步整理,需要继续补充来源、访谈或人工审计
+score_type,heuristic_potential_priority,启发式潜在价值优先级,不是收入、估值或市场规模

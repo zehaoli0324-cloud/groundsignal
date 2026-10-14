@@ -1,0 +1,4 @@
+benchmark_id,source_description,record_count,direct_count,related_count,out_of_taxonomy_count,review_count,summary_file,detail_file,reading_note
+cmb,CMB 题目级分类,280839,220,2944,272674,5001,data/normalized/biological_question_taxonomy_summary.csv,data/normalized/biological_question_taxonomy.jsonl,先看 summary，再按 benchmark_id 和 directness 过滤 JSONL
+lab_bench,LAB-Bench 记录级分类,1967,0,1505,0,462,data/normalized/biological_question_taxonomy_summary.csv,data/normalized/biological_question_taxonomy.jsonl,先看 summary，再按 benchmark_id 和 directness 过滤 JSONL
+paperbenchx,PaperBenchX 任务级分类,12,1,0,11,0,data/normalized/biological_question_taxonomy_summary.csv,data/normalized/biological_question_taxonomy.jsonl,先看 summary，再按 benchmark_id 和 directness 过滤 JSONL

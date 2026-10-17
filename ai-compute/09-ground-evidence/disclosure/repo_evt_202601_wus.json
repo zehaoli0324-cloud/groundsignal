@@ -1,0 +1,38 @@
+{
+  "id": "repo_evt_202601_wus",
+  "event_id": "evt_202601_wus",
+  "evidence_type": "disclosure",
+  "source_url": "https://github.com/zehaoli0324-cloud/groundsignal/blob/5506f8fa131f446e884762996387afc0b4d29b5d/ai-compute/04-%E4%BA%8B%E4%BB%B6/2026-01-%E6%B2%AA%E7%94%B5%E8%82%A1%E4%BB%BD%E6%88%90%E4%B8%BAGB300%E6%A0%B8%E5%BF%83PCB%E4%BE%9B%E5%BA%94%E5%95%86.md",
+  "source_domain": "github.com",
+  "source_tier": "UNKNOWN",
+  "published_at": null,
+  "first_seen_at": "2026-10-13T12:17:42+00:00",
+  "retrieved_at": "2026-10-13T12:17:42+00:00",
+  "processed_at": "2026-10-13T12:17:42+00:00",
+  "raw_fingerprint": "e9d6669eb2c1b695e5c9b379e3057a05f97ced6723e309774904252db8a85a5a",
+  "fingerprint_scope": "repository_markdown",
+  "source_independence_group": null,
+  "content_excerpt": "GB300 UBB 基板核心供应（财富号口径）",
+  "access_mode": "repository_backfill",
+  "original_source_checked": false,
+  "legal_basis": {
+    "public_access": "UNKNOWN",
+    "auth_required": "UNKNOWN",
+    "robots_reviewed": false,
+    "tos_reviewed": false,
+    "redistribution_status": "UNKNOWN",
+    "personal_data": "UNASSESSED",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  "cited_source_url": "https://caifuhao.eastmoney.com/news/20260114173150151128000",
+  "lineage": {
+    "repository_commit": "5506f8fa131f446e884762996387afc0b4d29b5d",
+    "repository_path": "ai-compute/04-事件/2026-01-沪电股份成为GB300核心PCB供应商.md",
+    "declared_fetched_at": "2026-08-26",
+    "declared_verified_at": "2026-08-26",
+    "legacy_event_type": "NEW_CUSTOMER",
+    "original_article_retrieved": false,
+    "note": "原文是仓库事件笔记，不是原始商业凭证；历史置信度不继承为确认状态"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "repo_evt_2026_cowos125",
+  "event_id": "evt_2026_cowos125",
+  "evidence_type": "capacity",
+  "source_url": "https://github.com/zehaoli0324-cloud/groundsignal/blob/5506f8fa131f446e884762996387afc0b4d29b5d/ai-compute/04-%E4%BA%8B%E4%BB%B6/2026-%E5%8F%B0%E7%A7%AF%E7%94%B5CoWoS%E6%9C%88%E4%BA%A7%E8%83%BD%E7%9B%AE%E6%A0%8712.5%E4%B8%87%E7%89%87.md",
+  "source_domain": "github.com",
+  "source_tier": "UNKNOWN",
+  "published_at": null,
+  "first_seen_at": "2026-10-13T12:17:42+00:00",
+  "retrieved_at": "2026-10-13T12:17:42+00:00",
+  "processed_at": "2026-10-13T12:17:42+00:00",
+  "raw_fingerprint": "900cad1fb0241ecb0be99ce0c90974badb0dcab26d4ab6226e06caba5467b408",
+  "fingerprint_scope": "repository_markdown",
+  "source_independence_group": null,
+  "content_excerpt": "上调 2026-2027 CoWoS 产能目标至月产 12.5 万片以上",
+  "access_mode": "repository_backfill",
+  "original_source_checked": false,
+  "legal_basis": {
+    "public_access": "UNKNOWN",
+    "auth_required": "UNKNOWN",
+    "robots_reviewed": false,
+    "tos_reviewed": false,
+    "redistribution_status": "UNKNOWN",
+    "personal_data": "UNASSESSED",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  "cited_source_url": "https://post.smzdm.com/p/a7g5pg4l/",
+  "lineage": {
+    "repository_commit": "5506f8fa131f446e884762996387afc0b4d29b5d",
+    "repository_path": "ai-compute/04-事件/2026-台积电CoWoS月产能目标12.5万片.md",
+    "declared_fetched_at": "2026-08-26",
+    "declared_verified_at": "2026-08-26",
+    "legacy_event_type": "CAPACITY_EXPANSION",
+    "original_article_retrieved": false,
+    "note": "原文是仓库事件笔记，不是原始商业凭证；历史置信度不继承为确认状态"
+  }
+}

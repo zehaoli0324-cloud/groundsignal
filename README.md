@@ -259,6 +259,7 @@ docs/            architecture · source methodology · schema · evaluation · u
 
 ## Documentation
 
+- **Issue #1 最小 Demo**：直接打开 [`samples/ground-evidence/demo.html`](samples/ground-evidence/demo.html)，或运行 `python scripts/evidence_demo.py`。支持独立证据计数、状态变化、按时间回放与 CSV/JSONL 导出；8 条真实仓库回填与虚构流程分开展示，详见 [`docs/14-ground-evidence-demo.md`](docs/14-ground-evidence-demo.md)。尚未证明真实提前发现。
 - **图形界面**：双击 `启动采集界面.vbs`，输入公司名称并点击“搜索并保存”。详见 `界面使用说明.md`。
 - `docs/11-auto-collection.md` — 自动联网搜索公司并写入 Obsidian（`python scripts/collect.py "公司名称"`；仓库路径见 `collector-config.json`）
 - `docs/02-企业情报数据库-架构与Proposal.md` — architecture

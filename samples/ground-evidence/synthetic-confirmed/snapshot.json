@@ -1,0 +1,230 @@
+{
+  "schema_version": "groundsignal.event-snapshot.v1",
+  "mode": "synthetic",
+  "title": "模拟供应关系：独立证据、确认与反证",
+  "as_of": "2026-05-21T08:15:00+00:00",
+  "entities": [
+    {
+      "id": "demo_supplier",
+      "name": "演示芯片厂（虚构）",
+      "aliases": []
+    },
+    {
+      "id": "demo_customer",
+      "name": "演示客户（虚构）",
+      "aliases": []
+    }
+  ],
+  "events": [
+    {
+      "event_id": "demo_supply_v1",
+      "title": "虚构案例：演示芯片厂向演示客户供货",
+      "event_type": "NEW_SUPPLIER",
+      "entity_ids": [
+        "demo_supplier",
+        "demo_customer"
+      ],
+      "product": "演示加速卡 V1（虚构）",
+      "event_time": null,
+      "status": "VERIFIED",
+      "status_reason": "一手来源已被明确核对并确认",
+      "evidence_count": 4,
+      "independent_sources": 3,
+      "unresolved_origins": 0,
+      "last_verified_at": "2026-05-21T08:15:00+00:00",
+      "superseded_at": null,
+      "superseded_by": null,
+      "evidence": [
+        {
+          "id": "demo_qualification",
+          "event_id": "demo_supply_v1",
+          "evidence_type": "qualification",
+          "source_url": "https://example.invalid/synthetic/qualification",
+          "source_domain": "example.invalid",
+          "source_tier": "T2",
+          "published_at": "2026-04-03T08:00:00Z",
+          "first_seen_at": "2026-04-03T08:00:00Z",
+          "retrieved_at": "2026-04-03T08:00:00Z",
+          "processed_at": "2026-04-03T08:00:00Z",
+          "raw_fingerprint": "366c22cab0a6eaf80a2edac1db011d455ef7c2daee5e806787a853a797491323",
+          "fingerprint_scope": "synthetic_document",
+          "source_independence_group": null,
+          "content_excerpt": "虚构资格资料：演示加速卡 V1 已通过演示客户的资格审核。",
+          "access_mode": "synthetic_fixture",
+          "original_source_checked": true,
+          "legal_basis": {
+            "public_access": "UNKNOWN",
+            "auth_required": "UNKNOWN",
+            "robots_reviewed": false,
+            "tos_reviewed": false,
+            "redistribution_status": "UNKNOWN",
+            "personal_data": "UNASSESSED",
+            "reviewer": null,
+            "reviewed_at": null
+          },
+          "cited_source_url": null,
+          "lineage": {
+            "synthetic": true,
+            "scenario": "issue_1_state_machine",
+            "note": "全文、主体、来源和时间均为虚构测试材料"
+          },
+          "review": {
+            "id": "review_qualification",
+            "evidence_id": "demo_qualification",
+            "at": "2026-04-03T08:15:00Z",
+            "decision": "SUPPORT",
+            "independence_group": "origin_qualification",
+            "supporting_quote": "虚构资格资料：演示加速卡 V1 已通过演示客户的资格审核。",
+            "reviewer": "synthetic_fixture",
+            "reason": "模拟审核，供回放测试"
+          }
+        },
+        {
+          "id": "demo_pilot",
+          "event_id": "demo_supply_v1",
+          "evidence_type": "delivery",
+          "source_url": "https://example.invalid/synthetic/pilot",
+          "source_domain": "example.invalid",
+          "source_tier": "T2",
+          "published_at": "2026-04-10T08:00:00Z",
+          "first_seen_at": "2026-04-10T08:00:00Z",
+          "retrieved_at": "2026-04-10T08:00:00Z",
+          "processed_at": "2026-04-10T08:00:00Z",
+          "raw_fingerprint": "6571b60620bac7d990dff5893ae320d38f8ea7796eec3d7cef0e97358d85da41",
+          "fingerprint_scope": "synthetic_document",
+          "source_independence_group": null,
+          "content_excerpt": "虚构交付记录：演示客户已收到演示加速卡 V1 的试产批次。",
+          "access_mode": "synthetic_fixture",
+          "original_source_checked": true,
+          "legal_basis": {
+            "public_access": "UNKNOWN",
+            "auth_required": "UNKNOWN",
+            "robots_reviewed": false,
+            "tos_reviewed": false,
+            "redistribution_status": "UNKNOWN",
+            "personal_data": "UNASSESSED",
+            "reviewer": null,
+            "reviewed_at": null
+          },
+          "cited_source_url": null,
+          "lineage": {
+            "synthetic": true,
+            "scenario": "issue_1_state_machine",
+            "note": "全文、主体、来源和时间均为虚构测试材料"
+          },
+          "review": {
+            "id": "review_pilot",
+            "evidence_id": "demo_pilot",
+            "at": "2026-04-10T08:15:00Z",
+            "decision": "SUPPORT",
+            "independence_group": "origin_delivery",
+            "supporting_quote": "虚构交付记录：演示客户已收到演示加速卡 V1 的试产批次。",
+            "reviewer": "synthetic_fixture",
+            "reason": "模拟审核，供回放测试"
+          }
+        },
+        {
+          "id": "demo_reprint",
+          "event_id": "demo_supply_v1",
+          "evidence_type": "delivery",
+          "source_url": "https://example.invalid/synthetic/reprint",
+          "source_domain": "example.invalid",
+          "source_tier": "T3",
+          "published_at": "2026-04-11T08:00:00Z",
+          "first_seen_at": "2026-04-11T08:00:00Z",
+          "retrieved_at": "2026-04-11T08:00:00Z",
+          "processed_at": "2026-04-11T08:00:00Z",
+          "raw_fingerprint": "c5dd1ec6ec5a1c460925f3dbe8e62eeefc2f2460b53257f93a6e446c53bebf7c",
+          "fingerprint_scope": "synthetic_document",
+          "source_independence_group": null,
+          "content_excerpt": "虚构转载：根据资格资料，演示加速卡 V1 已通过演示客户的资格审核。",
+          "access_mode": "synthetic_fixture",
+          "original_source_checked": true,
+          "legal_basis": {
+            "public_access": "UNKNOWN",
+            "auth_required": "UNKNOWN",
+            "robots_reviewed": false,
+            "tos_reviewed": false,
+            "redistribution_status": "UNKNOWN",
+            "personal_data": "UNASSESSED",
+            "reviewer": null,
+            "reviewed_at": null
+          },
+          "cited_source_url": null,
+          "lineage": {
+            "synthetic": true,
+            "scenario": "issue_1_state_machine",
+            "note": "全文、主体、来源和时间均为虚构测试材料"
+          },
+          "review": {
+            "id": "review_reprint",
+            "evidence_id": "demo_reprint",
+            "at": "2026-04-11T08:15:00Z",
+            "decision": "SUPPORT",
+            "independence_group": "origin_qualification",
+            "supporting_quote": "虚构转载：根据资格资料，演示加速卡 V1 已通过演示客户的资格审核。",
+            "reviewer": "synthetic_fixture",
+            "reason": "模拟审核，供回放测试"
+          }
+        },
+        {
+          "id": "demo_confirmation",
+          "event_id": "demo_supply_v1",
+          "evidence_type": "delivery",
+          "source_url": "https://example.invalid/synthetic/confirmation",
+          "source_domain": "example.invalid",
+          "source_tier": "T1",
+          "published_at": "2026-05-21T08:00:00Z",
+          "first_seen_at": "2026-05-21T08:00:00Z",
+          "retrieved_at": "2026-05-21T08:00:00Z",
+          "processed_at": "2026-05-21T08:00:00Z",
+          "raw_fingerprint": "6d4cf95a9fa3918e50c9d1d75a7cc72c029465e0bb2d708f4dae0e536c67ce8b",
+          "fingerprint_scope": "synthetic_document",
+          "source_independence_group": null,
+          "content_excerpt": "虚构客户公告：确认演示芯片厂为演示加速卡 V1 的供货方。",
+          "access_mode": "synthetic_fixture",
+          "original_source_checked": true,
+          "legal_basis": {
+            "public_access": "UNKNOWN",
+            "auth_required": "UNKNOWN",
+            "robots_reviewed": false,
+            "tos_reviewed": false,
+            "redistribution_status": "UNKNOWN",
+            "personal_data": "UNASSESSED",
+            "reviewer": null,
+            "reviewed_at": null
+          },
+          "cited_source_url": null,
+          "lineage": {
+            "synthetic": true,
+            "scenario": "issue_1_state_machine",
+            "note": "全文、主体、来源和时间均为虚构测试材料"
+          },
+          "review": {
+            "id": "review_confirmation",
+            "evidence_id": "demo_confirmation",
+            "at": "2026-05-21T08:15:00Z",
+            "decision": "CONFIRM",
+            "independence_group": "origin_customer_confirmation",
+            "supporting_quote": "虚构客户公告：确认演示芯片厂为演示加速卡 V1 的供货方。",
+            "reviewer": "synthetic_fixture",
+            "reason": "模拟审核，供回放测试"
+          }
+        }
+      ],
+      "first_supported_at": "2026-04-10T08:15:00+00:00",
+      "public_confirmation_at": "2026-05-21T08:00:00+00:00",
+      "lead_time_days": 40.9896,
+      "lead_time_note": "模拟值，不代表真实检测表现"
+    }
+  ],
+  "metrics": {
+    "visible_events": 1,
+    "states": {
+      "VERIFIED": 1
+    },
+    "visible_evidence": 4,
+    "independent_supports": 3,
+    "lead_time_measured_events": 1
+  }
+}

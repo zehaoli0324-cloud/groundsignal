@@ -1,0 +1,38 @@
+{
+  "id": "repo_evt_202503_hbm3e",
+  "event_id": "evt_202503_hbm3e",
+  "evidence_type": "disclosure",
+  "source_url": "https://github.com/zehaoli0324-cloud/groundsignal/blob/5506f8fa131f446e884762996387afc0b4d29b5d/ai-compute/04-%E4%BA%8B%E4%BB%B6/2025-03-SK%E6%B5%B7%E5%8A%9B%E5%A3%AB12%E5%B1%82HBM3E%E7%8B%AC%E5%AE%B6%E4%BE%9B%E5%BA%94%E8%8B%B1%E4%BC%9F%E8%BE%BE.md",
+  "source_domain": "github.com",
+  "source_tier": "UNKNOWN",
+  "published_at": null,
+  "first_seen_at": "2026-10-13T12:17:42+00:00",
+  "retrieved_at": "2026-10-13T12:17:42+00:00",
+  "processed_at": "2026-10-13T12:17:42+00:00",
+  "raw_fingerprint": "b1119de925ad534a7935ffa9fc376001622a4e1d718753bc8cd88e7c8bea74c5",
+  "fingerprint_scope": "repository_markdown",
+  "source_independence_group": null,
+  "content_excerpt": "12 层 HBM3E 独家供应英伟达",
+  "access_mode": "repository_backfill",
+  "original_source_checked": false,
+  "legal_basis": {
+    "public_access": "UNKNOWN",
+    "auth_required": "UNKNOWN",
+    "robots_reviewed": false,
+    "tos_reviewed": false,
+    "redistribution_status": "UNKNOWN",
+    "personal_data": "UNASSESSED",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  "cited_source_url": "https://www.36kr.com/newsflashes/3211242600219528",
+  "lineage": {
+    "repository_commit": "5506f8fa131f446e884762996387afc0b4d29b5d",
+    "repository_path": "ai-compute/04-事件/2025-03-SK海力士12层HBM3E独家供应英伟达.md",
+    "declared_fetched_at": "2026-08-26",
+    "declared_verified_at": "2026-08-26",
+    "legacy_event_type": "NEW_CUSTOMER",
+    "original_article_retrieved": false,
+    "note": "原文是仓库事件笔记，不是原始商业凭证；历史置信度不继承为确认状态"
+  }
+}

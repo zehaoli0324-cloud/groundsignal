@@ -1,0 +1,15 @@
+{
+  "schema_version": "groundsignal.source-registry.v1",
+  "note": "Hints prioritize retrieval; they never verify claims or independent origins.",
+  "sources": [
+    {"domain": "cninfo.com.cn", "kind": "disclosure_portal", "tier_hint": "T1", "priority": 3},
+    {"domain": "sse.com.cn", "kind": "exchange", "tier_hint": "T1", "priority": 3},
+    {"domain": "szse.cn", "kind": "exchange", "tier_hint": "T1", "priority": 3},
+    {"domain": "sec.gov", "kind": "regulator", "tier_hint": "T1", "priority": 3},
+    {"domain": "reuters.com", "kind": "media", "tier_hint": "T2", "priority": 2},
+    {"domain": "nikkei.com", "kind": "media", "tier_hint": "T2", "priority": 2},
+    {"domain": "trendforce.com", "kind": "industry_media", "tier_hint": "T2", "priority": 2},
+    {"domain": "xueqiu.com", "kind": "community", "tier_hint": "T3", "priority": 0},
+    {"domain": "caifuhao.eastmoney.com", "kind": "user_content", "tier_hint": "T3", "priority": 0}
+  ]
+}

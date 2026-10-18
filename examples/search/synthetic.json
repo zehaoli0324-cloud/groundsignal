@@ -1,0 +1,210 @@
+{
+  "schema_version": "groundsignal.synthetic-search.v1",
+  "synthetic": true,
+  "note": "Canned model responses test plumbing; they are not Qwen or DeepSeek results.",
+  "target": {
+    "id": "synthetic_chip",
+    "name": "星港芯片（虚构）",
+    "aliases": [
+      "星港芯片"
+    ],
+    "official_domains": [
+      "chip.example.invalid"
+    ],
+    "identity_status": "UNCONFIRMED",
+    "dimensions": [
+      "upstream",
+      "downstream",
+      "competitors",
+      "investors",
+      "investments",
+      "people",
+      "products",
+      "capacity",
+      "counterevidence"
+    ],
+    "time_range": {
+      "after": null,
+      "before": null
+    },
+    "seed_urls": []
+  },
+  "search_hits": {
+    "downstream": [
+      {
+        "url": "https://source.example.invalid/sample",
+        "title": "星港芯片（虚构） sample",
+        "snippet": "星港芯片（虚构）已向云帆计算（虚构）交付海潮一号（虚构）试产样品，仍处于客户测试阶段，尚未量产。",
+        "rank": 1,
+        "published_hint": null
+      }
+    ],
+    "investors": [
+      {
+        "url": "https://source.example.invalid/ownership",
+        "title": "星港芯片（虚构） ownership",
+        "snippet": "晨星基金（虚构）持有星港芯片（虚构）8%的股权，星港芯片（虚构）仍由其创始团队控制。",
+        "rank": 1,
+        "published_hint": null
+      }
+    ],
+    "counterevidence": [
+      {
+        "url": "https://source.example.invalid/denial",
+        "title": "星港芯片（虚构） denial",
+        "snippet": "星港芯片（虚构）否认已成为远望服务器（虚构）的量产供应商，并称双方仅开展技术交流，没有采购订单。",
+        "rank": 1,
+        "published_hint": null
+      }
+    ],
+    "upstream": [
+      {
+        "url": "https://source.example.invalid/reprint",
+        "title": "星港芯片（虚构） reprint",
+        "snippet": "星港芯片（虚构）已向云帆计算（虚构）交付海潮一号（虚构）试产样品，仍处于客户测试阶段，尚未量产。",
+        "rank": 1,
+        "published_hint": null
+      }
+    ]
+  },
+  "documents": {
+    "https://source.example.invalid/sample": {
+      "title": "虚构测试：sample",
+      "text": "合成测试资料，所有企业、产品、关系、金额及叙述均为虚构，不作为实际行业信息。\n星港芯片（虚构）已向云帆计算（虚构）交付海潮一号（虚构）试产样品，仍处于客户测试阶段，尚未量产。\n本段仅用于测试逐字证据定位、阶段区分、否定表达与转载识别，不代表任何真实公司的情况。"
+    },
+    "https://source.example.invalid/ownership": {
+      "title": "虚构测试：ownership",
+      "text": "合成测试资料，所有企业、产品、关系、金额及叙述均为虚构，不作为实际行业信息。\n晨星基金（虚构）持有星港芯片（虚构）8%的股权，星港芯片（虚构）仍由其创始团队控制。\n本段仅用于测试逐字证据定位、阶段区分、否定表达与转载识别，不代表任何真实公司的情况。"
+    },
+    "https://source.example.invalid/denial": {
+      "title": "虚构测试：denial",
+      "text": "合成测试资料，所有企业、产品、关系、金额及叙述均为虚构，不作为实际行业信息。\n星港芯片（虚构）否认已成为远望服务器（虚构）的量产供应商，并称双方仅开展技术交流，没有采购订单。\n本段仅用于测试逐字证据定位、阶段区分、否定表达与转载识别，不代表任何真实公司的情况。"
+    },
+    "https://source.example.invalid/reprint": {
+      "title": "虚构测试：reprint",
+      "text": "合成测试资料，所有企业、产品、关系、金额及叙述均为虚构，不作为实际行业信息。\n星港芯片（虚构）已向云帆计算（虚构）交付海潮一号（虚构）试产样品，仍处于客户测试阶段，尚未量产。\n本段仅用于测试逐字证据定位、阶段区分、否定表达与转载识别，不代表任何真实公司的情况。"
+    }
+  },
+  "model_outputs": {
+    "https://source.example.invalid/sample": {
+      "small": {
+        "claims": [
+          {
+            "subject": "星港芯片（虚构）",
+            "predicate": "SUPPLIES",
+            "object": "云帆计算（虚构）",
+            "product": "海潮一号（虚构）",
+            "stage": "MASS_PRODUCTION",
+            "polarity": "ASSERTED",
+            "event_time": null,
+            "quote": "星港芯片（虚构）已向云帆计算（虚构）交付海潮一号（虚构）试产样品，仍处于客户测试阶段，尚未量产。"
+          }
+        ]
+      },
+      "large": {
+        "claims": [
+          {
+            "subject": "星港芯片（虚构）",
+            "predicate": "SUPPLIES",
+            "object": "云帆计算（虚构）",
+            "product": "海潮一号（虚构）",
+            "stage": "TESTING",
+            "polarity": "ASSERTED",
+            "event_time": null,
+            "quote": "星港芯片（虚构）已向云帆计算（虚构）交付海潮一号（虚构）试产样品，仍处于客户测试阶段，尚未量产。"
+          }
+        ]
+      }
+    },
+    "https://source.example.invalid/ownership": {
+      "small": {
+        "claims": [
+          {
+            "subject": "晨星基金（虚构）",
+            "predicate": "OWNS",
+            "object": "星港芯片（虚构）",
+            "product": null,
+            "stage": "UNKNOWN",
+            "polarity": "ASSERTED",
+            "event_time": null,
+            "quote": "晨星基金（虚构）持有星港芯片（虚构）8%的股权，星港芯片（虚构）仍由其创始团队控制。"
+          }
+        ]
+      },
+      "large": {
+        "claims": [
+          {
+            "subject": "晨星基金（虚构）",
+            "predicate": "OWNS",
+            "object": "星港芯片（虚构）",
+            "product": null,
+            "stage": "UNKNOWN",
+            "polarity": "ASSERTED",
+            "event_time": null,
+            "quote": "晨星基金（虚构）持有星港芯片（虚构）8%的股权，星港芯片（虚构）仍由其创始团队控制。"
+          }
+        ]
+      }
+    },
+    "https://source.example.invalid/denial": {
+      "small": {
+        "claims": [
+          {
+            "subject": "星港芯片（虚构）",
+            "predicate": "SUPPLIES",
+            "object": "远望服务器（虚构）",
+            "product": null,
+            "stage": "UNKNOWN",
+            "polarity": "NEGATED",
+            "event_time": null,
+            "quote": "星港芯片（虚构）否认已成为远望服务器（虚构）的量产供应商，并称双方仅开展技术交流，没有采购订单。"
+          }
+        ]
+      },
+      "large": {
+        "claims": [
+          {
+            "subject": "星港芯片（虚构）",
+            "predicate": "SUPPLIES",
+            "object": "远望服务器（虚构）",
+            "product": null,
+            "stage": "UNKNOWN",
+            "polarity": "NEGATED",
+            "event_time": null,
+            "quote": "星港芯片（虚构）否认已成为远望服务器（虚构）的量产供应商，并称双方仅开展技术交流，没有采购订单。"
+          }
+        ]
+      }
+    },
+    "https://source.example.invalid/reprint": {
+      "small": {
+        "claims": [
+          {
+            "subject": "星港芯片（虚构）",
+            "predicate": "SUPPLIES",
+            "object": "云帆计算（虚构）",
+            "product": "海潮一号（虚构）",
+            "stage": "MASS_PRODUCTION",
+            "polarity": "ASSERTED",
+            "event_time": null,
+            "quote": "星港芯片（虚构）已向云帆计算（虚构）交付海潮一号（虚构）试产样品，仍处于客户测试阶段，尚未量产。"
+          }
+        ]
+      },
+      "large": {
+        "claims": [
+          {
+            "subject": "星港芯片（虚构）",
+            "predicate": "SUPPLIES",
+            "object": "云帆计算（虚构）",
+            "product": "海潮一号（虚构）",
+            "stage": "TESTING",
+            "polarity": "ASSERTED",
+            "event_time": null,
+            "quote": "星港芯片（虚构）已向云帆计算（虚构）交付海潮一号（虚构）试产样品，仍处于客户测试阶段，尚未量产。"
+          }
+        ]
+      }
+    }
+  }
+}

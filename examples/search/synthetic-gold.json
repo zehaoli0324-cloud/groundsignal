@@ -1,0 +1,66 @@
+{
+  "schema_version": "groundsignal.extraction-gold.v1",
+  "synthetic": true,
+  "documents": [
+    {
+      "document_id": "doc_7a931abe16547c95a365",
+      "text_sha256": "0d59d030e473c12771fb464fb187bdc5eb5b4398ecb0d0028f2801ceaeaffd87",
+      "claims": [
+        {
+          "subject": "星港芯片（虚构）",
+          "predicate": "SUPPLIES",
+          "object": "云帆计算（虚构）",
+          "product": "海潮一号（虚构）",
+          "stage": "TESTING",
+          "polarity": "ASSERTED",
+          "event_time": null
+        }
+      ]
+    },
+    {
+      "document_id": "doc_d4a20087796d3f7fc15c",
+      "text_sha256": "35ece126ff55de572b71d16bb27a475518ee9aa76d6be0ae021746de130369bc",
+      "claims": [
+        {
+          "subject": "晨星基金（虚构）",
+          "predicate": "OWNS",
+          "object": "星港芯片（虚构）",
+          "product": null,
+          "stage": "UNKNOWN",
+          "polarity": "ASSERTED",
+          "event_time": null
+        }
+      ]
+    },
+    {
+      "document_id": "doc_8d4d2dee782b920083a1",
+      "text_sha256": "c7f85f90d3df3eb8f665d268dcdd9d97b2bc0905f5fb3144eca4f6d41e0fe22a",
+      "claims": [
+        {
+          "subject": "星港芯片（虚构）",
+          "predicate": "SUPPLIES",
+          "object": "远望服务器（虚构）",
+          "product": null,
+          "stage": "UNKNOWN",
+          "polarity": "NEGATED",
+          "event_time": null
+        }
+      ]
+    },
+    {
+      "document_id": "doc_b41ce1fb961402175c4a",
+      "text_sha256": "0d59d030e473c12771fb464fb187bdc5eb5b4398ecb0d0028f2801ceaeaffd87",
+      "claims": [
+        {
+          "subject": "星港芯片（虚构）",
+          "predicate": "SUPPLIES",
+          "object": "云帆计算（虚构）",
+          "product": "海潮一号（虚构）",
+          "stage": "TESTING",
+          "polarity": "ASSERTED",
+          "event_time": null
+        }
+      ]
+    }
+  ]
+}

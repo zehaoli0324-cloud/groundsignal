@@ -1,0 +1,1356 @@
+{
+  "schema_version": "groundsignal.search-run.v1",
+  "id": "run_550c0d4358ac14397631",
+  "created_at": "2026-10-18T17:00:15.073197+00:00",
+  "finished_at": "2026-10-18T17:00:15.080094+00:00",
+  "synthetic": true,
+  "status": "SYNTHETIC_ONLY",
+  "target": {
+    "id": "synthetic_chip",
+    "name": "星港芯片（虚构）",
+    "aliases": [
+      "星港芯片"
+    ],
+    "official_domains": [
+      "chip.example.invalid"
+    ],
+    "identity_status": "UNCONFIRMED",
+    "dimensions": [
+      "upstream",
+      "downstream",
+      "competitors",
+      "investors",
+      "investments",
+      "people",
+      "products",
+      "capacity",
+      "counterevidence"
+    ],
+    "time_range": {
+      "after": null,
+      "before": null
+    },
+    "seed_urls": []
+  },
+  "config": {
+    "providers": [
+      "brave",
+      "tavily",
+      "deepseek"
+    ],
+    "fetcher": "http",
+    "pdf_parser": "pypdf",
+    "routing_mode": "cascade",
+    "audit_fraction": 0.2,
+    "budget": {
+      "max_queries": 18,
+      "max_search_calls": 24,
+      "results_per_query": 4,
+      "max_documents": 8,
+      "max_model_calls": 12,
+      "max_large_calls": 4,
+      "max_input_chars": 12000,
+      "max_output_tokens": 2048,
+      "max_bytes": 8000000,
+      "timeout_seconds": 20,
+      "max_elapsed_seconds": 240,
+      "request_interval_seconds": 1,
+      "cache_ttl_seconds": 21600,
+      "max_fetch_calls": 32
+    },
+    "models": {
+      "small": {
+        "enabled": false,
+        "base_url": "http://127.0.0.1:11434/v1",
+        "model": "qwen3.5:9b",
+        "api_key_env": null,
+        "extra_body": {}
+      },
+      "large": {
+        "enabled": false,
+        "base_url": "https://api.deepseek.com",
+        "model": "deepseek-flash",
+        "api_key_env": "DEEPSEEK_API_KEY",
+        "extra_body": {
+          "thinking": {
+            "type": "disabled"
+          }
+        }
+      }
+    }
+  },
+  "plan": {
+    "schema_version": "groundsignal.search-plan.v1",
+    "created_at": "2026-10-18T17:00:15.073521+00:00",
+    "target": {
+      "id": "synthetic_chip",
+      "name": "星港芯片（虚构）",
+      "aliases": [
+        "星港芯片"
+      ],
+      "official_domains": [
+        "chip.example.invalid"
+      ],
+      "identity_status": "UNCONFIRMED",
+      "dimensions": [
+        "upstream",
+        "downstream",
+        "competitors",
+        "investors",
+        "investments",
+        "people",
+        "products",
+        "capacity",
+        "counterevidence"
+      ],
+      "time_range": {
+        "after": null,
+        "before": null
+      },
+      "seed_urls": []
+    },
+    "budget": {
+      "max_queries": 18,
+      "max_search_calls": 24,
+      "results_per_query": 4,
+      "max_documents": 8,
+      "max_model_calls": 12,
+      "max_large_calls": 4,
+      "max_input_chars": 12000,
+      "max_output_tokens": 2048,
+      "max_bytes": 8000000,
+      "timeout_seconds": 20,
+      "max_elapsed_seconds": 240,
+      "request_interval_seconds": 1,
+      "cache_ttl_seconds": 21600,
+      "max_fetch_calls": 32
+    },
+    "queries": [
+      {
+        "id": "q_6b3530c52a1c47cb",
+        "dimension": "upstream",
+        "query": "\"星港芯片（虚构）\" 供应商 代工 封装 材料",
+        "purpose": "discovery_zh",
+        "time_filter": "query_hint_not_verified"
+      },
+      {
+        "id": "q_190530ce6744b9b6",
+        "dimension": "downstream",
+        "query": "\"星港芯片（虚构）\" 客户 采购 中标 订单",
+        "purpose": "discovery_zh",
+        "time_filter": "query_hint_not_verified"
+      },
+      {
+        "id": "q_125d7b4c53a2e2cf",
+        "dimension": "competitors",
+        "query": "\"星港芯片（虚构）\" 竞争对手 产品 替代",
+        "purpose": "discovery_zh",
+        "time_filter": "query_hint_not_verified"
+      },
+      {
+        "id": "q_5d7ad0255b12b597",
+        "dimension": "investors",
+        "query": "\"星港芯片（虚构）\" 股东 融资 投资方",
+        "purpose": "discovery_zh",
+        "time_filter": "query_hint_not_verified"
+      },
+      {
+        "id": "q_bc8282f5dbac62e9",
+        "dimension": "investments",
+        "query": "\"星港芯片（虚构）\" 对外投资 控股 全资子公司",
+        "purpose": "discovery_zh",
+        "time_filter": "query_hint_not_verified"
+      },
+      {
+        "id": "q_66a3b79f19e34a79",
+        "dimension": "people",
+        "query": "\"星港芯片（虚构）\" 创始人 实际控制人 管理层",
+        "purpose": "discovery_zh",
+        "time_filter": "query_hint_not_verified"
+      },
+      {
+        "id": "q_20f9aaee8d477c14",
+        "dimension": "products",
+        "query": "\"星港芯片（虚构）\" 产品 认证 量产 技术",
+        "purpose": "discovery_zh",
+        "time_filter": "query_hint_not_verified"
+      },
+      {
+        "id": "q_1727bb3d5c484085",
+        "dimension": "capacity",
+        "query": "\"星港芯片（虚构）\" 工厂 产能 扩产 投产",
+        "purpose": "discovery_zh",
+        "time_filter": "query_hint_not_verified"
+      },
+      {
+        "id": "q_00f7c041b65d0842",
+        "dimension": "counterevidence",
+        "query": "\"星港芯片（虚构）\" 否认 终止 更正 延期",
+        "purpose": "discovery_zh",
+        "time_filter": "query_hint_not_verified"
+      },
+      {
+        "id": "q_84fd1c4d2ca9820f",
+        "dimension": "upstream",
+        "query": "\"星港芯片\" suppliers foundry packaging",
+        "purpose": "discovery_en",
+        "time_filter": "query_hint_not_verified"
+      },
+      {
+        "id": "q_77153571c2fcfb39",
+        "dimension": "downstream",
+        "query": "\"星港芯片\" customers procurement shipment",
+        "purpose": "discovery_en",
+        "time_filter": "query_hint_not_verified"
+      },
+      {
+        "id": "q_a989a1744f859487",
+        "dimension": "competitors",
+        "query": "\"星港芯片\" competitors product alternatives",
+        "purpose": "discovery_en",
+        "time_filter": "query_hint_not_verified"
+      },
+      {
+        "id": "q_2249109420231e9e",
+        "dimension": "investors",
+        "query": "\"星港芯片\" shareholders funding investors",
+        "purpose": "discovery_en",
+        "time_filter": "query_hint_not_verified"
+      },
+      {
+        "id": "q_6f75ab4fd717617d",
+        "dimension": "investments",
+        "query": "\"星港芯片\" investments subsidiaries ownership",
+        "purpose": "discovery_en",
+        "time_filter": "query_hint_not_verified"
+      },
+      {
+        "id": "q_a0072e55569d2e0c",
+        "dimension": "people",
+        "query": "\"星港芯片\" founder beneficial owner management",
+        "purpose": "discovery_en",
+        "time_filter": "query_hint_not_verified"
+      },
+      {
+        "id": "q_2f328b2fd2d2a011",
+        "dimension": "products",
+        "query": "\"星港芯片\" products qualification production",
+        "purpose": "discovery_en",
+        "time_filter": "query_hint_not_verified"
+      },
+      {
+        "id": "q_fe4a0b3395acc53f",
+        "dimension": "capacity",
+        "query": "\"星港芯片\" factory capacity expansion",
+        "purpose": "discovery_en",
+        "time_filter": "query_hint_not_verified"
+      },
+      {
+        "id": "q_d73674dea1ac5e4c",
+        "dimension": "counterevidence",
+        "query": "\"星港芯片\" denied terminated correction delayed",
+        "purpose": "discovery_en",
+        "time_filter": "query_hint_not_verified"
+      }
+    ],
+    "unplanned_dimensions": []
+  },
+  "search_records": [
+    {
+      "provider": "fixture",
+      "query_id": "q_6b3530c52a1c47cb",
+      "query": "\"星港芯片（虚构）\" 供应商 代工 封装 材料",
+      "dimension": "upstream",
+      "searched_at": "2026-10-18T17:00:15.073197+00:00",
+      "status": "SIMULATED",
+      "cached": false,
+      "hits": [
+        {
+          "url": "https://source.example.invalid/reprint",
+          "title": "星港芯片（虚构） reprint",
+          "snippet": "星港芯片（虚构）已向云帆计算（虚构）交付海潮一号（虚构）试产样品，仍处于客户测试阶段，尚未量产。",
+          "rank": 1,
+          "published_hint": null
+        }
+      ],
+      "usage": {},
+      "error_code": null
+    },
+    {
+      "provider": "fixture",
+      "query_id": "q_190530ce6744b9b6",
+      "query": "\"星港芯片（虚构）\" 客户 采购 中标 订单",
+      "dimension": "downstream",
+      "searched_at": "2026-10-18T17:00:15.073197+00:00",
+      "status": "SIMULATED",
+      "cached": false,
+      "hits": [
+        {
+          "url": "https://source.example.invalid/sample",
+          "title": "星港芯片（虚构） sample",
+          "snippet": "星港芯片（虚构）已向云帆计算（虚构）交付海潮一号（虚构）试产样品，仍处于客户测试阶段，尚未量产。",
+          "rank": 1,
+          "published_hint": null
+        }
+      ],
+      "usage": {},
+      "error_code": null
+    },
+    {
+      "provider": "fixture",
+      "query_id": "q_125d7b4c53a2e2cf",
+      "query": "\"星港芯片（虚构）\" 竞争对手 产品 替代",
+      "dimension": "competitors",
+      "searched_at": "2026-10-18T17:00:15.073197+00:00",
+      "status": "SIMULATED",
+      "cached": false,
+      "hits": [],
+      "usage": {},
+      "error_code": null
+    },
+    {
+      "provider": "fixture",
+      "query_id": "q_5d7ad0255b12b597",
+      "query": "\"星港芯片（虚构）\" 股东 融资 投资方",
+      "dimension": "investors",
+      "searched_at": "2026-10-18T17:00:15.073197+00:00",
+      "status": "SIMULATED",
+      "cached": false,
+      "hits": [
+        {
+          "url": "https://source.example.invalid/ownership",
+          "title": "星港芯片（虚构） ownership",
+          "snippet": "晨星基金（虚构）持有星港芯片（虚构）8%的股权，星港芯片（虚构）仍由其创始团队控制。",
+          "rank": 1,
+          "published_hint": null
+        }
+      ],
+      "usage": {},
+      "error_code": null
+    },
+    {
+      "provider": "fixture",
+      "query_id": "q_bc8282f5dbac62e9",
+      "query": "\"星港芯片（虚构）\" 对外投资 控股 全资子公司",
+      "dimension": "investments",
+      "searched_at": "2026-10-18T17:00:15.073197+00:00",
+      "status": "SIMULATED",
+      "cached": false,
+      "hits": [],
+      "usage": {},
+      "error_code": null
+    },
+    {
+      "provider": "fixture",
+      "query_id": "q_66a3b79f19e34a79",
+      "query": "\"星港芯片（虚构）\" 创始人 实际控制人 管理层",
+      "dimension": "people",
+      "searched_at": "2026-10-18T17:00:15.073197+00:00",
+      "status": "SIMULATED",
+      "cached": false,
+      "hits": [],
+      "usage": {},
+      "error_code": null
+    },
+    {
+      "provider": "fixture",
+      "query_id": "q_20f9aaee8d477c14",
+      "query": "\"星港芯片（虚构）\" 产品 认证 量产 技术",
+      "dimension": "products",
+      "searched_at": "2026-10-18T17:00:15.073197+00:00",
+      "status": "SIMULATED",
+      "cached": false,
+      "hits": [],
+      "usage": {},
+      "error_code": null
+    },
+    {
+      "provider": "fixture",
+      "query_id": "q_1727bb3d5c484085",
+      "query": "\"星港芯片（虚构）\" 工厂 产能 扩产 投产",
+      "dimension": "capacity",
+      "searched_at": "2026-10-18T17:00:15.073197+00:00",
+      "status": "SIMULATED",
+      "cached": false,
+      "hits": [],
+      "usage": {},
+      "error_code": null
+    },
+    {
+      "provider": "fixture",
+      "query_id": "q_00f7c041b65d0842",
+      "query": "\"星港芯片（虚构）\" 否认 终止 更正 延期",
+      "dimension": "counterevidence",
+      "searched_at": "2026-10-18T17:00:15.073197+00:00",
+      "status": "SIMULATED",
+      "cached": false,
+      "hits": [
+        {
+          "url": "https://source.example.invalid/denial",
+          "title": "星港芯片（虚构） denial",
+          "snippet": "星港芯片（虚构）否认已成为远望服务器（虚构）的量产供应商，并称双方仅开展技术交流，没有采购订单。",
+          "rank": 1,
+          "published_hint": null
+        }
+      ],
+      "usage": {},
+      "error_code": null
+    },
+    {
+      "provider": "fixture",
+      "query_id": "q_84fd1c4d2ca9820f",
+      "query": "\"星港芯片\" suppliers foundry packaging",
+      "dimension": "upstream",
+      "searched_at": "2026-10-18T17:00:15.073197+00:00",
+      "status": "SIMULATED",
+      "cached": false,
+      "hits": [
+        {
+          "url": "https://source.example.invalid/reprint",
+          "title": "星港芯片（虚构） reprint",
+          "snippet": "星港芯片（虚构）已向云帆计算（虚构）交付海潮一号（虚构）试产样品，仍处于客户测试阶段，尚未量产。",
+          "rank": 1,
+          "published_hint": null
+        }
+      ],
+      "usage": {},
+      "error_code": null
+    },
+    {
+      "provider": "fixture",
+      "query_id": "q_77153571c2fcfb39",
+      "query": "\"星港芯片\" customers procurement shipment",
+      "dimension": "downstream",
+      "searched_at": "2026-10-18T17:00:15.073197+00:00",
+      "status": "SIMULATED",
+      "cached": false,
+      "hits": [
+        {
+          "url": "https://source.example.invalid/sample",
+          "title": "星港芯片（虚构） sample",
+          "snippet": "星港芯片（虚构）已向云帆计算（虚构）交付海潮一号（虚构）试产样品，仍处于客户测试阶段，尚未量产。",
+          "rank": 1,
+          "published_hint": null
+        }
+      ],
+      "usage": {},
+      "error_code": null
+    },
+    {
+      "provider": "fixture",
+      "query_id": "q_a989a1744f859487",
+      "query": "\"星港芯片\" competitors product alternatives",
+      "dimension": "competitors",
+      "searched_at": "2026-10-18T17:00:15.073197+00:00",
+      "status": "SIMULATED",
+      "cached": false,
+      "hits": [],
+      "usage": {},
+      "error_code": null
+    },
+    {
+      "provider": "fixture",
+      "query_id": "q_2249109420231e9e",
+      "query": "\"星港芯片\" shareholders funding investors",
+      "dimension": "investors",
+      "searched_at": "2026-10-18T17:00:15.073197+00:00",
+      "status": "SIMULATED",
+      "cached": false,
+      "hits": [
+        {
+          "url": "https://source.example.invalid/ownership",
+          "title": "星港芯片（虚构） ownership",
+          "snippet": "晨星基金（虚构）持有星港芯片（虚构）8%的股权，星港芯片（虚构）仍由其创始团队控制。",
+          "rank": 1,
+          "published_hint": null
+        }
+      ],
+      "usage": {},
+      "error_code": null
+    },
+    {
+      "provider": "fixture",
+      "query_id": "q_6f75ab4fd717617d",
+      "query": "\"星港芯片\" investments subsidiaries ownership",
+      "dimension": "investments",
+      "searched_at": "2026-10-18T17:00:15.073197+00:00",
+      "status": "SIMULATED",
+      "cached": false,
+      "hits": [],
+      "usage": {},
+      "error_code": null
+    },
+    {
+      "provider": "fixture",
+      "query_id": "q_a0072e55569d2e0c",
+      "query": "\"星港芯片\" founder beneficial owner management",
+      "dimension": "people",
+      "searched_at": "2026-10-18T17:00:15.073197+00:00",
+      "status": "SIMULATED",
+      "cached": false,
+      "hits": [],
+      "usage": {},
+      "error_code": null
+    },
+    {
+      "provider": "fixture",
+      "query_id": "q_2f328b2fd2d2a011",
+      "query": "\"星港芯片\" products qualification production",
+      "dimension": "products",
+      "searched_at": "2026-10-18T17:00:15.073197+00:00",
+      "status": "SIMULATED",
+      "cached": false,
+      "hits": [],
+      "usage": {},
+      "error_code": null
+    },
+    {
+      "provider": "fixture",
+      "query_id": "q_fe4a0b3395acc53f",
+      "query": "\"星港芯片\" factory capacity expansion",
+      "dimension": "capacity",
+      "searched_at": "2026-10-18T17:00:15.073197+00:00",
+      "status": "SIMULATED",
+      "cached": false,
+      "hits": [],
+      "usage": {},
+      "error_code": null
+    },
+    {
+      "provider": "fixture",
+      "query_id": "q_d73674dea1ac5e4c",
+      "query": "\"星港芯片\" denied terminated correction delayed",
+      "dimension": "counterevidence",
+      "searched_at": "2026-10-18T17:00:15.073197+00:00",
+      "status": "SIMULATED",
+      "cached": false,
+      "hits": [
+        {
+          "url": "https://source.example.invalid/denial",
+          "title": "星港芯片（虚构） denial",
+          "snippet": "星港芯片（虚构）否认已成为远望服务器（虚构）的量产供应商，并称双方仅开展技术交流，没有采购订单。",
+          "rank": 1,
+          "published_hint": null
+        }
+      ],
+      "usage": {},
+      "error_code": null
+    }
+  ],
+  "hits": [
+    {
+      "url": "https://source.example.invalid/denial",
+      "title": "星港芯片（虚构） denial",
+      "snippet": "星港芯片（虚构）否认已成为远望服务器（虚构）的量产供应商，并称双方仅开展技术交流，没有采购订单。",
+      "first_seen_at": "2026-10-18T17:00:15.073197+00:00",
+      "references": [
+        {
+          "provider": "fixture",
+          "query_id": "q_00f7c041b65d0842",
+          "dimension": "counterevidence",
+          "rank": 1
+        },
+        {
+          "provider": "fixture",
+          "query_id": "q_d73674dea1ac5e4c",
+          "dimension": "counterevidence",
+          "rank": 1
+        }
+      ],
+      "source_hint": {
+        "kind": "unknown",
+        "tier_hint": "UNKNOWN",
+        "priority": 1
+      }
+    },
+    {
+      "url": "https://source.example.invalid/ownership",
+      "title": "星港芯片（虚构） ownership",
+      "snippet": "晨星基金（虚构）持有星港芯片（虚构）8%的股权，星港芯片（虚构）仍由其创始团队控制。",
+      "first_seen_at": "2026-10-18T17:00:15.073197+00:00",
+      "references": [
+        {
+          "provider": "fixture",
+          "query_id": "q_5d7ad0255b12b597",
+          "dimension": "investors",
+          "rank": 1
+        },
+        {
+          "provider": "fixture",
+          "query_id": "q_2249109420231e9e",
+          "dimension": "investors",
+          "rank": 1
+        }
+      ],
+      "source_hint": {
+        "kind": "unknown",
+        "tier_hint": "UNKNOWN",
+        "priority": 1
+      }
+    },
+    {
+      "url": "https://source.example.invalid/reprint",
+      "title": "星港芯片（虚构） reprint",
+      "snippet": "星港芯片（虚构）已向云帆计算（虚构）交付海潮一号（虚构）试产样品，仍处于客户测试阶段，尚未量产。",
+      "first_seen_at": "2026-10-18T17:00:15.073197+00:00",
+      "references": [
+        {
+          "provider": "fixture",
+          "query_id": "q_6b3530c52a1c47cb",
+          "dimension": "upstream",
+          "rank": 1
+        },
+        {
+          "provider": "fixture",
+          "query_id": "q_84fd1c4d2ca9820f",
+          "dimension": "upstream",
+          "rank": 1
+        }
+      ],
+      "source_hint": {
+        "kind": "unknown",
+        "tier_hint": "UNKNOWN",
+        "priority": 1
+      }
+    },
+    {
+      "url": "https://source.example.invalid/sample",
+      "title": "星港芯片（虚构） sample",
+      "snippet": "星港芯片（虚构）已向云帆计算（虚构）交付海潮一号（虚构）试产样品，仍处于客户测试阶段，尚未量产。",
+      "first_seen_at": "2026-10-18T17:00:15.073197+00:00",
+      "references": [
+        {
+          "provider": "fixture",
+          "query_id": "q_190530ce6744b9b6",
+          "dimension": "downstream",
+          "rank": 1
+        },
+        {
+          "provider": "fixture",
+          "query_id": "q_77153571c2fcfb39",
+          "dimension": "downstream",
+          "rank": 1
+        }
+      ],
+      "source_hint": {
+        "kind": "unknown",
+        "tier_hint": "UNKNOWN",
+        "priority": 1
+      }
+    }
+  ],
+  "documents": [
+    {
+      "id": "doc_8d4d2dee782b920083a1",
+      "url": "https://source.example.invalid/denial",
+      "resolved_url": "https://source.example.invalid/denial",
+      "title": "虚构测试：denial",
+      "text": "合成测试资料，所有企业、产品、关系、金额及叙述均为虚构，不作为实际行业信息。\n星港芯片（虚构）否认已成为远望服务器（虚构）的量产供应商，并称双方仅开展技术交流，没有采购订单。\n本段仅用于测试逐字证据定位、阶段区分、否定表达与转载识别，不代表任何真实公司的情况。",
+      "pages": [],
+      "status": "FETCHED",
+      "first_seen_at": "2026-10-18T17:00:15.073197+00:00",
+      "retrieved_at": "2026-10-18T17:00:15.074576+00:00",
+      "error_code": null,
+      "raw_sha256": "c7f85f90d3df3eb8f665d268dcdd9d97b2bc0905f5fb3144eca4f6d41e0fe22a",
+      "text_sha256": "c7f85f90d3df3eb8f665d268dcdd9d97b2bc0905f5fb3144eca4f6d41e0fe22a",
+      "raw_path": null,
+      "parser": "synthetic_fixture",
+      "published_hint": null,
+      "synthetic": true,
+      "fetcher": "fixture",
+      "source_hint": {
+        "kind": "unknown",
+        "tier_hint": "UNKNOWN",
+        "priority": 1
+      },
+      "duplicate_content_of": null
+    },
+    {
+      "id": "doc_d4a20087796d3f7fc15c",
+      "url": "https://source.example.invalid/ownership",
+      "resolved_url": "https://source.example.invalid/ownership",
+      "title": "虚构测试：ownership",
+      "text": "合成测试资料，所有企业、产品、关系、金额及叙述均为虚构，不作为实际行业信息。\n晨星基金（虚构）持有星港芯片（虚构）8%的股权，星港芯片（虚构）仍由其创始团队控制。\n本段仅用于测试逐字证据定位、阶段区分、否定表达与转载识别，不代表任何真实公司的情况。",
+      "pages": [],
+      "status": "FETCHED",
+      "first_seen_at": "2026-10-18T17:00:15.073197+00:00",
+      "retrieved_at": "2026-10-18T17:00:15.077939+00:00",
+      "error_code": null,
+      "raw_sha256": "35ece126ff55de572b71d16bb27a475518ee9aa76d6be0ae021746de130369bc",
+      "text_sha256": "35ece126ff55de572b71d16bb27a475518ee9aa76d6be0ae021746de130369bc",
+      "raw_path": null,
+      "parser": "synthetic_fixture",
+      "published_hint": null,
+      "synthetic": true,
+      "fetcher": "fixture",
+      "source_hint": {
+        "kind": "unknown",
+        "tier_hint": "UNKNOWN",
+        "priority": 1
+      },
+      "duplicate_content_of": null
+    },
+    {
+      "id": "doc_b41ce1fb961402175c4a",
+      "url": "https://source.example.invalid/reprint",
+      "resolved_url": "https://source.example.invalid/reprint",
+      "title": "虚构测试：reprint",
+      "text": "合成测试资料，所有企业、产品、关系、金额及叙述均为虚构，不作为实际行业信息。\n星港芯片（虚构）已向云帆计算（虚构）交付海潮一号（虚构）试产样品，仍处于客户测试阶段，尚未量产。\n本段仅用于测试逐字证据定位、阶段区分、否定表达与转载识别，不代表任何真实公司的情况。",
+      "pages": [],
+      "status": "FETCHED",
+      "first_seen_at": "2026-10-18T17:00:15.073197+00:00",
+      "retrieved_at": "2026-10-18T17:00:15.078712+00:00",
+      "error_code": null,
+      "raw_sha256": "0d59d030e473c12771fb464fb187bdc5eb5b4398ecb0d0028f2801ceaeaffd87",
+      "text_sha256": "0d59d030e473c12771fb464fb187bdc5eb5b4398ecb0d0028f2801ceaeaffd87",
+      "raw_path": null,
+      "parser": "synthetic_fixture",
+      "published_hint": null,
+      "synthetic": true,
+      "fetcher": "fixture",
+      "source_hint": {
+        "kind": "unknown",
+        "tier_hint": "UNKNOWN",
+        "priority": 1
+      },
+      "duplicate_content_of": null
+    },
+    {
+      "id": "doc_7a931abe16547c95a365",
+      "url": "https://source.example.invalid/sample",
+      "resolved_url": "https://source.example.invalid/sample",
+      "title": "虚构测试：sample",
+      "text": "合成测试资料，所有企业、产品、关系、金额及叙述均为虚构，不作为实际行业信息。\n星港芯片（虚构）已向云帆计算（虚构）交付海潮一号（虚构）试产样品，仍处于客户测试阶段，尚未量产。\n本段仅用于测试逐字证据定位、阶段区分、否定表达与转载识别，不代表任何真实公司的情况。",
+      "pages": [],
+      "status": "FETCHED",
+      "first_seen_at": "2026-10-18T17:00:15.073197+00:00",
+      "retrieved_at": "2026-10-18T17:00:15.079517+00:00",
+      "error_code": null,
+      "raw_sha256": "0d59d030e473c12771fb464fb187bdc5eb5b4398ecb0d0028f2801ceaeaffd87",
+      "text_sha256": "0d59d030e473c12771fb464fb187bdc5eb5b4398ecb0d0028f2801ceaeaffd87",
+      "raw_path": null,
+      "parser": "synthetic_fixture",
+      "published_hint": null,
+      "synthetic": true,
+      "fetcher": "fixture",
+      "source_hint": {
+        "kind": "unknown",
+        "tier_hint": "UNKNOWN",
+        "priority": 1
+      },
+      "duplicate_content_of": "doc_b41ce1fb961402175c4a"
+    }
+  ],
+  "extractions": [
+    {
+      "document_id": "doc_8d4d2dee782b920083a1",
+      "routing_mode": "cascade",
+      "input_truncated": false,
+      "escalation_reasons": [
+        "high_risk_claim"
+      ],
+      "attempts": [
+        {
+          "role": "small",
+          "document_id": "doc_8d4d2dee782b920083a1",
+          "at": "2026-10-18T17:00:15.074946+00:00",
+          "requested_model": "fixture/small",
+          "response_model": "fixture/small",
+          "prompt_sha256": "3b4df7dd916c3a9ae08d6f2acd80d8c7ec47882123aa354aae3959925e064848",
+          "input_sha256": "c7f85f90d3df3eb8f665d268dcdd9d97b2bc0905f5fb3144eca4f6d41e0fe22a",
+          "config_sha256": "8c5d8759ae03e49225e77f9d6b7711b50da344c244c5c7caa4d422432a5aabc7",
+          "endpoint": "offline-fixture",
+          "status": "SIMULATED",
+          "error_code": null,
+          "usage": {},
+          "elapsed_ms": 0,
+          "synthetic": true,
+          "payload": {
+            "claims": [
+              {
+                "subject": "星港芯片（虚构）",
+                "predicate": "SUPPLIES",
+                "object": "远望服务器（虚构）",
+                "product": null,
+                "stage": "UNKNOWN",
+                "polarity": "NEGATED",
+                "event_time": null,
+                "quote": "星港芯片（虚构）否认已成为远望服务器（虚构）的量产供应商，并称双方仅开展技术交流，没有采购订单。"
+              }
+            ]
+          },
+          "raw_response_text": null
+        },
+        {
+          "role": "large",
+          "document_id": "doc_8d4d2dee782b920083a1",
+          "at": "2026-10-18T17:00:15.077789+00:00",
+          "requested_model": "fixture/large",
+          "response_model": "fixture/large",
+          "prompt_sha256": "3b4df7dd916c3a9ae08d6f2acd80d8c7ec47882123aa354aae3959925e064848",
+          "input_sha256": "c7f85f90d3df3eb8f665d268dcdd9d97b2bc0905f5fb3144eca4f6d41e0fe22a",
+          "config_sha256": "8c5d8759ae03e49225e77f9d6b7711b50da344c244c5c7caa4d422432a5aabc7",
+          "endpoint": "offline-fixture",
+          "status": "SIMULATED",
+          "error_code": null,
+          "usage": {},
+          "elapsed_ms": 0,
+          "synthetic": true,
+          "payload": {
+            "claims": [
+              {
+                "subject": "星港芯片（虚构）",
+                "predicate": "SUPPLIES",
+                "object": "远望服务器（虚构）",
+                "product": null,
+                "stage": "UNKNOWN",
+                "polarity": "NEGATED",
+                "event_time": null,
+                "quote": "星港芯片（虚构）否认已成为远望服务器（虚构）的量产供应商，并称双方仅开展技术交流，没有采购订单。"
+              }
+            ]
+          },
+          "raw_response_text": null
+        }
+      ],
+      "candidates": [
+        {
+          "subject": "星港芯片（虚构）",
+          "predicate": "SUPPLIES",
+          "object": "远望服务器（虚构）",
+          "product": null,
+          "stage": "UNKNOWN",
+          "polarity": "NEGATED",
+          "event_time": null,
+          "quote": "星港芯片（虚构）否认已成为远望服务器（虚构）的量产供应商，并称双方仅开展技术交流，没有采购订单。",
+          "id": "cand_080539e1bff38c02cf2f",
+          "document_id": "doc_8d4d2dee782b920083a1",
+          "quote_start": 39,
+          "quote_end": 87,
+          "pages": [],
+          "review_status": "PENDING",
+          "identity_status": "UNCONFIRMED",
+          "flags": [
+            "modality_or_counterevidence"
+          ],
+          "proposed_by": [
+            "large",
+            "small"
+          ]
+        }
+      ],
+      "rejected": []
+    },
+    {
+      "document_id": "doc_d4a20087796d3f7fc15c",
+      "routing_mode": "cascade",
+      "input_truncated": false,
+      "escalation_reasons": [
+        "high_risk_claim"
+      ],
+      "attempts": [
+        {
+          "role": "small",
+          "document_id": "doc_d4a20087796d3f7fc15c",
+          "at": "2026-10-18T17:00:15.078203+00:00",
+          "requested_model": "fixture/small",
+          "response_model": "fixture/small",
+          "prompt_sha256": "4548f7bbb75b87aea0a23f2d1f426baf7b7ac4b61310bd13fedaa2784ccf1b02",
+          "input_sha256": "35ece126ff55de572b71d16bb27a475518ee9aa76d6be0ae021746de130369bc",
+          "config_sha256": "8c5d8759ae03e49225e77f9d6b7711b50da344c244c5c7caa4d422432a5aabc7",
+          "endpoint": "offline-fixture",
+          "status": "SIMULATED",
+          "error_code": null,
+          "usage": {},
+          "elapsed_ms": 0,
+          "synthetic": true,
+          "payload": {
+            "claims": [
+              {
+                "subject": "晨星基金（虚构）",
+                "predicate": "OWNS",
+                "object": "星港芯片（虚构）",
+                "product": null,
+                "stage": "UNKNOWN",
+                "polarity": "ASSERTED",
+                "event_time": null,
+                "quote": "晨星基金（虚构）持有星港芯片（虚构）8%的股权，星港芯片（虚构）仍由其创始团队控制。"
+              }
+            ]
+          },
+          "raw_response_text": null
+        },
+        {
+          "role": "large",
+          "document_id": "doc_d4a20087796d3f7fc15c",
+          "at": "2026-10-18T17:00:15.078565+00:00",
+          "requested_model": "fixture/large",
+          "response_model": "fixture/large",
+          "prompt_sha256": "4548f7bbb75b87aea0a23f2d1f426baf7b7ac4b61310bd13fedaa2784ccf1b02",
+          "input_sha256": "35ece126ff55de572b71d16bb27a475518ee9aa76d6be0ae021746de130369bc",
+          "config_sha256": "8c5d8759ae03e49225e77f9d6b7711b50da344c244c5c7caa4d422432a5aabc7",
+          "endpoint": "offline-fixture",
+          "status": "SIMULATED",
+          "error_code": null,
+          "usage": {},
+          "elapsed_ms": 0,
+          "synthetic": true,
+          "payload": {
+            "claims": [
+              {
+                "subject": "晨星基金（虚构）",
+                "predicate": "OWNS",
+                "object": "星港芯片（虚构）",
+                "product": null,
+                "stage": "UNKNOWN",
+                "polarity": "ASSERTED",
+                "event_time": null,
+                "quote": "晨星基金（虚构）持有星港芯片（虚构）8%的股权，星港芯片（虚构）仍由其创始团队控制。"
+              }
+            ]
+          },
+          "raw_response_text": null
+        }
+      ],
+      "candidates": [
+        {
+          "subject": "晨星基金（虚构）",
+          "predicate": "OWNS",
+          "object": "星港芯片（虚构）",
+          "product": null,
+          "stage": "UNKNOWN",
+          "polarity": "ASSERTED",
+          "event_time": null,
+          "quote": "晨星基金（虚构）持有星港芯片（虚构）8%的股权，星港芯片（虚构）仍由其创始团队控制。",
+          "id": "cand_7c585eb8132d4339d6b0",
+          "document_id": "doc_d4a20087796d3f7fc15c",
+          "quote_start": 39,
+          "quote_end": 81,
+          "pages": [],
+          "review_status": "PENDING",
+          "identity_status": "UNCONFIRMED",
+          "flags": [
+            "ownership_or_competition_requires_review"
+          ],
+          "proposed_by": [
+            "large",
+            "small"
+          ]
+        }
+      ],
+      "rejected": []
+    },
+    {
+      "document_id": "doc_b41ce1fb961402175c4a",
+      "routing_mode": "cascade",
+      "input_truncated": false,
+      "escalation_reasons": [
+        "grounding_or_field_failure",
+        "empty_small_extraction",
+        "deterministic_audit_sample"
+      ],
+      "attempts": [
+        {
+          "role": "small",
+          "document_id": "doc_b41ce1fb961402175c4a",
+          "at": "2026-10-18T17:00:15.078955+00:00",
+          "requested_model": "fixture/small",
+          "response_model": "fixture/small",
+          "prompt_sha256": "7474f1cb72172276d4b14a4bad7bef9989121360c80f5909dc4f593889a6e65a",
+          "input_sha256": "0d59d030e473c12771fb464fb187bdc5eb5b4398ecb0d0028f2801ceaeaffd87",
+          "config_sha256": "8c5d8759ae03e49225e77f9d6b7711b50da344c244c5c7caa4d422432a5aabc7",
+          "endpoint": "offline-fixture",
+          "status": "SIMULATED",
+          "error_code": null,
+          "usage": {},
+          "elapsed_ms": 0,
+          "synthetic": true,
+          "payload": {
+            "claims": [
+              {
+                "subject": "星港芯片（虚构）",
+                "predicate": "SUPPLIES",
+                "object": "云帆计算（虚构）",
+                "product": "海潮一号（虚构）",
+                "stage": "MASS_PRODUCTION",
+                "polarity": "ASSERTED",
+                "event_time": null,
+                "quote": "星港芯片（虚构）已向云帆计算（虚构）交付海潮一号（虚构）试产样品，仍处于客户测试阶段，尚未量产。"
+              }
+            ]
+          },
+          "raw_response_text": null
+        },
+        {
+          "role": "large",
+          "document_id": "doc_b41ce1fb961402175c4a",
+          "at": "2026-10-18T17:00:15.079346+00:00",
+          "requested_model": "fixture/large",
+          "response_model": "fixture/large",
+          "prompt_sha256": "7474f1cb72172276d4b14a4bad7bef9989121360c80f5909dc4f593889a6e65a",
+          "input_sha256": "0d59d030e473c12771fb464fb187bdc5eb5b4398ecb0d0028f2801ceaeaffd87",
+          "config_sha256": "8c5d8759ae03e49225e77f9d6b7711b50da344c244c5c7caa4d422432a5aabc7",
+          "endpoint": "offline-fixture",
+          "status": "SIMULATED",
+          "error_code": null,
+          "usage": {},
+          "elapsed_ms": 0,
+          "synthetic": true,
+          "payload": {
+            "claims": [
+              {
+                "subject": "星港芯片（虚构）",
+                "predicate": "SUPPLIES",
+                "object": "云帆计算（虚构）",
+                "product": "海潮一号（虚构）",
+                "stage": "TESTING",
+                "polarity": "ASSERTED",
+                "event_time": null,
+                "quote": "星港芯片（虚构）已向云帆计算（虚构）交付海潮一号（虚构）试产样品，仍处于客户测试阶段，尚未量产。"
+              }
+            ]
+          },
+          "raw_response_text": null
+        }
+      ],
+      "candidates": [
+        {
+          "subject": "星港芯片（虚构）",
+          "predicate": "SUPPLIES",
+          "object": "云帆计算（虚构）",
+          "product": "海潮一号（虚构）",
+          "stage": "TESTING",
+          "polarity": "ASSERTED",
+          "event_time": null,
+          "quote": "星港芯片（虚构）已向云帆计算（虚构）交付海潮一号（虚构）试产样品，仍处于客户测试阶段，尚未量产。",
+          "id": "cand_520ce8e84b62e81d4cee",
+          "document_id": "doc_b41ce1fb961402175c4a",
+          "quote_start": 39,
+          "quote_end": 87,
+          "pages": [],
+          "review_status": "PENDING",
+          "identity_status": "UNCONFIRMED",
+          "flags": [
+            "modality_or_counterevidence",
+            "model_disagreement"
+          ],
+          "proposed_by": [
+            "large"
+          ]
+        }
+      ],
+      "rejected": [
+        {
+          "claim": {
+            "subject": "星港芯片（虚构）",
+            "predicate": "SUPPLIES",
+            "object": "云帆计算（虚构）",
+            "product": "海潮一号（虚构）",
+            "stage": "MASS_PRODUCTION",
+            "polarity": "ASSERTED",
+            "event_time": null,
+            "quote": "星港芯片（虚构）已向云帆计算（虚构）交付海潮一号（虚构）试产样品，仍处于客户测试阶段，尚未量产。"
+          },
+          "reasons": [
+            "mass_production_modality_mismatch"
+          ],
+          "document_id": "doc_b41ce1fb961402175c4a",
+          "role": "small"
+        }
+      ]
+    },
+    {
+      "document_id": "doc_7a931abe16547c95a365",
+      "routing_mode": "cascade",
+      "input_truncated": false,
+      "escalation_reasons": [
+        "grounding_or_field_failure",
+        "empty_small_extraction"
+      ],
+      "attempts": [
+        {
+          "role": "small",
+          "document_id": "doc_7a931abe16547c95a365",
+          "at": "2026-10-18T17:00:15.079761+00:00",
+          "requested_model": "fixture/small",
+          "response_model": "fixture/small",
+          "prompt_sha256": "7474f1cb72172276d4b14a4bad7bef9989121360c80f5909dc4f593889a6e65a",
+          "input_sha256": "0d59d030e473c12771fb464fb187bdc5eb5b4398ecb0d0028f2801ceaeaffd87",
+          "config_sha256": "8c5d8759ae03e49225e77f9d6b7711b50da344c244c5c7caa4d422432a5aabc7",
+          "endpoint": "offline-fixture",
+          "status": "SIMULATED",
+          "error_code": null,
+          "usage": {},
+          "elapsed_ms": 0,
+          "synthetic": true,
+          "payload": {
+            "claims": [
+              {
+                "subject": "星港芯片（虚构）",
+                "predicate": "SUPPLIES",
+                "object": "云帆计算（虚构）",
+                "product": "海潮一号（虚构）",
+                "stage": "MASS_PRODUCTION",
+                "polarity": "ASSERTED",
+                "event_time": null,
+                "quote": "星港芯片（虚构）已向云帆计算（虚构）交付海潮一号（虚构）试产样品，仍处于客户测试阶段，尚未量产。"
+              }
+            ]
+          },
+          "raw_response_text": null
+        },
+        {
+          "role": "large",
+          "document_id": "doc_7a931abe16547c95a365",
+          "at": "2026-10-18T17:00:15.079968+00:00",
+          "requested_model": "fixture/large",
+          "response_model": "fixture/large",
+          "prompt_sha256": "7474f1cb72172276d4b14a4bad7bef9989121360c80f5909dc4f593889a6e65a",
+          "input_sha256": "0d59d030e473c12771fb464fb187bdc5eb5b4398ecb0d0028f2801ceaeaffd87",
+          "config_sha256": "8c5d8759ae03e49225e77f9d6b7711b50da344c244c5c7caa4d422432a5aabc7",
+          "endpoint": "offline-fixture",
+          "status": "SIMULATED",
+          "error_code": null,
+          "usage": {},
+          "elapsed_ms": 0,
+          "synthetic": true,
+          "payload": {
+            "claims": [
+              {
+                "subject": "星港芯片（虚构）",
+                "predicate": "SUPPLIES",
+                "object": "云帆计算（虚构）",
+                "product": "海潮一号（虚构）",
+                "stage": "TESTING",
+                "polarity": "ASSERTED",
+                "event_time": null,
+                "quote": "星港芯片（虚构）已向云帆计算（虚构）交付海潮一号（虚构）试产样品，仍处于客户测试阶段，尚未量产。"
+              }
+            ]
+          },
+          "raw_response_text": null
+        }
+      ],
+      "candidates": [
+        {
+          "subject": "星港芯片（虚构）",
+          "predicate": "SUPPLIES",
+          "object": "云帆计算（虚构）",
+          "product": "海潮一号（虚构）",
+          "stage": "TESTING",
+          "polarity": "ASSERTED",
+          "event_time": null,
+          "quote": "星港芯片（虚构）已向云帆计算（虚构）交付海潮一号（虚构）试产样品，仍处于客户测试阶段，尚未量产。",
+          "id": "cand_b690cc6d0229eda50308",
+          "document_id": "doc_7a931abe16547c95a365",
+          "quote_start": 39,
+          "quote_end": 87,
+          "pages": [],
+          "review_status": "PENDING",
+          "identity_status": "UNCONFIRMED",
+          "flags": [
+            "modality_or_counterevidence",
+            "model_disagreement"
+          ],
+          "proposed_by": [
+            "large"
+          ]
+        }
+      ],
+      "rejected": [
+        {
+          "claim": {
+            "subject": "星港芯片（虚构）",
+            "predicate": "SUPPLIES",
+            "object": "云帆计算（虚构）",
+            "product": "海潮一号（虚构）",
+            "stage": "MASS_PRODUCTION",
+            "polarity": "ASSERTED",
+            "event_time": null,
+            "quote": "星港芯片（虚构）已向云帆计算（虚构）交付海潮一号（虚构）试产样品，仍处于客户测试阶段，尚未量产。"
+          },
+          "reasons": [
+            "mass_production_modality_mismatch"
+          ],
+          "document_id": "doc_7a931abe16547c95a365",
+          "role": "small"
+        }
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "subject": "星港芯片（虚构）",
+      "predicate": "SUPPLIES",
+      "object": "远望服务器（虚构）",
+      "product": null,
+      "stage": "UNKNOWN",
+      "polarity": "NEGATED",
+      "event_time": null,
+      "quote": "星港芯片（虚构）否认已成为远望服务器（虚构）的量产供应商，并称双方仅开展技术交流，没有采购订单。",
+      "id": "cand_080539e1bff38c02cf2f",
+      "document_id": "doc_8d4d2dee782b920083a1",
+      "quote_start": 39,
+      "quote_end": 87,
+      "pages": [],
+      "review_status": "PENDING",
+      "identity_status": "UNCONFIRMED",
+      "flags": [
+        "modality_or_counterevidence"
+      ],
+      "proposed_by": [
+        "large",
+        "small"
+      ]
+    },
+    {
+      "subject": "晨星基金（虚构）",
+      "predicate": "OWNS",
+      "object": "星港芯片（虚构）",
+      "product": null,
+      "stage": "UNKNOWN",
+      "polarity": "ASSERTED",
+      "event_time": null,
+      "quote": "晨星基金（虚构）持有星港芯片（虚构）8%的股权，星港芯片（虚构）仍由其创始团队控制。",
+      "id": "cand_7c585eb8132d4339d6b0",
+      "document_id": "doc_d4a20087796d3f7fc15c",
+      "quote_start": 39,
+      "quote_end": 81,
+      "pages": [],
+      "review_status": "PENDING",
+      "identity_status": "UNCONFIRMED",
+      "flags": [
+        "ownership_or_competition_requires_review"
+      ],
+      "proposed_by": [
+        "large",
+        "small"
+      ]
+    },
+    {
+      "subject": "星港芯片（虚构）",
+      "predicate": "SUPPLIES",
+      "object": "云帆计算（虚构）",
+      "product": "海潮一号（虚构）",
+      "stage": "TESTING",
+      "polarity": "ASSERTED",
+      "event_time": null,
+      "quote": "星港芯片（虚构）已向云帆计算（虚构）交付海潮一号（虚构）试产样品，仍处于客户测试阶段，尚未量产。",
+      "id": "cand_520ce8e84b62e81d4cee",
+      "document_id": "doc_b41ce1fb961402175c4a",
+      "quote_start": 39,
+      "quote_end": 87,
+      "pages": [],
+      "review_status": "PENDING",
+      "identity_status": "UNCONFIRMED",
+      "flags": [
+        "modality_or_counterevidence",
+        "model_disagreement"
+      ],
+      "proposed_by": [
+        "large"
+      ]
+    },
+    {
+      "subject": "星港芯片（虚构）",
+      "predicate": "SUPPLIES",
+      "object": "云帆计算（虚构）",
+      "product": "海潮一号（虚构）",
+      "stage": "TESTING",
+      "polarity": "ASSERTED",
+      "event_time": null,
+      "quote": "星港芯片（虚构）已向云帆计算（虚构）交付海潮一号（虚构）试产样品，仍处于客户测试阶段，尚未量产。",
+      "id": "cand_b690cc6d0229eda50308",
+      "document_id": "doc_7a931abe16547c95a365",
+      "quote_start": 39,
+      "quote_end": 87,
+      "pages": [],
+      "review_status": "PENDING",
+      "identity_status": "UNCONFIRMED",
+      "flags": [
+        "modality_or_counterevidence",
+        "model_disagreement"
+      ],
+      "proposed_by": [
+        "large"
+      ]
+    }
+  ],
+  "diagnostics": [],
+  "coverage": {
+    "upstream": {
+      "planned_queries": 2,
+      "successful_searches": 2,
+      "hit_urls": 1,
+      "fetched_documents": 1,
+      "pending_candidates": 1
+    },
+    "downstream": {
+      "planned_queries": 2,
+      "successful_searches": 2,
+      "hit_urls": 1,
+      "fetched_documents": 1,
+      "pending_candidates": 1
+    },
+    "competitors": {
+      "planned_queries": 2,
+      "successful_searches": 2,
+      "hit_urls": 0,
+      "fetched_documents": 0,
+      "pending_candidates": 0
+    },
+    "investors": {
+      "planned_queries": 2,
+      "successful_searches": 2,
+      "hit_urls": 1,
+      "fetched_documents": 1,
+      "pending_candidates": 1
+    },
+    "investments": {
+      "planned_queries": 2,
+      "successful_searches": 2,
+      "hit_urls": 0,
+      "fetched_documents": 0,
+      "pending_candidates": 0
+    },
+    "people": {
+      "planned_queries": 2,
+      "successful_searches": 2,
+      "hit_urls": 0,
+      "fetched_documents": 0,
+      "pending_candidates": 0
+    },
+    "products": {
+      "planned_queries": 2,
+      "successful_searches": 2,
+      "hit_urls": 0,
+      "fetched_documents": 0,
+      "pending_candidates": 0
+    },
+    "capacity": {
+      "planned_queries": 2,
+      "successful_searches": 2,
+      "hit_urls": 0,
+      "fetched_documents": 0,
+      "pending_candidates": 0
+    },
+    "counterevidence": {
+      "planned_queries": 2,
+      "successful_searches": 2,
+      "hit_urls": 1,
+      "fetched_documents": 1,
+      "pending_candidates": 1
+    }
+  },
+  "counts": {
+    "search_calls": 0,
+    "fetch_calls": 0,
+    "model_calls": 0,
+    "large_model_calls": 0,
+    "simulated_model_calls": 8,
+    "pending_candidates": 4
+  },
+  "parent_run_id": null,
+  "frozen_input_sha256": "86becb2076ba2f23bf5699b5ff1d1302a32b567d5e04b8a301795d25a57ca488",
+  "handoff": "ledger/manifest.json"
+}

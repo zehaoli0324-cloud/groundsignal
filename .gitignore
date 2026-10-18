@@ -3,6 +3,8 @@ __pycache__/
 .collector-cache/
 collector-startup-error.log
 .build-venv/
+.venv/
+research-runs/
 build/
 
 # Local settings, credentials and generated previews
@@ -15,3 +17,4 @@ collection-board.html
 panorama.html
 collector-preview.jpg
 obsidian-connection-preview.jpg
+evidence-runs/

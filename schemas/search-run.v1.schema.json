@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Captured search run; cross-record grounding is checked by validate_run",
+  "type": "object", "additionalProperties": false,
+  "required": ["schema_version", "id", "created_at", "finished_at", "synthetic", "status", "target", "config", "plan", "search_records", "hits", "documents", "extractions", "candidates", "diagnostics", "coverage", "counts", "parent_run_id", "frozen_input_sha256", "handoff"],
+  "properties": {
+    "schema_version": {"const": "groundsignal.search-run.v1"},
+    "id": {"type": "string", "pattern": "^run_[0-9a-f]{20}$"},
+    "created_at": {"type": "string", "format": "date-time"},
+    "finished_at": {"type": "string", "format": "date-time"},
+    "synthetic": {"type": "boolean"},
+    "status": {"enum": ["SYNTHETIC_ONLY", "CANDIDATES_PENDING_REVIEW", "NO_CANDIDATES", "COLLECTED_MODEL_NOT_COMPLETED", "NO_USABLE_DOCUMENTS"]},
+    "target": {"type": "object"}, "config": {"type": "object"},
+    "plan": {"type": "object", "required": ["queries", "unplanned_dimensions"], "properties": {"queries": {"type": "array", "items": {"type": "object", "required": ["id", "dimension", "query", "purpose", "time_filter"]}}, "unplanned_dimensions": {"type": "array", "items": {"type": "string"}}}},
+    "search_records": {"type": "array", "items": {"type": "object", "required": ["provider", "query_id", "dimension", "query", "searched_at", "status", "hits", "error_code"]}},
+    "hits": {"type": "array", "items": {"type": "object", "required": ["url", "first_seen_at", "references", "source_hint"]}},
+    "documents": {"type": "array", "items": {"$ref": "#/$defs/document"}},
+    "extractions": {"type": "array", "items": {"type": "object", "required": ["document_id", "routing_mode", "input_truncated", "escalation_reasons", "attempts", "candidates", "rejected"]}},
+    "candidates": {"type": "array", "items": {"$ref": "#/$defs/candidate"}},
+    "diagnostics": {"type": "array", "items": {"type": "object", "required": ["code"]}},
+    "coverage": {"type": "object"}, "counts": {"type": "object"},
+    "parent_run_id": {"type": ["string", "null"]},
+    "frozen_input_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "handoff": {"type": ["string", "null"]}
+  },
+  "$defs": {
+    "document": {"type": "object", "required": ["id", "url", "resolved_url", "title", "text", "pages", "status", "first_seen_at", "retrieved_at", "raw_sha256", "text_sha256", "synthetic", "source_hint", "error_code"], "properties": {
+      "id": {"type": "string", "pattern": "^doc_[0-9a-f]{20}$"},
+      "url": {"type": "string", "format": "uri"}, "resolved_url": {"type": "string", "format": "uri"},
+      "title": {"type": "string"}, "text": {"type": "string"}, "pages": {"type": "array", "items": {"type": "object", "required": ["page", "start", "end"], "properties": {"page": {"type": "integer", "minimum": 1}, "start": {"type": "integer", "minimum": 0}, "end": {"type": "integer", "minimum": 0}}}},
+      "status": {"enum": ["FETCHED", "IRRELEVANT", "FAILED"]},
+      "synthetic": {"type": "boolean"},
+      "first_seen_at": {"type": "string", "format": "date-time"}, "retrieved_at": {"type": "string", "format": "date-time"},
+      "text_sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"}, "raw_sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"}
+    }},
+    "candidate": {"type": "object", "additionalProperties": false,
+      "required": ["subject", "predicate", "object", "product", "stage", "polarity", "event_time", "quote", "id", "document_id", "quote_start", "quote_end", "pages", "review_status", "identity_status", "flags", "proposed_by"],
+      "properties": {
+        "subject": {"type": "string"}, "predicate": {"type": "string"}, "object": {"type": "string"},
+        "product": {"type": ["string", "null"]}, "stage": {"type": "string"}, "polarity": {"type": "string"}, "event_time": {"type": ["string", "null"]}, "quote": {"type": "string"},
+        "id": {"type": "string", "pattern": "^cand_[0-9a-f]{20}$"}, "document_id": {"type": "string"},
+        "quote_start": {"type": "integer", "minimum": 0}, "quote_end": {"type": "integer", "minimum": 0},
+        "pages": {"type": "array", "items": {"type": "integer", "minimum": 1}},
+        "review_status": {"const": "PENDING"}, "identity_status": {"const": "UNCONFIRMED"},
+        "flags": {"type": "array", "items": {"type": "string"}}, "proposed_by": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"enum": ["small", "large"]}}
+      }
+    }
+  }
+}

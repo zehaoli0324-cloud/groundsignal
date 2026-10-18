@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Model proposal only; no verification, identity or confidence fields accepted",
+  "type": "object", "additionalProperties": false,
+  "required": ["claims"],
+  "properties": {"claims": {"type": "array", "maxItems": 30, "items": {"$ref": "#/$defs/claim"}}},
+  "$defs": {"claim": {
+    "type": "object", "additionalProperties": false,
+    "required": ["subject", "predicate", "object", "product", "stage", "polarity", "event_time", "quote"],
+    "properties": {
+      "subject": {"type": "string", "minLength": 1, "maxLength": 200},
+      "predicate": {"enum": ["SUPPLIES", "CUSTOMER_OF", "MANUFACTURES_FOR", "PACKAGES_FOR", "DISTRIBUTES_FOR", "COMPETES_WITH", "PRODUCT_OVERLAP", "INVESTED_IN", "OWNS", "CONTROLS", "FOUNDED", "EXECUTIVE_AT", "MAKES", "OPERATES_FACILITY", "EXPANDS_CAPACITY", "PARTNERS_WITH"]},
+      "object": {"type": "string", "minLength": 1, "maxLength": 200},
+      "product": {"type": ["string", "null"], "minLength": 1, "maxLength": 200},
+      "stage": {"enum": ["UNKNOWN", "RUMOR", "PLANNED", "SAMPLE", "TESTING", "QUALIFIED", "DESIGN_WIN", "ORDERED", "SHIPPING", "MASS_PRODUCTION", "ENDED"]},
+      "polarity": {"enum": ["ASSERTED", "NEGATED", "UNCERTAIN"]},
+      "event_time": {"type": ["string", "null"], "pattern": "^\\d{4}(?:-\\d{2}(?:-\\d{2})?)?$"},
+      "quote": {"type": "string", "minLength": 8, "maxLength": 1800}
+    }
+  }}
+}

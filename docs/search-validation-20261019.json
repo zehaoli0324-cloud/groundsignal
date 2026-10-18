@@ -1,0 +1,134 @@
+{
+  "schema_version": "groundsignal.search-validation.v1",
+  "recorded_at": "2026-10-18T17:01:06.092780+00:00",
+  "local_tests": {
+    "status": "PASSED",
+    "total": 103,
+    "original": 61,
+    "new": 42,
+    "command": "python -m unittest discover -s tests -q"
+  },
+  "runtime": {
+    "python": "3.12.14",
+    "dependencies": {
+      "requests": "2.34.2",
+      "beautifulsoup4": "4.15.0",
+      "jsonschema": "4.26.0",
+      "pypdf": "6.21.1"
+    }
+  },
+  "live_http": {
+    "run_id": "run_07621ee8a51319800f20",
+    "started_at": "2026-10-18T16:54:53.060815+00:00",
+    "finished_at": "2026-10-18T16:54:53.063608+00:00",
+    "status": "NO_USABLE_DOCUMENTS",
+    "synthetic": false,
+    "counts": {
+      "search_calls": 0,
+      "fetch_calls": 0,
+      "model_calls": 0,
+      "large_model_calls": 0,
+      "simulated_model_calls": 0,
+      "pending_candidates": 0
+    },
+    "documents": [
+      {
+        "id": "doc_e98fd86fb3d7fc67c174",
+        "url": "https://nvidianews.nvidia.com/news/computer-industry-ai-factories-data-centers/",
+        "status": "FAILED",
+        "error_code": "dns_unavailable",
+        "text_sha256": null,
+        "parser": null,
+        "text_characters": 0
+      },
+      {
+        "id": "doc_645877caa8c502bbfdb7",
+        "url": "https://nvidianews.nvidia.com/news/nvidia-blackwell-platform-arrives-to-power-a-new-era-of-computing/",
+        "status": "FAILED",
+        "error_code": "dns_unavailable",
+        "text_sha256": null,
+        "parser": null,
+        "text_characters": 0
+      }
+    ],
+    "note": "Explicit seed URLs discovered manually; this checks live fetching, not search recall or model accuracy."
+  },
+  "live_search": {
+    "run_id": "run_b3c5b000b0b4895b4604",
+    "started_at": "2026-10-18T16:56:20.436604+00:00",
+    "finished_at": "2026-10-18T16:56:25.452835+00:00",
+    "status": "NO_USABLE_DOCUMENTS",
+    "counts": {
+      "search_calls": 1,
+      "fetch_calls": 0,
+      "model_calls": 0,
+      "large_model_calls": 0,
+      "simulated_model_calls": 0,
+      "pending_candidates": 0
+    },
+    "searches": [
+      {
+        "provider": "so360",
+        "query": "\"富瀚微\" 供应商 代工 封装 材料",
+        "status": "FAILED",
+        "error_code": "ReadTimeout"
+      },
+      {
+        "provider": "so360",
+        "query": "\"富瀚微\" 客户 采购 中标 订单",
+        "status": "BUDGET_EXHAUSTED",
+        "error_code": "max_search_calls"
+      },
+      {
+        "provider": "so360",
+        "query": "\"富瀚微\" 竞争对手 产品 替代",
+        "status": "BUDGET_EXHAUSTED",
+        "error_code": "max_search_calls"
+      },
+      {
+        "provider": "so360",
+        "query": "\"富瀚微\" 股东 融资 投资方",
+        "status": "BUDGET_EXHAUSTED",
+        "error_code": "max_search_calls"
+      },
+      {
+        "provider": "so360",
+        "query": "\"富瀚微\" 对外投资 控股 全资子公司",
+        "status": "BUDGET_EXHAUSTED",
+        "error_code": "max_search_calls"
+      },
+      {
+        "provider": "so360",
+        "query": "\"富瀚微\" 创始人 实际控制人 管理层",
+        "status": "BUDGET_EXHAUSTED",
+        "error_code": "max_search_calls"
+      },
+      {
+        "provider": "so360",
+        "query": "\"富瀚微\" 产品 认证 量产 技术",
+        "status": "BUDGET_EXHAUSTED",
+        "error_code": "max_search_calls"
+      },
+      {
+        "provider": "so360",
+        "query": "\"富瀚微\" 工厂 产能 扩产 投产",
+        "status": "BUDGET_EXHAUSTED",
+        "error_code": "max_search_calls"
+      },
+      {
+        "provider": "so360",
+        "query": "\"富瀚微\" 否认 终止 更正 延期",
+        "status": "BUDGET_EXHAUSTED",
+        "error_code": "max_search_calls"
+      }
+    ],
+    "note": "One bounded unauthenticated provider attempt; not a recall or model-quality measurement."
+  },
+  "real_model_measurements": "NOT_RUN",
+  "paid_search_transports": "MOCK_TESTED_ONLY_NO_KEYS",
+  "optional_crawl4ai_docling": "NOT_RUN",
+  "remote_ci": "NOT_YET_OBSERVED",
+  "quality_conclusion": "UNASSESSED",
+  "model_selection": "PROVISIONAL_NOT_BENCHMARK_WINNER",
+  "synthetic_results_are_model_measurements": false
+}

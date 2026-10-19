@@ -1,0 +1,47 @@
+{
+  "providers": [
+    "brave",
+    "tavily",
+    "deepseek"
+  ],
+  "fetcher": "http",
+  "pdf_parser": "pypdf",
+  "routing_mode": "cascade",
+  "audit_fraction": 0.2,
+  "budget": {
+    "max_queries": 18,
+    "max_search_calls": 24,
+    "results_per_query": 4,
+    "max_documents": 8,
+    "max_model_calls": 12,
+    "max_large_calls": 4,
+    "max_input_chars": 12000,
+    "max_output_tokens": 2048,
+    "max_bytes": 8000000,
+    "timeout_seconds": 20,
+    "max_elapsed_seconds": 240,
+    "request_interval_seconds": 1,
+    "cache_ttl_seconds": 21600,
+    "max_fetch_calls": 32
+  },
+  "models": {
+    "small": {
+      "enabled": false,
+      "base_url": "http://127.0.0.1:11434/v1",
+      "model": "qwen3.5:9b",
+      "api_key_env": null,
+      "extra_body": {}
+    },
+    "large": {
+      "enabled": false,
+      "base_url": "https://api.deepseek.com",
+      "model": "deepseek-flash",
+      "api_key_env": "DEEPSEEK_API_KEY",
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        }
+      }
+    }
+  }
+}

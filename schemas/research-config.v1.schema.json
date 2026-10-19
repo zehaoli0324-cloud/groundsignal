@@ -1,0 +1,200 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "providers",
+    "fetcher",
+    "pdf_parser",
+    "routing_mode",
+    "audit_fraction",
+    "budget",
+    "models"
+  ],
+  "properties": {
+    "providers": {
+      "type": "array",
+      "uniqueItems": true,
+      "maxItems": 6,
+      "items": {
+        "enum": [
+          "brave",
+          "tavily",
+          "firecrawl",
+          "deepseek",
+          "sogou",
+          "so360"
+        ]
+      }
+    },
+    "fetcher": {
+      "enum": [
+        "http",
+        "crawl4ai"
+      ]
+    },
+    "pdf_parser": {
+      "enum": [
+        "pypdf",
+        "docling"
+      ]
+    },
+    "routing_mode": {
+      "enum": [
+        "small_only",
+        "large_only",
+        "cascade"
+      ]
+    },
+    "audit_fraction": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "budget": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "max_queries",
+        "max_search_calls",
+        "results_per_query",
+        "max_documents",
+        "max_model_calls",
+        "max_large_calls",
+        "max_input_chars",
+        "max_output_tokens",
+        "max_bytes",
+        "timeout_seconds",
+        "max_elapsed_seconds",
+        "request_interval_seconds",
+        "cache_ttl_seconds",
+        "max_fetch_calls"
+      ],
+      "properties": {
+        "max_queries": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 54
+        },
+        "max_search_calls": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 200
+        },
+        "results_per_query": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10
+        },
+        "max_documents": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 50
+        },
+        "max_model_calls": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "max_large_calls": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "max_input_chars": {
+          "type": "integer",
+          "minimum": 500,
+          "maximum": 30000
+        },
+        "max_output_tokens": {
+          "type": "integer",
+          "minimum": 256,
+          "maximum": 8192
+        },
+        "max_bytes": {
+          "type": "integer",
+          "minimum": 1024,
+          "maximum": 20000000
+        },
+        "timeout_seconds": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 60
+        },
+        "max_elapsed_seconds": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 3600
+        },
+        "request_interval_seconds": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 10
+        },
+        "cache_ttl_seconds": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 86400
+        },
+        "max_fetch_calls": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 200
+        }
+      }
+    },
+    "models": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "small",
+        "large"
+      ],
+      "properties": {
+        "small": {
+          "$ref": "#/$defs/model"
+        },
+        "large": {
+          "$ref": "#/$defs/model"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "model": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "enabled",
+        "base_url",
+        "model",
+        "api_key_env",
+        "extra_body"
+      ],
+      "properties": {
+        "enabled": {
+          "type": "boolean"
+        },
+        "base_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "model": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "api_key_env": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[A-Z][A-Z0-9_]+$"
+        },
+        "extra_body": {
+          "type": "object"
+        }
+      }
+    }
+  }
+}

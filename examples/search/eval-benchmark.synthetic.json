@@ -1,0 +1,147 @@
+{
+  "schema_version": "groundsignal.research-benchmark.v1",
+  "id": "synthetic_collection_regression_v1",
+  "synthetic": true,
+  "target_id": "synthetic_chip",
+  "target_sha256": "52c10f89f2c348cbedbdc097123d85982ac4c2591ac47529e2343b7104a34a43",
+  "scope": "虚构采集回归：三条已取得主张、一条已知漏采、一个转载和一个无关来源；非真实行业评测",
+  "as_of": "2026-10-19T23:59:59Z",
+  "split": "regression",
+  "annotation": {
+    "status": "ADJUDICATED",
+    "annotators": [
+      "synthetic_fixture_author_a",
+      "synthetic_fixture_author_b"
+    ],
+    "adjudicator": "synthetic_fixture_author",
+    "groups_reviewed": true
+  },
+  "sources": [
+    {
+      "id": "sample_origin",
+      "urls": [
+        "https://source.example.invalid/sample",
+        "https://source.example.invalid/reprint"
+      ],
+      "relevance": 3,
+      "dimensions": [
+        "downstream",
+        "products"
+      ],
+      "required": true,
+      "published_at": null
+    },
+    {
+      "id": "ownership_origin",
+      "urls": [
+        "https://source.example.invalid/ownership"
+      ],
+      "relevance": 3,
+      "dimensions": [
+        "investors"
+      ],
+      "required": true,
+      "published_at": null
+    },
+    {
+      "id": "denial_origin",
+      "urls": [
+        "https://source.example.invalid/denial"
+      ],
+      "relevance": 3,
+      "dimensions": [
+        "counterevidence"
+      ],
+      "required": true,
+      "published_at": null
+    },
+    {
+      "id": "missing_capacity",
+      "urls": [
+        "https://source.example.invalid/missing-capacity"
+      ],
+      "relevance": 2,
+      "dimensions": [
+        "capacity"
+      ],
+      "required": true,
+      "published_at": null
+    },
+    {
+      "id": "irrelevant_origin",
+      "urls": [
+        "https://source.example.invalid/irrelevant"
+      ],
+      "relevance": 0,
+      "dimensions": [],
+      "required": false,
+      "published_at": null
+    }
+  ],
+  "documents": [
+    {
+      "source_group": "sample_origin",
+      "text_sha256": "0d59d030e473c12771fb464fb187bdc5eb5b4398ecb0d0028f2801ceaeaffd87",
+      "annotation_complete": true,
+      "claims": [
+        {
+          "subject": "星港芯片（虚构）",
+          "predicate": "SUPPLIES",
+          "object": "云帆计算（虚构）",
+          "product": "海潮一号（虚构）",
+          "stage": "TESTING",
+          "polarity": "ASSERTED",
+          "event_time": null
+        }
+      ]
+    },
+    {
+      "source_group": "ownership_origin",
+      "text_sha256": "35ece126ff55de572b71d16bb27a475518ee9aa76d6be0ae021746de130369bc",
+      "annotation_complete": true,
+      "claims": [
+        {
+          "subject": "晨星基金（虚构）",
+          "predicate": "OWNS",
+          "object": "星港芯片（虚构）",
+          "product": null,
+          "stage": "UNKNOWN",
+          "polarity": "ASSERTED",
+          "event_time": null
+        }
+      ]
+    },
+    {
+      "source_group": "denial_origin",
+      "text_sha256": "c7f85f90d3df3eb8f665d268dcdd9d97b2bc0905f5fb3144eca4f6d41e0fe22a",
+      "annotation_complete": true,
+      "claims": [
+        {
+          "subject": "星港芯片（虚构）",
+          "predicate": "SUPPLIES",
+          "object": "远望服务器（虚构）",
+          "product": null,
+          "stage": "UNKNOWN",
+          "polarity": "NEGATED",
+          "event_time": null
+        }
+      ]
+    },
+    {
+      "source_group": "missing_capacity",
+      "text_sha256": "6322188febd81b4b11173ac4c4fe55d700d3e51113c3456cfb94c9c88ca4b236",
+      "annotation_complete": true,
+      "claims": [
+        {
+          "subject": "星港芯片（虚构）",
+          "predicate": "EXPANDS_CAPACITY",
+          "object": "虚构晶圆工厂",
+          "product": null,
+          "stage": "PLANNED",
+          "polarity": "ASSERTED",
+          "event_time": null
+        }
+      ]
+    }
+  ]
+}

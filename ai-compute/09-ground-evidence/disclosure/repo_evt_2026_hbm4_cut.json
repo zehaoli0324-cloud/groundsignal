@@ -1,0 +1,38 @@
+{
+  "id": "repo_evt_2026_hbm4_cut",
+  "event_id": "evt_2026_hbm4_cut",
+  "evidence_type": "disclosure",
+  "source_url": "https://github.com/zehaoli0324-cloud/groundsignal/blob/5506f8fa131f446e884762996387afc0b4d29b5d/ai-compute/04-%E4%BA%8B%E4%BB%B6/2026-SK%E6%B5%B7%E5%8A%9B%E5%A3%AB%E4%B8%8B%E8%B0%83HBM4%E5%87%BA%E8%B4%A7%E4%B8%A4%E8%87%B3%E4%B8%89%E6%88%90.md",
+  "source_domain": "github.com",
+  "source_tier": "UNKNOWN",
+  "published_at": null,
+  "first_seen_at": "2026-10-13T12:17:42+00:00",
+  "retrieved_at": "2026-10-13T12:17:42+00:00",
+  "processed_at": "2026-10-13T12:17:42+00:00",
+  "raw_fingerprint": "c1e928b358ccc6deabb45766f99a3bbcc77817fd50f449ab0018f19242c2fa7f",
+  "fingerprint_scope": "repository_markdown",
+  "source_independence_group": null,
+  "content_excerpt": "下调 2026 年 HBM4 出货两至三成，转向 HBM3E 及 LPDDR 产能优化",
+  "access_mode": "repository_backfill",
+  "original_source_checked": false,
+  "legal_basis": {
+    "public_access": "UNKNOWN",
+    "auth_required": "UNKNOWN",
+    "robots_reviewed": false,
+    "tos_reviewed": false,
+    "redistribution_status": "UNKNOWN",
+    "personal_data": "UNASSESSED",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  "cited_source_url": "https://ai.zol.com.cn/1165/11654339.html",
+  "lineage": {
+    "repository_commit": "5506f8fa131f446e884762996387afc0b4d29b5d",
+    "repository_path": "ai-compute/04-事件/2026-SK海力士下调HBM4出货两至三成.md",
+    "declared_fetched_at": "2026-08-26",
+    "declared_verified_at": "2026-08-26",
+    "legacy_event_type": "SUPPLIER_CHANGED",
+    "original_article_retrieved": false,
+    "note": "原文是仓库事件笔记，不是原始商业凭证；历史置信度不继承为确认状态"
+  }
+}

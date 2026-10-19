@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "run_id",
+    "run_sha256",
+    "benchmark_sha256",
+    "documents",
+    "candidates"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "groundsignal.research-review.v1"
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "run_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "benchmark_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "documents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "document_id",
+          "capture_permission",
+          "cloud_permission",
+          "basis",
+          "reviewer",
+          "reviewed_at"
+        ],
+        "properties": {
+          "document_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "capture_permission": {
+            "enum": [
+              "ALLOWED",
+              "DENIED",
+              "UNKNOWN"
+            ]
+          },
+          "cloud_permission": {
+            "enum": [
+              "ALLOWED",
+              "DENIED",
+              "UNKNOWN"
+            ]
+          },
+          "basis": {
+            "type": "string",
+            "minLength": 1
+          },
+          "reviewer": {
+            "type": "string",
+            "minLength": 1
+          },
+          "reviewed_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      }
+    },
+    "candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "candidate_id",
+          "reviewer",
+          "reviewer_type",
+          "verdict",
+          "error_types",
+          "reason",
+          "reviewed_at"
+        ],
+        "properties": {
+          "candidate_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "reviewer": {
+            "type": "string",
+            "minLength": 1
+          },
+          "reviewer_type": {
+            "enum": [
+              "HUMAN",
+              "MODEL"
+            ]
+          },
+          "verdict": {
+            "enum": [
+              "CORRECT",
+              "INCORRECT",
+              "UNCERTAIN"
+            ]
+          },
+          "error_types": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "WRONG_ENTITY",
+                "REVERSED_RELATION",
+                "STAGE_OVERCLAIM",
+                "POLARITY_ERROR",
+                "TIME_ERROR",
+                "UNSUPPORTED",
+                "OTHER"
+              ]
+            },
+            "uniqueItems": true
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "reviewed_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "effort_minutes": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          }
+        }
+      }
+    }
+  }
+}

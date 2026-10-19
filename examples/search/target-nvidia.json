@@ -1,0 +1,10 @@
+{
+  "id": "research_nvidia",
+  "name": "英伟达",
+  "aliases": ["NVIDIA", "NVIDIA Corporation"],
+  "official_domains": ["nvidia.com", "nvidianews.nvidia.com"],
+  "identity_status": "UNCONFIRMED",
+  "dimensions": ["upstream", "downstream", "competitors", "investors", "investments", "people", "products", "capacity", "counterevidence"],
+  "time_range": {"after": null, "before": null},
+  "seed_urls": []
+}

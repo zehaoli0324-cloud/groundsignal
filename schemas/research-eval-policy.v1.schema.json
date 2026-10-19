@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "k",
+    "min_reference_groups",
+    "min_labeled_claims",
+    "min_retrieval_recall",
+    "min_extraction_precision",
+    "min_end_to_end_recall",
+    "min_rank_judgment_coverage",
+    "min_candidate_label_coverage",
+    "min_human_review_coverage",
+    "high_risk_human_reviewers"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "groundsignal.research-eval-policy.v1"
+    },
+    "k": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 100
+    },
+    "min_reference_groups": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "min_labeled_claims": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "min_retrieval_recall": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "min_extraction_precision": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "min_end_to_end_recall": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "min_rank_judgment_coverage": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "min_candidate_label_coverage": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "min_human_review_coverage": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "high_risk_human_reviewers": {
+      "type": "integer",
+      "minimum": 2
+    }
+  }
+}

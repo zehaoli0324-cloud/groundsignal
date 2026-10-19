@@ -1,0 +1,37 @@
+{
+  "schema_version": "groundsignal.collection-comparison.v1",
+  "selection_status": "NO_AUTOMATIC_WINNER",
+  "benchmark_sha256": "0218c8ecb4f30e4d933386cda94cbc4ce3935d9ca4d1fd0c552f49ad04c7fcdb",
+  "same_budget": true,
+  "same_frozen_input": true,
+  "results": [
+    {
+      "run_id": "run_fbccb53384d4edda7f1d",
+      "run_sha256": "0ebd2bbf284fd0216ed5bf287480e9d8a202c12737836fb0c9e3f5ad6c6259e0",
+      "quality_status": "SYNTHETIC_ONLY",
+      "decision": "NOT_READY",
+      "retrieval_recall": 0.75,
+      "precision": 1.0,
+      "end_to_end_recall": 0.5
+    },
+    {
+      "run_id": "run_d4e3eca218c8d85f4a29",
+      "run_sha256": "31534f268f77cbb88c55ff4ce117a2a64d2f2addd656e8966e1aad0ad5ef9eb8",
+      "quality_status": "SYNTHETIC_ONLY",
+      "decision": "NOT_READY",
+      "retrieval_recall": 0.75,
+      "precision": 1.0,
+      "end_to_end_recall": 0.75
+    },
+    {
+      "run_id": "run_a35e47b755fcd37cde57",
+      "run_sha256": "d034808bf654a0f14449a5a853b11832b8e0e8b0c98e053ea0882bcc92b98071",
+      "quality_status": "SYNTHETIC_ONLY",
+      "decision": "NOT_READY",
+      "retrieval_recall": 0.75,
+      "precision": 1.0,
+      "end_to_end_recall": 0.75
+    }
+  ],
+  "note": "Same target and reference benchmark are enforced; unequal budgets or inputs are not a fair model-only comparison."
+}

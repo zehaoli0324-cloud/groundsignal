@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-19",
+  "checks": [
+    {
+      "command": "prepare --target examples/search/target-nvidia.json --intensity quick --models none --providers brave --out research-runs/ops-verify-20261019-01/quick",
+      "exit_code": 0,
+      "status": "PREPARED_OFFLINE"
+    },
+    {
+      "command": "prepare --target examples/search/target-nvidia.json --intensity standard --models none --providers brave --out research-runs/ops-verify-20261019-01/standard",
+      "exit_code": 0,
+      "status": "PREPARED_OFFLINE"
+    },
+    {
+      "command": "prepare --target examples/search/target-nvidia.json --intensity deep --models none --providers brave --out research-runs/ops-verify-20261019-01/deep",
+      "exit_code": 0,
+      "status": "PREPARED_OFFLINE"
+    },
+    {
+      "command": "prepare --target examples/search/target-nvidia.json --models qwen9b-flash --out research-runs/ops-verify-20261019-01/qwen9b-flash",
+      "exit_code": 0,
+      "status": "PREPARED_OFFLINE"
+    },
+    {
+      "command": "prepare --target examples/search/target-nvidia.json --models qwen4b-pro --out research-runs/ops-verify-20261019-01/qwen4b-pro",
+      "exit_code": 0,
+      "status": "PREPARED_OFFLINE"
+    },
+    {
+      "command": "prepare --target examples/search/target-nvidia.seeded.json --providers --out research-runs/ops-verify-20261019-01/seed-session",
+      "exit_code": 0,
+      "status": "PREPARED_OFFLINE"
+    },
+    {
+      "command": "doctor --config research-runs/ops-verify-20261019-01/quick/config.json --target research-runs/ops-verify-20261019-01/quick/target.json",
+      "exit_code": 0,
+      "status": "DIAGNOSTIC_ONLY"
+    },
+    {
+      "command": "plan --target research-runs/ops-verify-20261019-01/deep/target.json --config research-runs/ops-verify-20261019-01/deep/config.json --out research-runs/ops-verify-20261019-01/plan",
+      "exit_code": 0,
+      "status": "PLAN_ONLY"
+    },
+    {
+      "command": "demo --out research-runs/ops-verify-20261019-01/demo",
+      "exit_code": 0,
+      "status": "SYNTHETIC_ONLY"
+    },
+    {
+      "command": "validate --run research-runs/ops-verify-20261019-01/demo/run.json",
+      "exit_code": 0,
+      "status": "CONTRACT_VALID"
+    },
+    {
+      "command": "audit --run research-runs/ops-verify-20261019-01/demo/run.json --out research-runs/ops-verify-20261019-01/audit",
+      "exit_code": 0,
+      "status": "TECHNICAL_AUDIT_ONLY"
+    },
+    {
+      "command": "compare --run research-runs/ops-verify-20261019-01/demo/run.json --fixture examples/search/synthetic.json --gold examples/search/synthetic-gold.json --out research-runs/ops-verify-20261019-01/compare",
+      "exit_code": 0,
+      "status": null
+    }
+  ],
+  "test_count": 114,
+  "mode": "OFFLINE_ONLY",
+  "documentation_relative_links": "VALID",
+  "live_search": "NOT_RUN",
+  "live_models": "NOT_RUN",
+  "optional_renderers": "NOT_RUN",
+  "legal_certification": "NOT_ASSESSED"
+}

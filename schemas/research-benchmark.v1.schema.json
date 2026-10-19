@@ -1,0 +1,264 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "id",
+    "synthetic",
+    "target_id",
+    "scope",
+    "as_of",
+    "split",
+    "annotation",
+    "sources",
+    "documents",
+    "target_sha256"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "groundsignal.research-benchmark.v1"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "synthetic": {
+      "type": "boolean"
+    },
+    "target_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scope": {
+      "type": "string",
+      "minLength": 1
+    },
+    "as_of": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "split": {
+      "enum": [
+        "development",
+        "holdout",
+        "regression"
+      ]
+    },
+    "annotation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "annotators",
+        "adjudicator",
+        "groups_reviewed"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "DRAFT",
+            "ADJUDICATED"
+          ]
+        },
+        "annotators": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "adjudicator": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "groups_reviewed": {
+          "type": "boolean"
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "urls",
+          "relevance",
+          "dimensions",
+          "required",
+          "published_at"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "urls": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uri"
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "relevance": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0,
+            "maximum": 3
+          },
+          "dimensions": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "upstream",
+                "downstream",
+                "competitors",
+                "investors",
+                "investments",
+                "people",
+                "products",
+                "capacity",
+                "counterevidence"
+              ]
+            },
+            "uniqueItems": true
+          },
+          "required": {
+            "type": "boolean"
+          },
+          "published_at": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          }
+        }
+      }
+    },
+    "documents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "source_group",
+          "text_sha256",
+          "annotation_complete",
+          "claims"
+        ],
+        "properties": {
+          "source_group": {
+            "type": "string",
+            "minLength": 1
+          },
+          "text_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "annotation_complete": {
+            "type": "boolean"
+          },
+          "claims": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "subject",
+                "predicate",
+                "object",
+                "product",
+                "stage",
+                "polarity",
+                "event_time"
+              ],
+              "properties": {
+                "subject": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 200
+                },
+                "predicate": {
+                  "enum": [
+                    "SUPPLIES",
+                    "CUSTOMER_OF",
+                    "MANUFACTURES_FOR",
+                    "PACKAGES_FOR",
+                    "DISTRIBUTES_FOR",
+                    "COMPETES_WITH",
+                    "PRODUCT_OVERLAP",
+                    "INVESTED_IN",
+                    "OWNS",
+                    "CONTROLS",
+                    "FOUNDED",
+                    "EXECUTIVE_AT",
+                    "MAKES",
+                    "OPERATES_FACILITY",
+                    "EXPANDS_CAPACITY",
+                    "PARTNERS_WITH"
+                  ]
+                },
+                "object": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 200
+                },
+                "product": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "minLength": 1,
+                  "maxLength": 200
+                },
+                "stage": {
+                  "enum": [
+                    "UNKNOWN",
+                    "RUMOR",
+                    "PLANNED",
+                    "SAMPLE",
+                    "TESTING",
+                    "QUALIFIED",
+                    "DESIGN_WIN",
+                    "ORDERED",
+                    "SHIPPING",
+                    "MASS_PRODUCTION",
+                    "ENDED"
+                  ]
+                },
+                "polarity": {
+                  "enum": [
+                    "ASSERTED",
+                    "NEGATED",
+                    "UNCERTAIN"
+                  ]
+                },
+                "event_time": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "pattern": "^\\d{4}(?:-\\d{2}(?:-\\d{2})?)?$"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "target_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  }
+}

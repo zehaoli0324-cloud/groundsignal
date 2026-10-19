@@ -1,0 +1,61 @@
+{
+  "schema_version": "groundsignal.model-comparison.v1",
+  "selection_status": "NO_AUTOMATIC_WINNER",
+  "results": [
+    {
+      "mode": "small_only",
+      "quality_status": "SYNTHETIC_ONLY",
+      "precision": 1.0,
+      "recall": 0.5,
+      "true_positive": 2,
+      "false_positive": 0,
+      "false_negative": 2,
+      "scored_documents": 4,
+      "all_fetched_documents": 4,
+      "model_calls": 0,
+      "large_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "estimated_money_cost": null,
+      "synthetic": true,
+      "frozen_input_sha256": "86becb2076ba2f23bf5699b5ff1d1302a32b567d5e04b8a301795d25a57ca488"
+    },
+    {
+      "mode": "large_only",
+      "quality_status": "SYNTHETIC_ONLY",
+      "precision": 1.0,
+      "recall": 1.0,
+      "true_positive": 4,
+      "false_positive": 0,
+      "false_negative": 0,
+      "scored_documents": 4,
+      "all_fetched_documents": 4,
+      "model_calls": 0,
+      "large_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "estimated_money_cost": null,
+      "synthetic": true,
+      "frozen_input_sha256": "86becb2076ba2f23bf5699b5ff1d1302a32b567d5e04b8a301795d25a57ca488"
+    },
+    {
+      "mode": "cascade",
+      "quality_status": "SYNTHETIC_ONLY",
+      "precision": 1.0,
+      "recall": 1.0,
+      "true_positive": 4,
+      "false_positive": 0,
+      "false_negative": 0,
+      "scored_documents": 4,
+      "all_fetched_documents": 4,
+      "model_calls": 0,
+      "large_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "estimated_money_cost": null,
+      "synthetic": true,
+      "frozen_input_sha256": "86becb2076ba2f23bf5699b5ff1d1302a32b567d5e04b8a301795d25a57ca488"
+    }
+  ],
+  "note": "Compare only this labeled subset. Synthetic fixtures are not model measurements; money cost is unknown without provider pricing/account data."
+}

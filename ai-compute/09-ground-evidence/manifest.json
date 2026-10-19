@@ -1,0 +1,144 @@
+{
+  "schema_version": "groundsignal.ground-evidence.v1",
+  "title": "现有 AI Compute 事件：历史回填",
+  "mode": "repository_backfill",
+  "created_at": "2026-10-13T12:17:42+00:00",
+  "stale_after_days": 45,
+  "entities": [
+    {
+      "id": "company_0890f456684a70f1",
+      "name": "NVIDIA",
+      "aliases": [],
+      "identity_status": "REPOSITORY_LABEL_ONLY"
+    },
+    {
+      "id": "company_f359e42f1d9b36fc",
+      "name": "SK海力士",
+      "aliases": [],
+      "identity_status": "REPOSITORY_LABEL_ONLY"
+    },
+    {
+      "id": "company_7ad9114a6ee73402",
+      "name": "台积电",
+      "aliases": [],
+      "identity_status": "REPOSITORY_LABEL_ONLY"
+    },
+    {
+      "id": "company_255a4dc2b1944069",
+      "name": "三星电子",
+      "aliases": [],
+      "identity_status": "REPOSITORY_LABEL_ONLY"
+    },
+    {
+      "id": "company_dadebd05e4843391",
+      "name": "沪电股份",
+      "aliases": [],
+      "identity_status": "REPOSITORY_LABEL_ONLY"
+    }
+  ],
+  "events": [
+    {
+      "id": "evt_202403_blackwell",
+      "title": "2024-03-NVIDIA发布Blackwell",
+      "event_type": "NEW_PRODUCT",
+      "entity_ids": [
+        "company_0890f456684a70f1"
+      ],
+      "product": null,
+      "event_time": "2024-03",
+      "created_at": "2026-10-13T12:17:42+00:00"
+    },
+    {
+      "id": "evt_202503_hbm3e",
+      "title": "2025-03-SK海力士12层HBM3E独家供应英伟达",
+      "event_type": "NEW_CUSTOMER",
+      "entity_ids": [
+        "company_f359e42f1d9b36fc",
+        "company_0890f456684a70f1"
+      ],
+      "product": null,
+      "event_time": "2025-03",
+      "created_at": "2026-10-13T12:17:42+00:00"
+    },
+    {
+      "id": "evt_2025_cowos2x",
+      "title": "2025-台积电CoWoS产能翻倍",
+      "event_type": "CAPACITY_EXPANSION",
+      "entity_ids": [
+        "company_7ad9114a6ee73402"
+      ],
+      "product": null,
+      "event_time": "2025",
+      "created_at": "2026-10-13T12:17:42+00:00"
+    },
+    {
+      "id": "evt_202601_hbm2x",
+      "title": "2026-01-三星与SK海力士HBM出货或翻倍",
+      "event_type": "CAPACITY_EXPANSION",
+      "entity_ids": [
+        "company_255a4dc2b1944069",
+        "company_f359e42f1d9b36fc"
+      ],
+      "product": null,
+      "event_time": "2026-01",
+      "created_at": "2026-10-13T12:17:42+00:00"
+    },
+    {
+      "id": "evt_202601_wus",
+      "title": "2026-01-沪电股份成为GB300核心PCB供应商",
+      "event_type": "NEW_CUSTOMER",
+      "entity_ids": [
+        "company_dadebd05e4843391",
+        "company_0890f456684a70f1"
+      ],
+      "product": null,
+      "event_time": "2026-01",
+      "created_at": "2026-10-13T12:17:42+00:00"
+    },
+    {
+      "id": "evt_2026_skh_soldout",
+      "title": "2026-SK海力士HBM产能售罄",
+      "event_type": "PRICE_UP",
+      "entity_ids": [
+        "company_f359e42f1d9b36fc"
+      ],
+      "product": null,
+      "event_time": "2026",
+      "created_at": "2026-10-13T12:17:42+00:00"
+    },
+    {
+      "id": "evt_2026_hbm4_cut",
+      "title": "2026-SK海力士下调HBM4出货两至三成",
+      "event_type": "SUPPLIER_CHANGED",
+      "entity_ids": [
+        "company_f359e42f1d9b36fc"
+      ],
+      "product": null,
+      "event_time": "2026",
+      "created_at": "2026-10-13T12:17:42+00:00"
+    },
+    {
+      "id": "evt_2026_cowos125",
+      "title": "2026-台积电CoWoS月产能目标12.5万片",
+      "event_type": "CAPACITY_EXPANSION",
+      "entity_ids": [
+        "company_7ad9114a6ee73402"
+      ],
+      "product": null,
+      "event_time": "2026",
+      "created_at": "2026-10-13T12:17:42+00:00"
+    }
+  ],
+  "reviews": [],
+  "event_updates": [],
+  "evidence_files": [
+    "disclosure/repo_evt_202403_blackwell.json",
+    "disclosure/repo_evt_202503_hbm3e.json",
+    "capacity/repo_evt_2025_cowos2x.json",
+    "capacity/repo_evt_202601_hbm2x.json",
+    "disclosure/repo_evt_202601_wus.json",
+    "disclosure/repo_evt_2026_skh_soldout.json",
+    "disclosure/repo_evt_2026_hbm4_cut.json",
+    "capacity/repo_evt_2026_cowos125.json"
+  ]
+}

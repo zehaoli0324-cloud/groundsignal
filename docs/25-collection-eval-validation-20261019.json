@@ -1,0 +1,139 @@
+{
+  "date": "2026-10-19",
+  "scope": "OFFLINE_SYNTHETIC_ONLY",
+  "unit_tests": 137,
+  "commands": [
+    {
+      "script": "scripts/evaluate_research.py",
+      "arguments": [
+        "demo",
+        "--out",
+        "research-runs/collection-eval-verification-04/demo"
+      ],
+      "exit_code": 0,
+      "status": "SYNTHETIC_ONLY"
+    },
+    {
+      "script": "scripts/evaluate_research.py",
+      "arguments": [
+        "init-benchmark",
+        "--run",
+        "research-runs/collection-eval-verification-04/demo/run/run.json",
+        "--out",
+        "research-runs/collection-eval-verification-04/draft"
+      ],
+      "exit_code": 0,
+      "status": "ANNOTATION_DRAFT"
+    },
+    {
+      "script": "scripts/evaluate_research.py",
+      "arguments": [
+        "review-template",
+        "--run",
+        "research-runs/collection-eval-verification-04/demo/run/run.json",
+        "--benchmark",
+        "examples/search/eval-benchmark.synthetic.json",
+        "--out",
+        "research-runs/collection-eval-verification-04/review"
+      ],
+      "exit_code": 0,
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "script": "scripts/evaluate_research.py",
+      "arguments": [
+        "score",
+        "--run",
+        "research-runs/collection-eval-verification-04/demo/run/run.json",
+        "--benchmark",
+        "examples/search/eval-benchmark.synthetic.json",
+        "--reviews",
+        "research-runs/collection-eval-verification-04/review/reviews.json",
+        "--out",
+        "research-runs/collection-eval-verification-04/scored"
+      ],
+      "exit_code": 3,
+      "status": "SYNTHETIC_ONLY"
+    },
+    {
+      "script": "scripts/evaluate_research.py",
+      "arguments": [
+        "score",
+        "--run",
+        "research-runs/collection-eval-verification-04/demo/run/run.json",
+        "--benchmark",
+        "research-runs/collection-eval-verification-04/draft/benchmark.json",
+        "--out",
+        "research-runs/collection-eval-verification-04/blocked-draft"
+      ],
+      "exit_code": 2,
+      "status": "CONTRACT_REJECTED"
+    },
+    {
+      "script": "scripts/evaluate_research.py",
+      "arguments": [
+        "score",
+        "--run",
+        "research-runs/collection-eval-verification-04/demo/run/run.json",
+        "--benchmark",
+        "research-runs/collection-eval-verification-04/draft/benchmark.json",
+        "--allow-draft",
+        "--out",
+        "research-runs/collection-eval-verification-04/draft-preview"
+      ],
+      "exit_code": 3,
+      "status": "SYNTHETIC_ONLY"
+    },
+    {
+      "script": "scripts/research.py",
+      "arguments": [
+        "compare",
+        "--run",
+        "research-runs/collection-eval-verification-04/demo/run/run.json",
+        "--fixture",
+        "examples/search/synthetic.json",
+        "--out",
+        "research-runs/collection-eval-verification-04/routes"
+      ],
+      "exit_code": 0,
+      "status": "NO_AUTOMATIC_WINNER"
+    },
+    {
+      "script": "scripts/evaluate_research.py",
+      "arguments": [
+        "compare",
+        "--runs",
+        "research-runs/collection-eval-verification-04/routes/small_only/run.json",
+        "research-runs/collection-eval-verification-04/routes/large_only/run.json",
+        "research-runs/collection-eval-verification-04/routes/cascade/run.json",
+        "--benchmark",
+        "examples/search/eval-benchmark.synthetic.json",
+        "--out",
+        "research-runs/collection-eval-verification-04/comparison"
+      ],
+      "exit_code": 3,
+      "status": "NO_AUTOMATIC_WINNER"
+    },
+    {
+      "script": "scripts/evaluate_research.py",
+      "arguments": [
+        "compare",
+        "--runs",
+        "research-runs/collection-eval-verification-04/demo/run/run.json",
+        "research-runs/collection-eval-verification-04/demo/run/run.json",
+        "--benchmark",
+        "examples/search/eval-benchmark.synthetic.json",
+        "--out",
+        "research-runs/collection-eval-verification-04/duplicate"
+      ],
+      "exit_code": 2,
+      "status": "CONTRACT_REJECTED"
+    }
+  ],
+  "relative_links": "VALID",
+  "external_projects": "DOCUMENT_REVIEW_ONLY",
+  "real_baseline_trials": "NOT_RUN",
+  "real_model_quality": "UNASSESSED",
+  "real_source_benchmark": "NOT_CREATED",
+  "real_cost": "UNKNOWN"
+}

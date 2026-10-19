@@ -1,0 +1,448 @@
+{
+  "schema_version": "groundsignal.collection-evaluation.v1",
+  "evaluated_at": "2026-10-19T01:46:49.653322+00:00",
+  "run_id": "run_aca78b156b7d55a2d0c1",
+  "run_sha256": "fa52609d8dfb25e1c7107a4c0e444bbac653cde3bef20089d5ce63aaaf93db65",
+  "benchmark_id": "synthetic_collection_regression_v1",
+  "benchmark_sha256": "0218c8ecb4f30e4d933386cda94cbc4ce3935d9ca4d1fd0c552f49ad04c7fcdb",
+  "policy_sha256": "e9cbc6c33b2a8d0f68b91bad672b849b95e647282213ba2c345762b340caf29a",
+  "reviews_sha256": "1222f6b9bbe94c88d992b8587285919d3c20debc5935f5d9283b09f3434e8cee",
+  "synthetic": true,
+  "quality_status": "SYNTHETIC_ONLY",
+  "scope": "虚构采集回归：三条已取得主张、一条已知漏采、一个转载和一个无关来源；非真实行业评测",
+  "split": "regression",
+  "as_of": "2026-10-19T23:59:59Z",
+  "retrieval": {
+    "k": 10,
+    "unique_ranked_groups": 3,
+    "returned_at_k": 3,
+    "judged_at_k": 3,
+    "judgment_coverage_at_k": 1.0,
+    "known_relevant_reference_groups": 4,
+    "found_relevant_at_k": 3,
+    "reference_recall_at_k": 0.75,
+    "precision_on_judged_at_k": 1.0,
+    "ndcg_at_k": 0.920287093242588,
+    "reference_reciprocal_rank": 1.0,
+    "ranked_reference_groups": [
+      "denial_origin",
+      "ownership_origin",
+      "sample_origin"
+    ],
+    "by_dimension": {
+      "upstream": {
+        "known_relevant": 0,
+        "found_at_k": 0,
+        "reference_recall_at_k": null
+      },
+      "downstream": {
+        "known_relevant": 1,
+        "found_at_k": 1,
+        "reference_recall_at_k": 1.0
+      },
+      "competitors": {
+        "known_relevant": 0,
+        "found_at_k": 0,
+        "reference_recall_at_k": null
+      },
+      "investors": {
+        "known_relevant": 1,
+        "found_at_k": 1,
+        "reference_recall_at_k": 1.0
+      },
+      "investments": {
+        "known_relevant": 0,
+        "found_at_k": 0,
+        "reference_recall_at_k": null
+      },
+      "people": {
+        "known_relevant": 0,
+        "found_at_k": 0,
+        "reference_recall_at_k": null
+      },
+      "products": {
+        "known_relevant": 1,
+        "found_at_k": 1,
+        "reference_recall_at_k": 1.0
+      },
+      "capacity": {
+        "known_relevant": 1,
+        "found_at_k": 0,
+        "reference_recall_at_k": 0.0
+      },
+      "counterevidence": {
+        "known_relevant": 1,
+        "found_at_k": 1,
+        "reference_recall_at_k": 1.0
+      }
+    }
+  },
+  "retrieval_by_provider": {
+    "fixture": {
+      "k": 10,
+      "unique_ranked_groups": 3,
+      "returned_at_k": 3,
+      "judged_at_k": 3,
+      "judgment_coverage_at_k": 1.0,
+      "known_relevant_reference_groups": 4,
+      "found_relevant_at_k": 3,
+      "reference_recall_at_k": 0.75,
+      "precision_on_judged_at_k": 1.0,
+      "ndcg_at_k": 0.920287093242588,
+      "reference_reciprocal_rank": 1.0,
+      "ranked_reference_groups": [
+        "sample_origin",
+        "ownership_origin",
+        "denial_origin"
+      ],
+      "by_dimension": {
+        "upstream": {
+          "known_relevant": 0,
+          "found_at_k": 0,
+          "reference_recall_at_k": null
+        },
+        "downstream": {
+          "known_relevant": 1,
+          "found_at_k": 1,
+          "reference_recall_at_k": 1.0
+        },
+        "competitors": {
+          "known_relevant": 0,
+          "found_at_k": 0,
+          "reference_recall_at_k": null
+        },
+        "investors": {
+          "known_relevant": 1,
+          "found_at_k": 1,
+          "reference_recall_at_k": 1.0
+        },
+        "investments": {
+          "known_relevant": 0,
+          "found_at_k": 0,
+          "reference_recall_at_k": null
+        },
+        "people": {
+          "known_relevant": 0,
+          "found_at_k": 0,
+          "reference_recall_at_k": null
+        },
+        "products": {
+          "known_relevant": 1,
+          "found_at_k": 1,
+          "reference_recall_at_k": 1.0
+        },
+        "capacity": {
+          "known_relevant": 1,
+          "found_at_k": 0,
+          "reference_recall_at_k": 0.0
+        },
+        "counterevidence": {
+          "known_relevant": 1,
+          "found_at_k": 1,
+          "reference_recall_at_k": 1.0
+        }
+      }
+    }
+  },
+  "acquisition": {
+    "attempted_documents": 4,
+    "fetched_documents": 4,
+    "fetch_success_fraction": 1.0,
+    "relevant_reference_groups_captured": 3,
+    "reference_capture_recall": 0.75,
+    "missing_required_reference_groups": [
+      "missing_capacity"
+    ],
+    "duplicate_content_documents": 1,
+    "known_publication_capture_lag_seconds_median": null,
+    "lag_measured_documents": 0
+  },
+  "extraction": {
+    "labeled_reference_documents": 4,
+    "available_reference_document_versions": 3,
+    "gold_claims": 4,
+    "available_gold_claims": 3,
+    "scored_unique_predictions": 3,
+    "raw_labeled_candidates": 4,
+    "unlabeled_candidates": 0,
+    "candidate_label_coverage": 1.0,
+    "true_positive": 3,
+    "false_positive": 0,
+    "false_negative_on_fetched": 0,
+    "false_negative_end_to_end": 1,
+    "precision": 1.0,
+    "precision_wilson95": [
+      0.4385029682449546,
+      1
+    ],
+    "recall_on_fetched": 1.0,
+    "end_to_end_reference_recall": 0.75,
+    "by_predicate": {
+      "EXPANDS_CAPACITY": {
+        "gold": 1,
+        "predicted": 0,
+        "true_positive": 0,
+        "precision": null,
+        "end_to_end_reference_recall": 0.0
+      },
+      "OWNS": {
+        "gold": 1,
+        "predicted": 1,
+        "true_positive": 1,
+        "precision": 1.0,
+        "end_to_end_reference_recall": 1.0
+      },
+      "SUPPLIES": {
+        "gold": 2,
+        "predicted": 2,
+        "true_positive": 2,
+        "precision": 1.0,
+        "end_to_end_reference_recall": 1.0
+      }
+    },
+    "by_stage": {
+      "PLANNED": {
+        "gold": 1,
+        "predicted": 0,
+        "true_positive": 0,
+        "precision": null,
+        "end_to_end_reference_recall": 0.0
+      },
+      "TESTING": {
+        "gold": 1,
+        "predicted": 1,
+        "true_positive": 1,
+        "precision": 1.0,
+        "end_to_end_reference_recall": 1.0
+      },
+      "UNKNOWN": {
+        "gold": 2,
+        "predicted": 2,
+        "true_positive": 2,
+        "precision": 1.0,
+        "end_to_end_reference_recall": 1.0
+      }
+    },
+    "by_polarity": {
+      "ASSERTED": {
+        "gold": 3,
+        "predicted": 2,
+        "true_positive": 2,
+        "precision": 1.0,
+        "end_to_end_reference_recall": 0.6666666666666666
+      },
+      "NEGATED": {
+        "gold": 1,
+        "predicted": 1,
+        "true_positive": 1,
+        "precision": 1.0,
+        "end_to_end_reference_recall": 1.0
+      }
+    },
+    "matching": "source_group + text_sha256 + exact atomic fields; duplicate reprints do not multiply credit"
+  },
+  "human_review": {
+    "reviewed_candidates": 0,
+    "candidate_count": 4,
+    "human_review_coverage": 0.0,
+    "unanimously_correct": 0,
+    "unanimously_correct_fraction": null,
+    "conflicting_candidates": 0,
+    "uncertain_candidates": 0,
+    "critical_error_reviews": 0,
+    "errors_by_type": {},
+    "high_risk_candidates": 2,
+    "high_risk_fully_reviewed": 0,
+    "high_risk_review_coverage": 0.0,
+    "model_judgments_excluded": 0,
+    "human_minutes_declared": null,
+    "timed_human_review_rows": 0,
+    "minutes_per_unanimously_correct_candidate": null,
+    "identity_note": "Reviewer identities and verdicts are declarations, not authenticated signatures.",
+    "gold_disagreement_review_rows": 0
+  },
+  "governance": {
+    "status": "DECLARATIONS_ONLY",
+    "legal_compliance": "NOT_ASSESSED",
+    "documents_missing_capture_permission": [
+      "doc_8d4d2dee782b920083a1",
+      "doc_d4a20087796d3f7fc15c",
+      "doc_b41ce1fb961402175c4a",
+      "doc_7a931abe16547c95a365"
+    ],
+    "documents_declared_capture_denied": [],
+    "outbound_attempt_document_ids": [],
+    "outbound_with_denied_permission": [],
+    "outbound_with_unknown_permission": [],
+    "note": "Checks supplied declarations after the run; does not prevent access or certify rights."
+  },
+  "operations": {
+    "counts": {
+      "search_calls": 0,
+      "fetch_calls": 0,
+      "model_calls": 0,
+      "large_model_calls": 0,
+      "simulated_model_calls": 8,
+      "pending_candidates": 4
+    },
+    "wall_seconds": 0.008785,
+    "real_successful_model_response": false,
+    "search_statuses": {
+      "SIMULATED": 18
+    },
+    "model_attempt_statuses": {
+      "SIMULATED": 8
+    },
+    "budget_breaches": [],
+    "input_truncated_documents": 0,
+    "input_tokens": null,
+    "output_tokens": null,
+    "attempts_with_complete_token_usage": 0,
+    "token_usage_complete": false,
+    "money_cost": null,
+    "cost_per_correct_claim": null
+  },
+  "gates": [
+    {
+      "name": "reference_sample_size",
+      "status": "MET",
+      "value": 4,
+      "threshold": 3
+    },
+    {
+      "name": "gold_claim_sample_size",
+      "status": "FAILED",
+      "value": 4,
+      "threshold": 100
+    },
+    {
+      "name": "retrieval_recall",
+      "status": "FAILED",
+      "value": 0.75,
+      "threshold": 0.8
+    },
+    {
+      "name": "rank_judgment_coverage",
+      "status": "MET",
+      "value": 1.0,
+      "threshold": 0.8
+    },
+    {
+      "name": "extraction_precision",
+      "status": "MET",
+      "value": 1.0,
+      "threshold": 0.95
+    },
+    {
+      "name": "end_to_end_recall",
+      "status": "FAILED",
+      "value": 0.75,
+      "threshold": 0.8
+    },
+    {
+      "name": "candidate_label_coverage",
+      "status": "MET",
+      "value": 1.0,
+      "threshold": 1
+    },
+    {
+      "name": "human_review_coverage",
+      "status": "FAILED",
+      "value": 0.0,
+      "threshold": 1
+    },
+    {
+      "name": "retrieval_recall:downstream",
+      "status": "MET",
+      "value": 1.0,
+      "threshold": 0.8
+    },
+    {
+      "name": "retrieval_recall:investors",
+      "status": "MET",
+      "value": 1.0,
+      "threshold": 0.8
+    },
+    {
+      "name": "retrieval_recall:products",
+      "status": "MET",
+      "value": 1.0,
+      "threshold": 0.8
+    },
+    {
+      "name": "retrieval_recall:capacity",
+      "status": "FAILED",
+      "value": 0.0,
+      "threshold": 0.8
+    },
+    {
+      "name": "retrieval_recall:counterevidence",
+      "status": "MET",
+      "value": 1.0,
+      "threshold": 0.8
+    },
+    {
+      "name": "high_risk_review_coverage",
+      "status": "FAILED",
+      "value": 0.0,
+      "threshold": 1
+    },
+    {
+      "name": "critical_error_reviews",
+      "status": "UNASSESSED",
+      "value": null,
+      "threshold": 0
+    },
+    {
+      "name": "unanimous_human_correctness",
+      "status": "UNASSESSED",
+      "value": null,
+      "threshold": 1
+    },
+    {
+      "name": "human_gold_disagreements",
+      "status": "UNASSESSED",
+      "value": null,
+      "threshold": 0
+    },
+    {
+      "name": "budget_breaches",
+      "status": "MET",
+      "value": 0,
+      "threshold": 0
+    },
+    {
+      "name": "missing_required_reference_groups",
+      "status": "FAILED",
+      "value": 1,
+      "threshold": 0
+    },
+    {
+      "name": "declared_permission_violations",
+      "status": "MET",
+      "value": 0,
+      "threshold": 0
+    },
+    {
+      "name": "permission_declaration_completeness",
+      "status": "FAILED",
+      "value": 0,
+      "threshold": 1
+    },
+    {
+      "name": "live_run",
+      "status": "FAILED",
+      "value": 0,
+      "threshold": 1
+    },
+    {
+      "name": "adjudicated_reference",
+      "status": "MET",
+      "value": 1,
+      "threshold": 1
+    }
+  ],
+  "decision": "NOT_READY",
+  "overall_score": null,
+  "note": "Scoped reference-set metrics; no automatic winner or legal/factual certification."
+}

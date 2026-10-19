@@ -1,0 +1,6 @@
+-r requirements.txt
+pypdf>=5,<7
+
+# Optional renderers are deliberately not installed by this lightweight profile.
+# pip install crawl4ai ; crawl4ai-setup
+# pip install docling

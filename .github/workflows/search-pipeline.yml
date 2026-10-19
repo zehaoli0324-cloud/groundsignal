@@ -33,3 +33,4 @@ jobs:
       - run: python scripts/research.py doctor --config research-runs/ci-session/config.json --target research-runs/ci-session/target.json
       - run: python scripts/research.py audit --run research-runs/ci-demo/run.json --out research-runs/ci-audit
       - run: python scripts/research.py compare --run research-runs/ci-demo/run.json --fixture examples/search/synthetic.json --gold examples/search/synthetic-gold.json --out research-runs/ci-comparison
+      - run: python scripts/evaluate_research.py demo --out research-runs/ci-collection-eval

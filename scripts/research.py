@@ -9,11 +9,26 @@ from industry_search.contracts import REPO, config_check, read_json, target_chec
 from industry_search.evaluation import compare
 from industry_search.pipeline import execute, fresh_directory, load_run, replay
 from industry_search.planning import plan
+from industry_search.operations import INTENSITIES, MODEL_PRESETS, audit, doctor, prepare
 
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     commands = parser.add_subparsers(dest='command', required=True)
+    setup = commands.add_parser('prepare', help='Generate an offline session configuration and query preview')
+    setup.add_argument('--target', type=Path, required=True)
+    setup.add_argument('--intensity', choices=INTENSITIES, default='quick')
+    setup.add_argument('--models', choices=MODEL_PRESETS, default='none')
+    setup.add_argument('--providers', nargs='*', choices=('brave', 'tavily', 'deepseek', 'firecrawl', 'sogou', 'so360'),
+                       help='Space-separated explicit providers; empty flag selects seeds only')
+    setup.add_argument('--out', type=Path, required=True)
+    health = commands.add_parser('doctor', help='Offline diagnostics; --probe only reads local model metadata')
+    health.add_argument('--config', type=Path, default=REPO / 'config/search.default.json')
+    health.add_argument('--target', type=Path)
+    health.add_argument('--probe', action='store_true')
+    inspect = commands.add_parser('audit', help='Technical run audit, not factual/legal approval')
+    inspect.add_argument('--run', type=Path, required=True)
+    inspect.add_argument('--out', type=Path, help='Optional new directory for audit.json')
     for name in ('plan', 'run'):
         sub = commands.add_parser(name)
         sub.add_argument('--target', type=Path, required=True)
@@ -33,6 +48,18 @@ def main(argv=None):
     validate.add_argument('--run', type=Path, required=True)
     args = parser.parse_args(argv)
     try:
+        if args.command in {'prepare', 'doctor', 'audit'}:
+            if args.command == 'prepare':
+                result = prepare(args.target, args.intensity, args.models, args.providers, args.out)
+            elif args.command == 'doctor':
+                result = doctor(config_check(read_json(args.config)),
+                                target_check(read_json(args.target)) if args.target else None, args.probe)
+            else:
+                result = audit(args.run)
+                if args.out:
+                    write_json(fresh_directory(args.out) / 'audit.json', result)
+            print(json.dumps(result, ensure_ascii=False, indent=2))
+            return 0
         if args.command == 'validate':
             run = load_run(args.run)
             print(json.dumps({'status': 'CONTRACT_VALID', 'run_id': run['id'],

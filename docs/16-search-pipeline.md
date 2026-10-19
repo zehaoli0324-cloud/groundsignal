@@ -2,6 +2,8 @@
 
 对应 [Issue #4](https://github.com/zehaoli0324-cloud/groundsignal/issues/4)；设计依据见 [proposal](15-search-evidence-proposal.md)。本入口为 `scripts/research.py`，原 `collect.py` 和 Windows 采集界面仍使用原来的流程。
 
+首次使用按 [部署手册](18-deployment-guide.md) 和 [使用手册](19-usage-guide.md) 操作；搜索预算与六轮角度见 [挖掘方案](20-search-mining-strategy.md)，来源权限、个人信息和验收见 [合规与质量](21-compliance-quality.md)。本页为原始接口参考。新增 `prepare` 离线生成三档会话，`doctor` 检查配置（仅 `--probe` 请求本地模型元数据），`audit` 报告技术缺口，不代表事实正确或法律授权。
+
 ## 1. 现在可以做什么
 
 输入公司研究目标，生成覆盖九类关系/变化的搜索计划；通过 Brave、Tavily、Firecrawl、DeepSeek 的 REST 适配器或显式选择的旧搜索源取得线索；保存原始网页或 PDF、解析文本及内容指纹；抽取带精确引文的关系候选；按失败/风险/抽样规则调用大模型；生成待审队列和 PR #3 的证据 ledger。

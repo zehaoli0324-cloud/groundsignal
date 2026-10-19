@@ -29,4 +29,7 @@ jobs:
       - run: python -m unittest discover -s tests -q
       - run: python scripts/research.py demo --out research-runs/ci-demo
       - run: python scripts/research.py validate --run research-runs/ci-demo/run.json
+      - run: python scripts/research.py prepare --target examples/search/target-nvidia.json --intensity deep --models none --providers brave --out research-runs/ci-session
+      - run: python scripts/research.py doctor --config research-runs/ci-session/config.json --target research-runs/ci-session/target.json
+      - run: python scripts/research.py audit --run research-runs/ci-demo/run.json --out research-runs/ci-audit
       - run: python scripts/research.py compare --run research-runs/ci-demo/run.json --fixture examples/search/synthetic.json --gold examples/search/synthetic-gold.json --out research-runs/ci-comparison
